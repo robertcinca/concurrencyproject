@@ -2,5 +2,6 @@ package test;
 
 public class random {
 
-	public void foo{}
+	public void foo() {}
+	
 }
