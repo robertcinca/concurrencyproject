@@ -2,9 +2,11 @@
 public class Employee {
 
 	public int employeeID;
+	public Company employer;
 	
-	Employee(int ID) {
+	Employee(int ID, Company employer) {
 		this.employeeID = ID;
+		this.employer = employer;
 	}
 	
 	public void deposit(int amount) {
@@ -16,6 +18,6 @@ public class Employee {
 	}
 	
 	public int checkBalance() {
-		return balance;
+		return 1;
 	}
 }

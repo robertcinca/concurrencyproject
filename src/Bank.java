@@ -15,7 +15,8 @@ public class Bank implements Executor {
 	public void doBusiness(int m) {
 		ExecutorService executor = Executors.newFixedThreadPool(m);
 		for(int i=0; i<m; i++) {
-			Runnable bankStaff = new BankStaff(i);
+			bankStaffFree[i] = i;
+			Runnable bankStaff = new BankStaff(i, this);
 			executor.execute(bankStaff);
 		}
 	}		
