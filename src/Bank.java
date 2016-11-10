@@ -23,6 +23,13 @@ public class Bank implements Executor {
 	
 	public void doBusiness() {
 		
+		/**
+		 * I dont quite know how to incorporate the time concept yet
+		 * Maybe a global variable that acts as a counter would work.
+		 * This method would then basically work as a for-loop and increment the timer each time it passes through
+		 * the threads are put to sleep if it not their turn and are woken up if they are open for processing
+		 * the threads would probably also need to include some kind of variables that can be used for optimization
+		 */
 		
 		ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
 		
