@@ -3,6 +3,7 @@ public class Employee {
 
 	public int employeeID;
 	public Company employer;
+	public Job assignment;
 	
 	Employee(int ID, Company employer) {
 		this.employeeID = ID;

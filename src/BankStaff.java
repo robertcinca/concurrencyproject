@@ -16,8 +16,7 @@ public class BankStaff implements Runnable {
 			try {
 				Thread.sleep(10000);
 			} catch(InterruptedException e) {
-				Thread.currentThread().interrupt();
-				
+				Thread.currentThread().interrupt();		
 			}
 		}
 	}
