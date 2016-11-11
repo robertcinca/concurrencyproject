@@ -10,8 +10,15 @@ public class Job {
 		this.employee = employee;
 		this.time = time;
 		this.action = action;
-		if(amount!=0) {
-			this.amount = amount;
+		this.amount = amount;
+	}
+	
+	@Override
+	public String toString() {
+		if(amount>0) {
+			return "This is a " + action + " job over " + amount + " to be executed by " + employee + " at time " + time + ".";
+		} else {
+			return "This is a balance " + action + " to be executed by " + employee + " at time " + time + ".";
 		}
 	}
 	

@@ -21,4 +21,9 @@ public class Employee {
 	public int checkBalance() {
 		return 1;
 	}
+	
+	@Override
+	public String toString() {
+		return "Employee " + employeeID;
+	}
 }
