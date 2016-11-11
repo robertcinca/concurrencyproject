@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -6,35 +7,40 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
 public class Bank implements Executor {
 
 	final ExecutorService employees;
+	private List<Job> schedule;
 	
-	private int[] bankStaffFree;
-	private int[] bankStaffBusy;
-	
-	public Bank(int m) {
-		employees = Executors.newFixedThreadPool(m);
-		bankStaffFree = new int[m];
-		bankStaffBusy = new int[m];
+	public Bank(int[] config, List<Job> jobs) {
+		employees = Executors.newFixedThreadPool(config[0]);
+		schedule = jobs;
 		
-		for(int i=0; i<m; i++) {
-			bankStaffFree[i] = i;
+		//this is probably wrong
+		for(int i=0; i<config[0]; i++) {
 			Runnable bankStaff = new BankStaff(i, this);
 		}
 	}
-	
+
 	public void doBusiness() {
-		
-		/**
-		 * I dont quite know how to incorporate the time concept yet
-		 * Maybe a global variable that acts as a counter would work.
-		 * This method would then basically work as a for-loop and increment the timer each time it passes through
-		 * the threads are put to sleep if it not their turn and are woken up if they are open for processing
-		 * the threads would probably also need to include some kind of variables that can be used for optimization
-		 */
-		
 		ReentrantReadWriteLock lock = new ReentrantReadWriteLock();
 		
+		int timer = 0;
+		
+		//true as long as the schedule and the queue are not empty
+		//the queue could be a priorityBlockingQueue
+		
+		//i think i fucked up with the executor. when using it, the job would implement the runnable?
+		//still would work, the bankstaff would be basically the individual threads
+		//no idea how to implement the job queue though
+		
+		//Runnable 
 		while(!false) {
+			//add jobs from schedule to queue
 			
+			//synchronized thread actions
+			
+			//signal threads the timer int / put them to sleep
+			
+			//change queue priorities
+			timer++;
 		}
 		
 	//	employees.shutdown();

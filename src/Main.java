@@ -25,7 +25,7 @@ public class Main {
 			System.out.println(jobs.get(i));
 		}
 		
-		Bank bank = new Bank(config[0]);
+		Bank bank = new Bank(config, jobs);
 		bank.doBusiness();
 		
 		System.out.println("checkMain2");
