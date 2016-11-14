@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.concurrent.BlockingQueue;
 
 public class Main {
@@ -23,13 +22,8 @@ public class Main {
 			System.out.println(companies[i]);
 		}
 		System.out.println();
-		for(int i=0; i<jobs.size(); i++) {
-			try {
-				System.out.println(jobs.take());
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+		for(Runnable job : jobs) {
+			System.out.println(job.toString());
 		}
 		
 		Bank bank = new Bank(config, jobs);

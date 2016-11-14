@@ -1,5 +1,5 @@
 
-public class Job extends RunsPriority implements Runnable {
+public class Job extends RunsPriority implements Comparable {
 
 	Employee employee;
 	String action;
