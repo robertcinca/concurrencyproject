@@ -1,5 +1,5 @@
 
-public class Job {
+public class Job implements Comparable {
 
 	Employee employee;
 	String action;
@@ -20,6 +20,12 @@ public class Job {
 		} else {
 			return "This is a balance " + action + " to be executed by " + employee + " at time " + time + ".";
 		}
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 	
 }

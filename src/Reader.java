@@ -2,10 +2,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Enumeration;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.PriorityBlockingQueue;
 
 /**
  * @author Lorenz
@@ -83,9 +83,22 @@ public class Reader {
 		return companies;
 	}
 	
-	public List<Job> assignJobs(Company[] employer) {
-		List<Job> jobs = new LinkedList<Job>();			
+	public BlockingQueue<Job> assignJobs(Company[] employer) {
 		Enumeration<?> enumerate = prop.propertyNames();
+		/**
+		String temp1;
+		int k = 0;
+		while(enumerate.hasMoreElements()) {
+			temp1 = (String) enumerate.nextElement();
+			if(temp1.startsWith("Time")) {
+				String[] parts = prop.getProperty(temp1).split("[.]");
+				for(int j=0; j<parts.length; j++) {
+				k++;
+				}
+			}
+		}
+		*/
+		BlockingQueue<Runnable> jobs = new PriorityBlockingQueue<Runnable>();			
 		String temp;
 		int i = 0;
 		while(enumerate.hasMoreElements()) {

@@ -1,5 +1,7 @@
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
 
-public class BankStaff implements Runnable {
+public class BankStaff implements Executor {
 
 	private int employeeID;
 	private Bank employer;
@@ -7,19 +9,12 @@ public class BankStaff implements Runnable {
 	public BankStaff(int i, Bank employer) {
 		this.employeeID = i;
 		this.employer = employer;
+		Executors.newFixedThreadPool(1);
 	}
 
 	@Override
-	public void run() {
-		while(true) {
-			System.out.println(employeeID);
-			try {
-				Thread.sleep(10000);
-			} catch(InterruptedException e) {
-				Thread.currentThread().interrupt();		
-			}
-		}
+	public void execute(Runnable command) {
+		
 	}
-	
 	
 }

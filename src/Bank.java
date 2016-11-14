@@ -1,21 +1,23 @@
 import java.util.List;
+import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.Executor;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
-public class Bank implements Executor {
+public class Bank {
 
-	final ExecutorService employees;
-	private List<Job> schedule;
+	//no idea if lists are the best data structure for this
+	private List<BankStaff> staff;
+	private BlockingQueue<Job> schedule;
+	//the bank class contains a list of all jobs which are runnables
+	//when this class creates the staff, it gives them a reference to the runnable list. there shouldnt be race conditions like this
 	
-	public Bank(int[] config, List<Job> jobs) {
-		employees = Executors.newFixedThreadPool(config[0]);
-		schedule = jobs;
-		
-		//this is probably wrong
+	public Bank(int[] config, BlockingQueue<Job> jobs) {	
+		schedule = jobs;	
 		for(int i=0; i<config[0]; i++) {
-			Runnable bankStaff = new BankStaff(i, this);
+			BankStaff bankStaff = new BankStaff(i, this);
+			staff.add(bankStaff);
 		}
 	}
 
@@ -44,13 +46,6 @@ public class Bank implements Executor {
 		}
 		
 	//	employees.shutdown();
-	}
-
-	@Override
-	public void execute(Runnable command) {
-		// TODO Auto-generated method stub
+	}	
 		
-	}		
-		
-
 }
