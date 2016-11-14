@@ -83,7 +83,7 @@ public class Reader {
 		return companies;
 	}
 	
-	public BlockingQueue<Job> assignJobs(Company[] employer) {
+	public BlockingQueue<Runnable> assignJobs(Company[] employer) {
 		Enumeration<?> enumerate = prop.propertyNames();
 		/**
 		String temp1;

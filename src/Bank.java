@@ -9,11 +9,11 @@ public class Bank {
 
 	//no idea if lists are the best data structure for this
 	private List<BankStaff> staff;
-	private BlockingQueue<Job> schedule;
+	private BlockingQueue<Runnable> schedule;
 	//the bank class contains a list of all jobs which are runnables
 	//when this class creates the staff, it gives them a reference to the runnable list. there shouldnt be race conditions like this
 	
-	public Bank(int[] config, BlockingQueue<Job> jobs) {	
+	public Bank(int[] config, BlockingQueue<Runnable> jobs) {	
 		schedule = jobs;	
 		for(int i=0; i<config[0]; i++) {
 			BankStaff bankStaff = new BankStaff(i, this);

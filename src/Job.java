@@ -1,5 +1,5 @@
 
-public class Job implements Comparable {
+public class Job extends RunsPriority implements Runnable {
 
 	Employee employee;
 	String action;
@@ -26,6 +26,12 @@ public class Job implements Comparable {
 	public int compareTo(Object o) {
 		// TODO Auto-generated method stub
 		return 0;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
