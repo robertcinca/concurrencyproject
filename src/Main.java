@@ -17,7 +17,7 @@ public class Main {
 		
 		/**
 		 * Outputs the configuration details
-		 */
+		 
 		for(int i=0; i<companies.length; i++) {
 			System.out.println(companies[i]);
 		}
@@ -25,6 +25,7 @@ public class Main {
 		for(Runnable job : jobs) {
 			System.out.println(job.toString());
 		}
+		*/
 		
 		Bank bank = new Bank(config, jobs);
 		bank.doBusiness();

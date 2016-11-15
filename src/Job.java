@@ -30,8 +30,7 @@ public class Job extends RunsPriority implements Comparable {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		
+		System.out.println(time + action + employee);
 	}
 	
 }
