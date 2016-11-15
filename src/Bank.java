@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.PriorityBlockingQueue;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Bank {
@@ -23,8 +24,10 @@ public class Bank {
 	private ExecutorService executor;
 	public ReentrantReadWriteLock lock;
 	
-	public void setUpBank(int[] config, BlockingQueue<Runnable> jobs) {			
-		this.setJobs(jobs);
+	public void setUpBank(int[] config, BlockingQueue<Runnable> jobs) {
+		lock = new ReentrantReadWriteLock();
+		this.jobs = jobs;
+		schedule = new PriorityBlockingQueue<Runnable>(jobs.size());
 		executor = Executors.newFixedThreadPool(config[0]);
 		staff = new LinkedList<BankStaff>();
 		for(int i=0; i<config[0]; i++) {
@@ -34,22 +37,27 @@ public class Bank {
 	}
 
 	public void doBusiness() {
-		// int timer = 0;
-		schedule = jobs;
-		//fuck, you cant access the variables in a runnable in this queue
-		try {
-			int temp = jobs.peek().getTime();
-			System.out.println();
-		} catch (NoSuchMethodException e) {
-			e.printStackTrace();
-		} catch (SecurityException e) {
-			e.printStackTrace();
-		}
-		lock = new ReentrantReadWriteLock();		
-				
-		//should wait for signal that executor threads are finished then shut them down. outer loop, inner loop maybe the timer?
+		int timer = 0;
 		for(BankStaff bankstaff : staff) {
 			executor.execute(bankstaff);
+		}
+		while(!schedule.isEmpty()||!jobs.isEmpty()) {	
+			for(Runnable job : jobs) {
+				if(((Job) job).getTime() == timer) {
+					schedule.add(job);
+				}
+			}		
+					
+			//should wait for signal that executor threads are finished then shut them down. outer loop, inner loop maybe the timer?
+			try {
+				Thread.sleep(2000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			timer++;
+			System.out.println(timer);
+			
 		}
 		executor.shutdown();		
 	}
