@@ -38,7 +38,7 @@ public class Employee {
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
-				}
+				}			
 			}
 		}
 		System.out.println("(" + bank.getTimer() + "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", deposits "  +amount+

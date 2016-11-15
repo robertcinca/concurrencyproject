@@ -17,10 +17,6 @@ public class Main {
 		//this is the limiter
 		config[6] = jobs.size();
 		
-		for(Runnable job : jobs) {
-			System.out.println(job);
-		}
-		
 		bank.setUpBank(config, jobs);
 
 		bank.doBusiness();

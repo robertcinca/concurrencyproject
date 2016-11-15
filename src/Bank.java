@@ -14,7 +14,6 @@ public class Bank {
 	bank is already set fixed as well
 	- the sleep method is not sufficient for the task, it only shows if the program is working. for submission, it has to be removed so the efficiency of the program can be
 	tested. locks need to be implemented
-	- we might have to search for bottlenecks as well
 	- the step in and out of queue can be implemented by letting jobs check the executor if all threads are busy, then a boolean value is changed
 	*/
 	
@@ -42,16 +41,37 @@ public class Bank {
 			executor.execute(bankstaff);
 		}
 		//shutdown starts too early because im stup oh i know why oh no i dont
-		while( !(schedule.isEmpty()) || config[6]>0) {
-			System.out.println("Timer = " + timer + " (J:" + jobs.size()+ " S:"+ schedule.size() + ")");
-			
-			for(Runnable job : jobs) {
-				if(((Job) job).getTime() == timer) {
-					schedule.add(job);
-					config[6] = config[6] - 1;
+		while(true) {
+			System.out.println("Timer = " + timer + " (J:" +config[6]+ " S:"+ schedule.size() + ")");
+				for(Runnable job : jobs) {
+					if(((Job) job).getTime() == timer) {
+						schedule.add(job);
+						config[6] = config[6] - 1;
+					}
+				}
+			try {
+				Thread.sleep(20);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			timer++;
+			//schedule is recognized as empty too early for some random reason
+			if(config[6]==0 && schedule.size()==0) {
+				int jobDone = 0;
+				for(BankStaff teller : staff) {
+					if(!teller.isBusy()) {
+						jobDone +=1;
+					}
+				}
+				if(jobDone == config[0]) {
+					break;
 				}
 			}
-			
+		}
+		
+		executor.shutdown();
+		while(!executor.isShutdown()) {
+			System.out.println(timer);
 			try {
 				Thread.sleep(20);
 			} catch (InterruptedException e) {
@@ -59,7 +79,6 @@ public class Bank {
 			}
 			timer++;
 		}
-		executor.shutdown();	
 		System.out.println("ExecutorShutdown");
 	}
 
