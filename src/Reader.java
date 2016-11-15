@@ -4,7 +4,6 @@ import java.io.InputStream;
 import java.util.Enumeration;
 import java.util.Properties;
 import java.util.Scanner;
-import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.PriorityBlockingQueue;
 
 /**
@@ -54,7 +53,7 @@ public class Reader {
 	
 	public int[] setup(Bank bank) {
 		this.bank = bank;
-		int[] config = new int[6];	
+		int[] config = new int[7];	
 		config[0] = Integer.parseInt(prop.getProperty("M"));
 		config[1] = Integer.parseInt(prop.getProperty("T_d"));
 		config[2] = Integer.parseInt(prop.getProperty("T_w"));
@@ -83,7 +82,7 @@ public class Reader {
 		return companies;
 	}
 	
-	public BlockingQueue<Runnable> assignJobs(Company[] employer) {
+	public PriorityBlockingQueue<Runnable> assignJobs(Company[] employer) {
 		Enumeration<?> enumerate1 = prop.propertyNames();
 		String temp1;
 		int k = 0;
@@ -96,7 +95,8 @@ public class Reader {
 				}
 			}
 		}
-		BlockingQueue<Runnable> jobs = new PriorityBlockingQueue<Runnable>(k);		
+		//Comparator<Runnable> comparator = new RunnableComparator();
+		PriorityBlockingQueue<Runnable> jobs = new PriorityBlockingQueue<Runnable>(k);		
 		Enumeration<?> enumerate2 = prop.propertyNames();
 		String temp;
 		while(enumerate2.hasMoreElements()) {

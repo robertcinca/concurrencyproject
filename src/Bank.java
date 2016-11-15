@@ -15,18 +15,17 @@ public class Bank {
 	- the sleep method is not sufficient for the task, it only shows if the program is working. for submission, it has to be removed so the efficiency of the program can be
 	tested. locks need to be implemented
 	- we might have to search for bottlenecks as well
+	- the step in and out of queue can be implemented by letting jobs check the executor if all threads are busy, then a boolean value is changed
 	*/
 	
-	//no idea if lists are the best data structure for this
 	private List<BankStaff> staff;
-	private BlockingQueue<Runnable> jobs;
-	private BlockingQueue<Runnable> schedule;
-	private Lock lock;
+	private PriorityBlockingQueue<Runnable> jobs;
+	private PriorityBlockingQueue<Runnable> schedule;
 	private ExecutorService executor;	
 	private int timer = 0;
 	private int[] config;
 	
-	public void setUpBank(int[] config, BlockingQueue<Runnable> jobs) {
+	public void setUpBank(int[] config, PriorityBlockingQueue<Runnable> jobs) {
 		this.jobs = jobs;
 		this.config = config;
 		schedule = new PriorityBlockingQueue<Runnable>(jobs.size());
@@ -39,28 +38,26 @@ public class Bank {
 	}
 
 	public void doBusiness() {	
-		while(!(schedule.isEmpty()&&jobs.isEmpty())) {
+		for(BankStaff bankstaff : staff) {
+			executor.execute(bankstaff);
+		}
+		//shutdown starts too early because im stup oh i know why oh no i dont
+		while( !(schedule.isEmpty()) || config[6]>0) {
 			System.out.println("Timer = " + timer + " (J:" + jobs.size()+ " S:"+ schedule.size() + ")");
+			
 			for(Runnable job : jobs) {
-				if(((Job) job).getTime() <= timer) {
+				if(((Job) job).getTime() == timer) {
 					schedule.add(job);
-					jobs.remove();
+					config[6] = config[6] - 1;
 				}
 			}
-			if(timer==0) {
-				for(BankStaff bankstaff : staff) {
-					executor.execute(bankstaff);
-				}
-			}
+			
 			try {
 				Thread.sleep(20);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 			timer++;
-			if(timer==20) {
-				System.out.println(jobs.poll());
-			}
 		}
 		executor.shutdown();	
 		System.out.println("ExecutorShutdown");
@@ -70,7 +67,7 @@ public class Bank {
 		return jobs;
 	}
 
-	public void setJobs(BlockingQueue<Runnable> jobs) {
+	public void setJobs(PriorityBlockingQueue<Runnable> jobs) {
 		this.jobs = jobs;
 	}
 
@@ -85,12 +82,5 @@ public class Bank {
 	public int getConfig(int x) {
 		return config[x];
 	}
-
-	
-	public Lock getLock() {
-		return lock;
-	}
-
-
 		
 }

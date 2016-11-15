@@ -1,10 +1,10 @@
-import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.PriorityBlockingQueue;
 
 public class Main {
 	
-	//contains M, T_d, T_w, T_b, T_in, T_out in this particular order
+	//contains M, T_d, T_w, T_b, T_in, T_out, Limiter in this particular order
 	private static int[] config;
-	private static BlockingQueue<Runnable> jobs;
+	private static PriorityBlockingQueue<Runnable> jobs;
 	private static Company[] companies;
 	
 	public static void main(String[] args) {
@@ -14,12 +14,19 @@ public class Main {
 		config = reader.setup(bank);
 		companies = reader.createEconomy();
 		jobs = reader.assignJobs(companies);
+		//this is the limiter
+		config[6] = jobs.size();
+		
+		for(Runnable job : jobs) {
+			System.out.println(job);
+		}
 		
 		bank.setUpBank(config, jobs);
 
 		bank.doBusiness();
 		
 		System.out.println("mainDone");
+		
 	}
 	
 }

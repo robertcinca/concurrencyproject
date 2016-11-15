@@ -1,5 +1,5 @@
 
-public class Job extends RunsPriority implements Comparable {
+public class Job extends RunsPriority implements Comparable<Job> {
 
 	private Employee employee;
 	private String action;
@@ -16,11 +16,16 @@ public class Job extends RunsPriority implements Comparable {
 	}
 
 	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int compareTo(Job o) {
+		if( o.getTime() < time) {
+			return -1;
+		} else if( o.getTime() > time) {
+			return 1;
+		} else {
+			return 0;
+		}
 	}
-
+	
 	@Override
 	public void run() {
 		employee.doTask(action, amount, admitted, tellerNo);
@@ -37,8 +42,12 @@ public class Job extends RunsPriority implements Comparable {
 	
 	@Override
 	public String toString() {
-		return  Integer.toString(time);
+		return  employee + ", " + Integer.toString(time);
 	}
+
+	
+
+
 	
 	
 }

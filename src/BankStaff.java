@@ -10,18 +10,19 @@ public class BankStaff implements Runnable {
 	}
 
 	public void work() {
-		while(!employer.getJobs().isEmpty()) {
-			while(!employer.getSchedule().isEmpty()) {
-				//employer.getLock().lock();
-				//if(!employer.getSchedule().isEmpty()) {
-					((Job) employer.getSchedule().peek()).setAdmitted(employer.getTimer(), employeeID);
-					employer.getSchedule().poll().run();
-			//		employer.getLock().unlock();
-			//	} else {
-			//		employer.getLock().unlock();
-			//	}
-			}
-		}
+	//	while(employer.getConfig(6)!=0) {
+				while(!employer.getSchedule().isEmpty() || employer.getConfig(6)>0) {
+					try {
+					      while (true) {
+					        Runnable x = employer.getSchedule().take();
+					        ((Job) x).setAdmitted(employer.getTimer(), employeeID);
+					        x.run();
+					      }
+				    } catch (InterruptedException e) {
+				    	e.printStackTrace();
+				    }
+				}
+//	 	}
 	}
 
 	@Override
