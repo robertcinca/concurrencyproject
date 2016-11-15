@@ -11,6 +11,6 @@ public class Company {
 	
 	@Override
 	public String toString() {
-		return "This is company " + companyNo + " with a balance of " + balance +".";
+		return "company "+companyNo;
 	}
 }

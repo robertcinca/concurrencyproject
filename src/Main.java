@@ -9,28 +9,17 @@ public class Main {
 	
 	public static void main(String[] args) {
 		Reader reader = new Reader();
+		Bank bank = new Bank();
 		
-		config = reader.setup();
+		config = reader.setup(bank);
 		companies = reader.createEconomy();
-		//this is now a priorityblockingqueue
 		jobs = reader.assignJobs(companies);
 		
-		/**
-		 * Outputs the configuration details
-		 
-		for(int i=0; i<companies.length; i++) {
-			System.out.println(companies[i]);
-		}
-		System.out.println();
-		for(Runnable job : jobs) {
-			System.out.println(job.toString());
-		}
-		*/
-		
-		Bank bank = new Bank(config, jobs);
+		bank.setUpBank(config, jobs);
+
 		bank.doBusiness();
 		
-		System.out.println("checkMain2");
+		System.out.println("mainDone");
 	}
 	
 }

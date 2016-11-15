@@ -15,6 +15,7 @@ import java.util.concurrent.PriorityBlockingQueue;
 public class Reader {
 	
 	Properties prop;
+	Bank bank;
 	
 	public Reader() {
 		Scanner keyboard = new Scanner(System.in);
@@ -51,7 +52,8 @@ public class Reader {
 		}
 	}
 	
-	public int[] setup() {
+	public int[] setup(Bank bank) {
+		this.bank = bank;
 		int[] config = new int[6];	
 		config[0] = Integer.parseInt(prop.getProperty("M"));
 		config[1] = Integer.parseInt(prop.getProperty("T_d"));
@@ -70,12 +72,8 @@ public class Reader {
 			temp = (String) enumerate.nextElement();
 			if(temp.startsWith("Company")) {
 				i++;
-				//Checkpoint
-				System.out.println(i);
 			}
 		}
-		//Checkpoint
-		System.out.println("CompanyCheck");
 		Company[] companies = new Company[i];
 		for(int j=0; j<companies.length; j++) {
 			int balance = Integer.parseInt(prop.getProperty("Company" + (j+1)));
@@ -94,32 +92,25 @@ public class Reader {
 			if(temp1.startsWith("Time")) {
 				String[] parts = prop.getProperty(temp1).split("[.]");
 				for(int j=0; j<parts.length; j++) {
-				k++;
-				System.out.println("JobSize " + k);
+					k++;
 				}
 			}
 		}
-		//there is a problem with adding items to the blocking queue, i thought the enumeration or the initial queue size (11) was the problem, but it wasnt
-		//(the queue size could still become problematic once the input is bigger so ill keep this.
+		BlockingQueue<Runnable> jobs = new PriorityBlockingQueue<Runnable>(k);		
 		Enumeration<?> enumerate2 = prop.propertyNames();
-		BlockingQueue<Runnable> jobs = new PriorityBlockingQueue<Runnable>(k);			
 		String temp;
-		int i = 0;
 		while(enumerate2.hasMoreElements()) {
 			temp = (String) enumerate2.nextElement();
 			if(temp.startsWith("Time")) {
 				String[] parts = prop.getProperty(temp).split("[.]");
 				for(int j=0; j<parts.length; j++) {
 					String[] parts2 = parts[j].split(",");	
-					Employee emp = new Employee(Integer.parseInt(parts2[0].substring(8)), employer[Integer.parseInt(parts2[1].substring(7))-1]);
+					Employee emp = new Employee(Integer.parseInt(parts2[0].substring(8)), employer[Integer.parseInt(parts2[1].substring(7))-1], bank);
 					Job newJob = new Job(emp, Integer.parseInt(temp.substring(4)), parts2[2], Integer.parseInt(parts2[3]));
 					jobs.add(newJob);
-					i++;	
-					System.out.println("JobAdd " + i);
 				}			
 			}
 		}	
-		System.out.println("JobCheck");			
 		return jobs;
 	}
 	

@@ -1,25 +1,16 @@
 
 public class Job extends RunsPriority implements Comparable {
 
-	Employee employee;
-	String action;
-	int amount;
-	int time;
+	private Employee employee;
+	private String action;
+	private int amount;
+	private int time;
 	
 	public Job(Employee employee, int time, String action, int amount) {
 		this.employee = employee;
 		this.time = time;
 		this.action = action;
 		this.amount = amount;
-	}
-	
-	@Override
-	public String toString() {
-		if(amount>0) {
-			return "This is a " + action + " job over " + amount + " to be executed by " + employee + " at time " + time + ".";
-		} else {
-			return "This is a balance " + action + " to be executed by " + employee + " at time " + time + ".";
-		}
 	}
 
 	@Override
@@ -30,7 +21,11 @@ public class Job extends RunsPriority implements Comparable {
 
 	@Override
 	public void run() {
-		System.out.println(time + action + employee);
+		employee.doTask(action, amount);
+	}
+
+	public int getTime() {
+		return time;
 	}
 	
 }

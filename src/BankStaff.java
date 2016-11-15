@@ -11,25 +11,18 @@ public class BankStaff implements Runnable {
 
 	public void work() {
 		//reentrant lock in here? reference the bank class lock
-		while(!employer.schedule.isEmpty()) {
-			employer.schedule.poll().run();
-		}
+		//double while-is-empty loop for the second queue which has to be added
+		//lock from bank needs to be passed on
+		//while(!employer.getJobs().isEmpty()) {
+			while(!employer.getSchedule().isEmpty()) {
+				employer.getSchedule().poll().run();
+			}
+		//}
 	}
 
 	@Override
 	public void run() {
-		//this should notify the bank class once done so that can shut threads down
-		while(!employer.schedule.isEmpty()) {
-			work();
-			//System.out.println("bankstaff " + employeeID + " just chillin");
-			try {
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				e.printStackTrace();
-			}
-			System.out.println("stillalivebankstaff" + employeeID);
-		}
-		
+			work();		
 	}
 	
 	
