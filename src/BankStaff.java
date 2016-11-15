@@ -11,11 +11,15 @@ public class BankStaff implements Runnable {
 
 	public void work() {
 		while(!employer.getJobs().isEmpty()) {
-			//nullpointer occurence / lock might be useful / only one teller gets all the jobs? timing problem in the employee class
 			while(!employer.getSchedule().isEmpty()) {
-				//System.out.println("Teller " + employeeID);
-				((Job) employer.getSchedule().peek()).setAdmitted(employer.getTimer());
-				employer.getSchedule().poll().run();
+				//employer.getLock().lock();
+				//if(!employer.getSchedule().isEmpty()) {
+					((Job) employer.getSchedule().peek()).setAdmitted(employer.getTimer(), employeeID);
+					employer.getSchedule().poll().run();
+			//		employer.getLock().unlock();
+			//	} else {
+			//		employer.getLock().unlock();
+			//	}
 			}
 		}
 	}
@@ -23,6 +27,10 @@ public class BankStaff implements Runnable {
 	@Override
 	public void run() {
 			work();		
+	}
+	
+	public String toString() {
+		return Integer.toString(employeeID);
 	}
 	
 }

@@ -4,6 +4,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.PriorityBlockingQueue;
+import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Bank {
@@ -11,16 +12,16 @@ public class Bank {
 	- im not quite sure if this is perfectly in line with the task which says employeeids are assigned when the customer goes to the bank.
 	actually, in the input files the id is already assigned. i wish these people would learn english because thats bullshit
 	bank is already set fixed as well
-	- it might be better to continuoulsy add jobs to the blockingqueue depending on the timer but thats not as important right now
-	No this is actually important. EMPLOYEES ONLY GO INTO THE QUEUE IF ALL BANK STAFF IS BUSY. CHANGE NECESSARY
-	maybe a second blocking queue. if all bank staff is busy, the job would be put in that one, bankstaff also can only access that one. this would
-	lead to shutdown problems though / no, check if both queues are empty <- this is a good solution , also solves time problem
+	- the sleep method is not sufficient for the task, it only shows if the program is working. for submission, it has to be removed so the efficiency of the program can be
+	tested. locks need to be implemented
+	- we might have to search for bottlenecks as well
 	*/
 	
 	//no idea if lists are the best data structure for this
 	private List<BankStaff> staff;
 	private BlockingQueue<Runnable> jobs;
 	private BlockingQueue<Runnable> schedule;
+	private Lock lock;
 	private ExecutorService executor;	
 	private int timer = 0;
 	private int[] config;
@@ -32,31 +33,34 @@ public class Bank {
 		executor = Executors.newFixedThreadPool(config[0]);
 		staff = new LinkedList<BankStaff>();
 		for(int i=0; i<config[0]; i++) {
-			BankStaff bankStaff = new BankStaff(i, this);
+			BankStaff bankStaff = new BankStaff(i+1, this);
 			staff.add(bankStaff);
 		}
 	}
 
-	public void doBusiness() {
-		for(BankStaff bankstaff : staff) {
-			executor.execute(bankstaff);
-		}
-		while(!schedule.isEmpty()||!jobs.isEmpty()) {	
+	public void doBusiness() {	
+		while(!(schedule.isEmpty()&&jobs.isEmpty())) {
+			System.out.println("Timer = " + timer + " (J:" + jobs.size()+ " S:"+ schedule.size() + ")");
 			for(Runnable job : jobs) {
-				if(((Job) job).getTime() == timer) {
+				if(((Job) job).getTime() <= timer) {
 					schedule.add(job);
+					jobs.remove();
 				}
-			}		
-					
+			}
+			if(timer==0) {
+				for(BankStaff bankstaff : staff) {
+					executor.execute(bankstaff);
+				}
+			}
 			try {
-				Thread.sleep(2000);
+				Thread.sleep(20);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			//employees access the not-updated timer, another lock?
 			timer++;
-			System.out.println("Timer = " + timer);
-			
+			if(timer==20) {
+				System.out.println(jobs.poll());
+			}
 		}
 		executor.shutdown();	
 		System.out.println("ExecutorShutdown");
@@ -81,5 +85,12 @@ public class Bank {
 	public int getConfig(int x) {
 		return config[x];
 	}
+
+	
+	public Lock getLock() {
+		return lock;
+	}
+
+
 		
 }

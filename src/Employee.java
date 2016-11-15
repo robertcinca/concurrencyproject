@@ -3,9 +3,10 @@ public class Employee {
 
 	//private public needs checking in all classes / settergetter
 	private int employeeID;
-	private Company employer;
+	final private Company employer;
 	//bank is assigned when employee comes to bank (two queue system)
 	private Bank bank;
+	private int tellerNo;
 	
 	Employee(int ID, Company employer, Bank bank) {
 		this.employeeID = ID;
@@ -13,7 +14,8 @@ public class Employee {
 		this.bank = bank;
 	}
 	
-	public void doTask(String task, int amount, int admitted) {
+	public void doTask(String task, int amount, int admitted, int tellerNo) {
+		this.tellerNo = tellerNo;
 		if(task.equals("deposit")) {
 			deposit(amount, admitted);
 		} else if(task.equals("withdraw")) {
@@ -32,14 +34,15 @@ public class Employee {
 				break;
 			} else {
 				try {
-					Thread.sleep(500);
+					Thread.sleep(5);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
-		System.out.println("(" + bank.getTimer() + "). Employee " + employeeID + " deposits " + amount + " into " + employer + ". Admitted at time " +admitted);
+		System.out.println("(" + bank.getTimer() + "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", deposits "  +amount+
+				" into " +employer+ ". Admitted at time " +admitted);
 		employer.getLock().writeLock().unlock();
 	}
 	
@@ -51,14 +54,15 @@ public class Employee {
 				break;
 			} else {
 				try {
-					Thread.sleep(500);
+					Thread.sleep(5);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
-		System.out.println("(" + bank.getTimer() + "). Employee " + employeeID + " withdraws " + amount + " from " + employer + ". Admitted at time " +admitted);
+		System.out.println("(" + bank.getTimer() + "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", withdraws " +amount+
+				" from " +employer+ ". Admitted at time " +admitted);
 		employer.getLock().writeLock().unlock();
 	}
 	
@@ -69,14 +73,15 @@ public class Employee {
 				break;
 			} else {
 				try {
-					Thread.sleep(500);
+					Thread.sleep(5);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
 		}
-		System.out.println("(" + bank.getTimer() + "). Employee " + employeeID + " checks balance of " + employer + ". It is " + employer.getBalance() + ". Admitted at time " +admitted);
+		System.out.println("(" + bank.getTimer() + "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", checks balance of " +employer+
+				". It is " +employer.getBalance()+ ". Admitted at time " +admitted);
 		employer.getLock().readLock().unlock();
 	}
 	

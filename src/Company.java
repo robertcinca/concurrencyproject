@@ -9,7 +9,7 @@ public class Company {
 	public Company(int companyNo, int balance) {
 		this.companyNo = companyNo;
 		this.setBalance(balance);
-		setLock(new ReentrantReadWriteLock());
+		lock = new ReentrantReadWriteLock();
 	}
 	
 	@Override

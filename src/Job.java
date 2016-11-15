@@ -6,6 +6,7 @@ public class Job extends RunsPriority implements Comparable {
 	private int amount;
 	private int time;
 	private int admitted;
+	private int tellerNo;
 	
 	public Job(Employee employee, int time, String action, int amount) {
 		this.employee = employee;
@@ -22,15 +23,21 @@ public class Job extends RunsPriority implements Comparable {
 
 	@Override
 	public void run() {
-		employee.doTask(action, amount, admitted);
+		employee.doTask(action, amount, admitted, tellerNo);
 	}
 
 	public int getTime() {
 		return time;
 	}
 
-	public void setAdmitted(int admitted) {
+	public void setAdmitted(int admitted, int tellerNo) {
 		this.admitted = admitted;
+		this.tellerNo = tellerNo;
+	}
+	
+	@Override
+	public String toString() {
+		return  Integer.toString(time);
 	}
 	
 	
