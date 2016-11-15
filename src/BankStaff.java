@@ -10,12 +10,11 @@ public class BankStaff implements Runnable {
 	}
 
 	public void work() {
-		//reentrant lock in here? reference the bank class lock
-		//double while-is-empty loop for the second queue which has to be added
-		//lock from bank needs to be passed on
 		while(!employer.getJobs().isEmpty()) {
-			//nullpointer because the timer isnt imlemented in the other classes yet / a lock might be necessary nonetheless
+			//nullpointer occurence / lock might be useful / only one teller gets all the jobs? timing problem in the employee class
 			while(!employer.getSchedule().isEmpty()) {
+				//System.out.println("Teller " + employeeID);
+				((Job) employer.getSchedule().peek()).setAdmitted(employer.getTimer());
 				employer.getSchedule().poll().run();
 			}
 		}
@@ -25,6 +24,5 @@ public class BankStaff implements Runnable {
 	public void run() {
 			work();		
 	}
-	
 	
 }

@@ -1,16 +1,35 @@
+import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Company {
 
-	public int balance;
-	public int companyNo;
+	private int balance;
+	private int companyNo;
+	private ReentrantReadWriteLock lock;
 	
 	public Company(int companyNo, int balance) {
 		this.companyNo = companyNo;
-		this.balance = balance;
+		this.setBalance(balance);
+		setLock(new ReentrantReadWriteLock());
 	}
 	
 	@Override
 	public String toString() {
 		return "company "+companyNo;
+	}
+
+	public ReentrantReadWriteLock getLock() {
+		return lock;
+	}
+
+	public void setLock(ReentrantReadWriteLock lock) {
+		this.lock = lock;
+	}
+
+	public int getBalance() {
+		return balance;
+	}
+
+	public void setBalance(int balance) {
+		this.balance = balance;
 	}
 }

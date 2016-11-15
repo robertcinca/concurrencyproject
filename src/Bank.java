@@ -21,12 +21,13 @@ public class Bank {
 	private List<BankStaff> staff;
 	private BlockingQueue<Runnable> jobs;
 	private BlockingQueue<Runnable> schedule;
-	private ExecutorService executor;
-	public ReentrantReadWriteLock lock;
+	private ExecutorService executor;	
+	private int timer = 0;
+	private int[] config;
 	
 	public void setUpBank(int[] config, BlockingQueue<Runnable> jobs) {
-		lock = new ReentrantReadWriteLock();
 		this.jobs = jobs;
+		this.config = config;
 		schedule = new PriorityBlockingQueue<Runnable>(jobs.size());
 		executor = Executors.newFixedThreadPool(config[0]);
 		staff = new LinkedList<BankStaff>();
@@ -37,7 +38,6 @@ public class Bank {
 	}
 
 	public void doBusiness() {
-		int timer = 0;
 		for(BankStaff bankstaff : staff) {
 			executor.execute(bankstaff);
 		}
@@ -48,18 +48,18 @@ public class Bank {
 				}
 			}		
 					
-			//should wait for signal that executor threads are finished then shut them down. outer loop, inner loop maybe the timer?
 			try {
 				Thread.sleep(2000);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			//employees access the not-updated timer, another lock?
 			timer++;
-			System.out.println(timer);
+			System.out.println("Timer = " + timer);
 			
 		}
-		executor.shutdown();		
+		executor.shutdown();	
+		System.out.println("ExecutorShutdown");
 	}
 
 	public BlockingQueue<Runnable> getJobs() {
@@ -74,5 +74,12 @@ public class Bank {
 		return schedule;
 	}
 	
+	public int getTimer() {
+		return timer;
+	}
+	
+	public int getConfig(int x) {
+		return config[x];
+	}
 		
 }

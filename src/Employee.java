@@ -2,8 +2,8 @@
 public class Employee {
 
 	//private public needs checking in all classes / settergetter
-	public int employeeID;
-	public Company employer;
+	private int employeeID;
+	private Company employer;
 	//bank is assigned when employee comes to bank (two queue system)
 	private Bank bank;
 	
@@ -13,35 +13,71 @@ public class Employee {
 		this.bank = bank;
 	}
 	
-	public void doTask(String task, int amount) {
+	public void doTask(String task, int amount, int admitted) {
 		if(task.equals("deposit")) {
-			deposit(amount);
+			deposit(amount, admitted);
 		} else if(task.equals("withdraw")) {
-			withdraw(amount);
+			withdraw(amount, admitted);
 		} else {
-			checkBalance();
+			checkBalance(admitted);
 		}
 	}
 	
-	public void deposit(int amount) {
+	public void deposit(int amount, int admitted) {
 		//here one of the lockmechanisms presented in lecture should be implemented or trylock
-		bank.lock.writeLock().lock();
-		System.out.println("Employee " + employeeID + " deposits " + amount + " into " + employer);
-		employer.balance += amount;
-		bank.lock.writeLock().unlock();
+		employer.getLock().writeLock().lock();	
+		employer.setBalance(employer.getBalance() + amount);
+		while(true) {
+			if(bank.getTimer() >= admitted + bank.getConfig(1)) {
+				break;
+			} else {
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		System.out.println("(" + bank.getTimer() + "). Employee " + employeeID + " deposits " + amount + " into " + employer + ". Admitted at time " +admitted);
+		employer.getLock().writeLock().unlock();
 	}
 	
-	public void withdraw(int amount) {
-		bank.lock.writeLock().lock();
-		System.out.println("Employee " + employeeID + " withdraws " + amount + " from " + employer);
-		employer.balance -= amount;
-		bank.lock.writeLock().unlock();
+	public void withdraw(int amount, int admitted) {
+		employer.getLock().writeLock().lock();
+		employer.setBalance(employer.getBalance() - amount);
+		while(true) {
+			if(bank.getTimer() >= admitted + bank.getConfig(2)) {
+				break;
+			} else {
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		System.out.println("(" + bank.getTimer() + "). Employee " + employeeID + " withdraws " + amount + " from " + employer + ". Admitted at time " +admitted);
+		employer.getLock().writeLock().unlock();
 	}
 	
-	public void checkBalance() {
-		bank.lock.readLock().lock();
-		System.out.println("Employee " + employeeID + " checks balance of " + employer + ". It is " + employer.balance);
-		bank.lock.readLock().unlock();
+	public void checkBalance(int admitted) {
+		employer.getLock().readLock().lock();
+		while(true) {
+			if(bank.getTimer() >= admitted + bank.getConfig(3)) {
+				break;
+			} else {
+				try {
+					Thread.sleep(500);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+		System.out.println("(" + bank.getTimer() + "). Employee " + employeeID + " checks balance of " + employer + ". It is " + employer.getBalance() + ". Admitted at time " +admitted);
+		employer.getLock().readLock().unlock();
 	}
 	
 	@Override
