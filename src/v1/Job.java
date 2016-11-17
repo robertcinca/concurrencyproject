@@ -1,19 +1,34 @@
 package v1;
 
-public class Job extends RunsPriority implements Comparable<Job> {
+//this shit shouldnt be runnable
+
+public class Job implements Comparable<Job> {
 
 	private Employee employee;
-	private String action;
+	private int transactionType;
+	private int processingTime;
 	private int amount;
 	private int time;
 	private int admitted;
 	private int tellerNo;
 	
-	public Job(Employee employee, int time, String action, int amount) {
+	
+	public Job(Employee employee, int time, int transactionType, int amount, int processingTime) {
 		this.employee = employee;
 		this.time = time;
-		this.action = action;
+		this.transactionType = transactionType;
 		this.amount = amount;
+		this.processingTime = processingTime;
+	}
+	
+	public void setAdmitted(int admitted, int tellerNo) {
+		this.admitted = admitted;
+		this.tellerNo = tellerNo;
+	}
+	
+	public void execute(int timer) {
+		employee.doTask(transactionType, amount, admitted, tellerNo, timer);	
+		employee = null;
 	}
 
 	@Override
@@ -26,29 +41,17 @@ public class Job extends RunsPriority implements Comparable<Job> {
 			return 0;
 		}
 	}
-	
-	@Override
-	public void run() {
-		employee.doTask(action, amount, admitted, tellerNo);
-	}
 
 	public int getTime() {
 		return time;
 	}
-
-	public void setAdmitted(int admitted, int tellerNo) {
-		this.admitted = admitted;
-		this.tellerNo = tellerNo;
+	public int getAdmitted() {
+		return admitted;
 	}
-	
-	@Override
-	public String toString() {
-		return  employee + ", " + Integer.toString(time);
+	public int getProcessingTime() {
+		return processingTime;
 	}
 
-	
 
-
-	
 	
 }

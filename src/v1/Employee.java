@@ -1,93 +1,53 @@
 package v1;
 
+//all the actions in this task should return a value to teller instead of running in here. this makes it possible to implement cyclic barrier
+
 public class Employee {
 
-	//private public needs checking in all classes / settergetter
 	private int employeeID;
-	final private Company employer;
-	//bank is assigned when employee comes to bank (two queue system)
+	private Company employer;
 	private Bank bank;
-	private int tellerNo;
+
 	
-	Employee(int ID, Company employer, Bank bank) {
+	Employee(int ID, Company employer) {
 		this.employeeID = ID;
 		this.employer = employer;
-		this.bank = bank;
 	}
 	
-	public void doTask(String task, int amount, int admitted, int tellerNo) {
-		this.tellerNo = tellerNo;
-		if(task.equals("deposit")) {
-			deposit(amount, admitted);
-		} else if(task.equals("withdraw")) {
-			withdraw(amount, admitted);
+
+	public void doTask(int transactionType, int amount, int admitted, int tellerNo, int timer) {
+		if(transactionType == 1) {
+			deposit(amount, admitted, tellerNo, timer);
+		} else if(transactionType == 2) {
+			withdraw(amount, admitted, tellerNo, timer);
 		} else {
-			checkBalance(admitted);
+			checkBalance(admitted, tellerNo, timer);
 		}
 	}
 	
-	public void deposit(int amount, int admitted) {
+	private void deposit(int amount, int admitted, int tellerNo, int timer) {
 		//here one of the lockmechanisms presented in lecture should be implemented or trylock
 		employer.getLock().writeLock().lock();	
 		employer.setBalance(employer.getBalance() + amount);
-		while(true) {
-			if(bank.getTimer() >= admitted + bank.getConfig(1)) {
-				break;
-			} else {
-				try {
-					Thread.sleep(5);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}			
-			}
-		}
-		System.out.println("(" + bank.getTimer() + "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", deposits "  +amount+
+		System.out.println("(" +timer+ "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", deposits "  +amount+
 				" into " +employer+ ". Admitted at time " +admitted);
 		employer.getLock().writeLock().unlock();
 	}
 	
-	public void withdraw(int amount, int admitted) {
+	private void withdraw(int amount, int admitted, int tellerNo, int timer) {
 		employer.getLock().writeLock().lock();
 		employer.setBalance(employer.getBalance() - amount);
-		while(true) {
-			if(bank.getTimer() >= admitted + bank.getConfig(2)) {
-				break;
-			} else {
-				try {
-					Thread.sleep(5);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		}
-		System.out.println("(" + bank.getTimer() + "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", withdraws " +amount+
+		System.out.println("(" +timer+ "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", withdraws " +amount+
 				" from " +employer+ ". Admitted at time " +admitted);
 		employer.getLock().writeLock().unlock();
 	}
 	
-	public void checkBalance(int admitted) {
+	public void checkBalance(int admitted, int tellerNo, int timer) {
 		employer.getLock().readLock().lock();
-		while(true) {
-			if(bank.getTimer() >= admitted + bank.getConfig(3)) {
-				break;
-			} else {
-				try {
-					Thread.sleep(5);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		}
-		System.out.println("(" + bank.getTimer() + "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", checks balance of " +employer+
+		
+		System.out.println("(" +timer+ "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", checks balance of " +employer+
 				". It is " +employer.getBalance()+ ". Admitted at time " +admitted);
 		employer.getLock().readLock().unlock();
 	}
 	
-	@Override
-	public String toString() {
-		return "Employee " + employeeID;
-	}
 }
