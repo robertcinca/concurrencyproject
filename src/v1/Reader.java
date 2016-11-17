@@ -70,8 +70,7 @@ public class Reader {
 		config[2] = Integer.parseInt(prop.getProperty("T_w"));
 		config[3] = Integer.parseInt(prop.getProperty("T_b"));
 		config[4] = Integer.parseInt(prop.getProperty("T_in"));
-		config[5] = Integer.parseInt(prop.getProperty("T_out"));
-		
+		config[5] = Integer.parseInt(prop.getProperty("T_out"));	
 		createEconomy();
 	}
 	

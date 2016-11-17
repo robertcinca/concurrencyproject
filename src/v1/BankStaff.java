@@ -12,18 +12,22 @@ public class BankStaff implements Runnable {
 	public BankStaff(int i, Bank bank) {
 		this.tellerID = i;
 		this.employer = bank;
+		task = null;
 	}
 	
 	public void work() {
 		while(true) {	
 			
-			//there could be a second or maybe even third barrier up here so the job scheduling is synchronized as well, job reading in bank
-			//class must be done before this line
+			try {
+				employer.getBarrier1().await();
+			} catch (InterruptedException | BrokenBarrierException e1) {
+				e1.printStackTrace();
+			}
 			
 			//idling employees try to acquire new job
 			if(!busy){		
 				task = employer.getSchedule().poll();
-				if(!task.equals(null)) {
+				if(!(task == null)) {
 					busy = true;
 					task.setAdmitted(employer.getTimer(), tellerID);
 				}
@@ -37,12 +41,9 @@ public class BankStaff implements Runnable {
 					busy = false;
 				}
 			}
-			
-			//bankstaff could try to get a job from queue, if succesfull it is safed in a local variable and then each round it is changed until
-			//it can be executed. for that a row of references is called so that employee prints it out, but all the action stays in here
-			
+						
 			try {
-				employer.getBarrier().await();
+				employer.getBarrier2().await();
 			} catch (InterruptedException | BrokenBarrierException e) {
 				System.out.println("Teller " +tellerID+ " stuck at barrier.");
 			}
@@ -57,6 +58,10 @@ public class BankStaff implements Runnable {
 		System.out.println("Teller " +tellerID+ " starts his day. " + Thread.currentThread().getName());
 		work();
 		System.out.println("Teller " +tellerID+ " ends his day. " + Thread.currentThread().getName());
+	}
+	
+	public boolean getStatus() {
+		return busy;
 	}
 
 	

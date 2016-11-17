@@ -11,6 +11,7 @@ public class Job implements Comparable<Job> {
 	private int time;
 	private int admitted;
 	private int tellerNo;
+	private boolean queued;
 	
 	
 	public Job(Employee employee, int time, int transactionType, int amount, int processingTime) {
@@ -50,6 +51,12 @@ public class Job implements Comparable<Job> {
 	}
 	public int getProcessingTime() {
 		return processingTime;
+	}
+	public boolean getQueued() {
+		return queued;
+	}
+	public void setQueued(boolean x) {
+		this.queued = x;
 	}
 
 
