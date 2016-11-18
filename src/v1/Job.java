@@ -12,14 +12,18 @@ public class Job implements Comparable<Job> {
 	private int admitted;
 	private int tellerNo;
 	private boolean queued;
+	private int[] queueingTimes;
 	
 	
-	public Job(Employee employee, int time, int transactionType, int amount, int processingTime) {
+	public Job(Employee employee, int time, int transactionType, int amount, int processingTime, int T_in, int T_out ) {
 		this.employee = employee;
 		this.time = time;
 		this.transactionType = transactionType;
 		this.amount = amount;
 		this.processingTime = processingTime;
+		queueingTimes = new int[2];
+		this.queueingTimes[0] = T_in;
+		this.queueingTimes[1] = T_out;
 	}
 	
 	public void setAdmitted(int admitted, int tellerNo) {
@@ -57,6 +61,15 @@ public class Job implements Comparable<Job> {
 	}
 	public void setQueued(boolean x) {
 		this.queued = x;
+	}
+	public Employee getEmployee() {
+		return employee;
+	}
+	public int getQueueingTimes(int i) {
+		return queueingTimes[i];
+	}
+	public void setQueueingTimes(int i, int j) {
+		queueingTimes[i] = queueingTimes[i] + j;
 	}
 
 

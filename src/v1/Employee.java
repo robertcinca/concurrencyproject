@@ -29,25 +29,30 @@ public class Employee {
 		//here one of the lockmechanisms presented in lecture should be implemented or trylock
 		employer.getLock().writeLock().lock();	
 		employer.setBalance(employer.getBalance() + amount);
-		System.out.println("(" +timer+ "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", deposits "  +amount+
-				" into " +employer+ ". Admitted at time " +admitted);
+		System.out.println("(" +timer+ ") Employee " +employeeID+ ", with help of Teller " +tellerNo+ ", deposits "  +amount+
+				" into " +employer+ ". Admitted at time " +admitted+ ".");
 		employer.getLock().writeLock().unlock();
 	}
 	
 	private void withdraw(int amount, int admitted, int tellerNo, int timer) {
 		employer.getLock().writeLock().lock();
 		employer.setBalance(employer.getBalance() - amount);
-		System.out.println("(" +timer+ "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", withdraws " +amount+
-				" from " +employer+ ". Admitted at time " +admitted);
+		System.out.println("(" +timer+ ") Employee " +employeeID+ ", with help of Teller " +tellerNo+ ", withdraws " +amount+
+				" from " +employer+ ". Admitted at time " +admitted+ ".");
 		employer.getLock().writeLock().unlock();
 	}
 	
 	public void checkBalance(int admitted, int tellerNo, int timer) {
 		employer.getLock().readLock().lock();
 		
-		System.out.println("(" +timer+ "). Employee " +employeeID+ ", with help of teller " +tellerNo+ ", checks balance of " +employer+
-				". It is " +employer.getBalance()+ ". Admitted at time " +admitted);
+		System.out.println("(" +timer+ ") Employee " +employeeID+ ", with help of Teller " +tellerNo+ ", checks balance of " +employer+
+				". It is " +employer.getBalance()+ ". Admitted at time " +admitted+ ".");
 		employer.getLock().readLock().unlock();
+	}
+	
+	@Override
+	public String toString() {
+		return Integer.toString(employeeID);
 	}
 	
 }

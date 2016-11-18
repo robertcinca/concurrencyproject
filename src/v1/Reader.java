@@ -3,8 +3,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Enumeration;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.concurrent.PriorityBlockingQueue;
@@ -28,7 +26,7 @@ public class Reader {
 		Scanner keyboard = new Scanner(System.in);
 		int configNo;
 		do {
-			System.out.println("Which configuration should be run? (1-2)");
+			System.out.println("Which configuration should be run? (1-3)");
 			while(!keyboard.hasNextInt()) {
 				System.out.println("This is not a number.");
 				keyboard.next();
@@ -106,13 +104,12 @@ public class Reader {
 		PriorityBlockingQueue<Job> list = new PriorityBlockingQueue<Job>();
 		while(enumerate.hasMoreElements()) {
 			temp = (String) enumerate.nextElement();
-			if(temp.startsWith("Time" + timer)) {
+			if(temp.equals("Time" + timer)) {
 				String[] parts = prop.getProperty(temp).split("[.]");
 				for(int j=0; j<parts.length; j++) {
 					String[] parts2 = parts[j].split(",");	
 					Employee emp = new Employee(Integer.parseInt(parts2[0].substring(8)),
-							companies[Integer.parseInt(parts2[1].substring(7))-1]);
-					
+							companies[Integer.parseInt(parts2[1].substring(7))-1]);	
 					int transactionType;
 					if(parts2[2].equals("deposit")) {
 						transactionType = 1;
@@ -121,15 +118,40 @@ public class Reader {
 					} else {
 						transactionType = 3;
 					}
-					
 					//calls the only constructor in job and fills it
 					Job newJob = new Job(emp, Integer.parseInt(temp.substring(4)), transactionType,
-							Integer.parseInt(parts2[3]), config[transactionType]);
+							Integer.parseInt(parts2[3]), config[transactionType], config[4], config[5]);
 					list.add(newJob);
 				}			
 			}
 		}	
 		return list;
+	}
+	
+	public boolean isDone(int timer) {
+		boolean isDone = false;
+		String temp; 
+		Enumeration<?> enumerate1 = prop.propertyNames();	
+		int i = 0;
+		while(enumerate1.hasMoreElements()) {
+			temp = (String) enumerate1.nextElement();
+			if(temp.startsWith("Time")) {
+				i++;
+			}
+		}
+		Enumeration<?> enumerate2 = prop.propertyNames();
+		while(enumerate2.hasMoreElements()) {
+			temp = (String) enumerate2.nextElement();
+			for(int j=0; j<timer; j++) {
+				if(temp.equals("Time" + j)) {
+					i--;
+				}
+			}
+		}
+		if(i==0) {
+			isDone = true;
+		}
+		return isDone;
 	}
 	
 	public int getConfig(int x) {

@@ -15,12 +15,41 @@ public class BankStaff implements Runnable {
 		task = null;
 	}
 	
-	public void work() {
+	@Override
+	public void run() {
+		System.out.println("Teller " +tellerID+ " starts his day. Start " + Thread.currentThread().getName());
 		while(true) {	
 			
+			//all tellers that have a job do that now, this should maybe done before the first barrier, there might be a need for a third one			
+			if(busy) {
+				//T_in AND T_out ARE NOT YET IMPLEMENTED!!!!!!!!!!
+				if(task.getAdmitted() + task.getProcessingTime() <= employer.getTimer()) {
+					if(task.getQueued()) {
+						if(task.getQueueingTimes(1)<=0) {
+							task.setQueued(false);
+						} else {
+							task.setQueueingTimes(1, -1);
+						}
+					} else {
+						task.execute(employer.getTimer());
+						task = null;
+						busy = false;
+					}
+				}
+			}
+			
+			//this barrier is used so tellers can finish tasks before the new busycount and schedule allocation is done
 			try {
 				employer.getBarrier1().await();
 			} catch (InterruptedException | BrokenBarrierException e1) {
+				e1.printStackTrace();
+			}
+			
+			//this barrier is used so scheduling can be done before tellers pick tasks from the schedule
+			try {
+				employer.getBarrier2().await();
+			} catch (InterruptedException | BrokenBarrierException e1) {
+				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			
@@ -30,34 +59,29 @@ public class BankStaff implements Runnable {
 				if(!(task == null)) {
 					busy = true;
 					task.setAdmitted(employer.getTimer(), tellerID);
+					System.out.println("("+employer.getTimer()+") Teller " +tellerID+ " takes on Employee " +task.getEmployee()+ ".");
 				}
 			}
 			
-			//all tellers that have a job do that now
-			if(busy) {
-				if(task.getAdmitted() + task.getProcessingTime() == employer.getTimer()) {
-					task.execute(employer.getTimer());
-					task = null;
-					busy = false;
-				}
-			}
-						
+			//wait for employees to finish their turn so the timer can be incremented			
 			try {
-				employer.getBarrier2().await();
+				employer.getBarrier3().await();
 			} catch (InterruptedException | BrokenBarrierException e) {
-				System.out.println("Teller " +tellerID+ " stuck at barrier.");
+				e.printStackTrace();
 			}
 			
-			//check for kill condition to terminate this thread in bank class. bank has to set the signal if it know that all threads are done,
-			//otherwise the barriers will block everything
+			try {
+				employer.getBarrier4().await();
+			} catch (InterruptedException | BrokenBarrierException e) {
+				e.printStackTrace();
+			}
+			
+			if(employer.getDone()) {
+				break;
+			}
+			
 		}
-	}
-	
-	@Override
-	public void run() {
-		System.out.println("Teller " +tellerID+ " starts his day. " + Thread.currentThread().getName());
-		work();
-		System.out.println("Teller " +tellerID+ " ends his day. " + Thread.currentThread().getName());
+		System.out.println("Teller " +tellerID+ " ends his day. Kill " + Thread.currentThread().getName());
 	}
 	
 	public boolean getStatus() {
