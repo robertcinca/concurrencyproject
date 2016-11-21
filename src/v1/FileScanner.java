@@ -28,10 +28,10 @@ import java.util.concurrent.PriorityBlockingQueue;
 
 public class FileScanner {
 	
-	private Scanner reader;
+	private String data;
 	//Contains in this particular order: M, T_d, T_w, T_b, T_in, T_out
 	private int[] config;
-	private LinkedList<Company> companies;
+	private Company[] companies;
 	
 	/**
 	 * Sets up the reader and asks which configuration should be run
@@ -48,14 +48,7 @@ public class FileScanner {
 			configNo = keyboard.nextInt();
 		} while(configNo<=0);
 		keyboard.close();			
-		String dat = "config" + configNo + ".txt";
-		
-		try {
-			reader = new Scanner(new File("resources/" + dat));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		}
-
+		data = "resources/config" + configNo + ".txt";
 	}
 	
 	/**
@@ -63,15 +56,21 @@ public class FileScanner {
 	 * reads the config file and retrieves all the configuration variables.
 	 */
 	public void setup() {
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(new File(data));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		config = new int[6];
 		String temp;
-		while(reader.hasNext()) {
-			temp = reader.next();
+		while(scanner.hasNext()) {
+			temp = scanner.next();
 			if(temp.equals("M")) {
 				for(int j=0; j<6; j++) {
-					config[j] = Integer.parseInt(reader.next());
+					config[j] = Integer.parseInt(scanner.next());
 					if(j!=5) {
-						reader.next();
+						scanner.next();
 					}
 				}
 				break;
@@ -84,31 +83,50 @@ public class FileScanner {
 	 * Searches the config for company entries, creates an array, and fills it with companies and their corresponding balance
 	 */
 	private void createEconomy() {
-		companies = new LinkedList<Company>();
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(new File(data));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		String temp; 
-		int i = 1;
-		while(reader.hasNext()) {
-			temp = reader.next();
-			if(temp.equals("Time")) {
+		int i = 0;
+		while(scanner.hasNext()) {
+			temp = scanner.next();
+			if(temp.startsWith("Time")) {
 				break;
 			}
-			System.out.println(temp);
 			if(temp.startsWith("Company")) {
-				reader.next();
-				String balance = reader.next();
-				//cuts the dollar sign
-				balance = balance.substring(1);	
-				//cuts out the commas
-				int balanceInt = Integer.valueOf(balance.replaceAll(",", "").toString());	
-				Company corporation = new Company(i, balanceInt);
-				companies.add(corporation);
 				i++;
 			}
 		}
-		for(Company company : companies) {
-			System.out.println(company);
+		scanner.close();
+		companies = new Company[i];
+		Scanner scanner2 = null;
+		try {
+			scanner2 = new Scanner(new File(data));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} 
+		int j = 1;
+		while(scanner2.hasNext()) {
+			temp = scanner2.next();
+			if(temp.equals("Time")) {
+				break;
+			}
+			if(temp.startsWith("Company")) {
+				scanner2.next();
+				temp = scanner2.next();
+				//cuts the dollar sign
+				temp = temp.substring(1);	
+				//cuts out the commas
+				int balanceInt = Integer.valueOf(temp.replaceAll(",", "").toString());	
+				Company corporation = new Company(j, balanceInt);
+				companies[j-1] = corporation;
+				j++;
+			}
 		}
-
+		scanner2.close();
 	}
 	
 	/**
@@ -117,58 +135,108 @@ public class FileScanner {
 	 * @return a list which contains the events at timer, if any
 	 */
 	public PriorityBlockingQueue<Job> assignJobs(int timer) {
-		Enumeration<?> enumerate = prop.propertyNames();
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(new File(data));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		String temp;
+		int size;
 		PriorityBlockingQueue<Job> list = new PriorityBlockingQueue<Job>();
-		while(enumerate.hasMoreElements()) {
-			temp = (String) enumerate.nextElement();
-			if(temp.equals("Time" + timer)) {
-				String[] parts = prop.getProperty(temp).split("[.]");
-				for(int j=0; j<parts.length; j++) {
-					String[] parts2 = parts[j].split(",");	
-					Employee emp = new Employee(Integer.parseInt(parts2[0].substring(8)),
-							companies[Integer.parseInt(parts2[1].substring(7))-1]);	
+		while(scanner.hasNext()) {
+			temp = scanner.next();
+			if(temp.equals("Time")) {
+				temp = scanner.next();
+				size = temp.length();
+				temp = temp.substring(0, size-1);
+				int x = Integer.parseInt(temp);
+				if(x == timer) {	
+					scanner.next();
+					int id = Integer.parseInt(scanner.next());
+					//takes the next value and cuts out the companypart
+					temp = scanner.next();
+					size = temp.length();
+					int employer = Integer.parseInt((temp.substring(7, size-1)));
+					Employee emp = new Employee(id, companies[(employer-1)]);	
+					
 					int transactionType;
-					if(parts2[2].equals("deposit")) {
+					int amount = 0;
+					temp = scanner.next();
+					
+					if(temp.equals("deposit")) {
 						transactionType = 1;
-					} else if(parts2[2].equals("withdraw")) {
+						String amountTemp = scanner.next();
+						//cuts the dollar sign
+						amountTemp = amountTemp.substring(1);	
+						//cuts out the commas
+						amount = Integer.valueOf(amountTemp.replaceAll(",", "").toString());					
+					} else if(temp.equals("withdrawal")) {
 						transactionType = 2;
+						String amountTemp = scanner.next();
+						//cuts the dollar sign
+						amountTemp = amountTemp.substring(1);	
+						//cuts out the commas
+						amount = Integer.valueOf(amountTemp.replaceAll(",", "").toString());				
 					} else {
 						transactionType = 3;
-					}
+						amount = 0;
+					}	
 					//calls the only constructor in job and fills it
-					Job newJob = new Job(emp, Integer.parseInt(temp.substring(4)), transactionType,
-							Integer.parseInt(parts2[3]), config[transactionType], config[4], config[5]);
-					list.add(newJob);
+					Job newJob = new Job(emp, timer, transactionType,
+							amount , config[transactionType], config[4], config[5]);
+					list.add(newJob);	
 				}			
 			}
 		}	
+		scanner.close();
 		return list;
 	}
 	
+	/**
+	 * 
+	 */
 	public boolean isDone(int timer) {
+		Scanner scanner = null;
+		try {
+			scanner = new Scanner(new File(data));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
 		boolean isDone = false;
 		String temp; 
-		Enumeration<?> enumerate1 = prop.propertyNames();	
 		int i = 0;
-		while(enumerate1.hasMoreElements()) {
-			temp = (String) enumerate1.nextElement();
-			if(temp.startsWith("Time")) {
+		while(scanner.hasNext()) {
+			temp = scanner.next();
+			if(temp.equals("Time")) {
 				i++;
 			}
 		}
-		Enumeration<?> enumerate2 = prop.propertyNames();
-		while(enumerate2.hasMoreElements()) {
-			temp = (String) enumerate2.nextElement();
-			for(int j=0; j<timer; j++) {
-				if(temp.equals("Time" + j)) {
-					i--;
+		scanner.close();
+		Scanner scanner2 = null;
+		try {
+			scanner2 = new Scanner(new File(data));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		while(scanner2.hasNext()) {
+			temp = scanner2.next();
+			if(temp.equals("Time")) {
+				temp = scanner2.next();
+				int size = temp.length();
+				temp = temp.substring(0, size-1);
+				int x = Integer.parseInt(temp);
+				for(int j=0; j<timer; j++) {
+					if(x ==j) {
+						i--;
+					}
 				}
 			}
 		}
 		if(i==0) {
 			isDone = true;
 		}
+		scanner2.close();
 		return isDone;
 	}
 	

@@ -22,7 +22,6 @@ public class BankStaff implements Runnable {
 			
 			//all tellers that have a job do that now, this should maybe done before the first barrier, there might be a need for a third one			
 			if(busy) {
-				//T_in AND T_out ARE NOT YET IMPLEMENTED!!!!!!!!!!
 				if(task.getAdmitted() + task.getProcessingTime() <= employer.getTimer()) {
 					if(task.getQueued()) {
 						if(task.getQueueingTimes(1)<=0) {

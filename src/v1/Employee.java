@@ -6,8 +6,6 @@ public class Employee {
 
 	private int employeeID;
 	private Company employer;
-	private Bank bank;
-
 	
 	Employee(int ID, Company employer) {
 		this.employeeID = ID;
@@ -44,7 +42,6 @@ public class Employee {
 	
 	public void checkBalance(int admitted, int tellerNo, int timer) {
 		employer.getLock().readLock().lock();
-		
 		System.out.println("(" +timer+ ") Employee " +employeeID+ ", with help of Teller " +tellerNo+ ", checks balance of " +employer+
 				". It is " +employer.getBalance()+ ". Admitted at time " +admitted+ ".");
 		employer.getLock().readLock().unlock();

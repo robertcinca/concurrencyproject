@@ -6,13 +6,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		FileScanner reader = new FileScanner();
-		reader.setup();
-		
-		for(int i = 0; i<6; i++) {
-			System.out.println(reader.getConfig(i));
-		}
-		
-		/**
+		reader.setup();	
 		Bank bank = new Bank(reader);
 				
 		System.out.println("Bank is now open");
@@ -24,7 +18,6 @@ public class Main {
 		}
 		
 		System.out.println("Bank is now closed");
-		**/
 	}
 	
 		
