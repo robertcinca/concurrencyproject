@@ -1,7 +1,5 @@
 package v1;
 
-//this shit shouldnt be runnable
-
 public class Job implements Comparable<Job> {
 
 	private Employee employee;

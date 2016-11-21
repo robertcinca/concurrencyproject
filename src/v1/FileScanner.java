@@ -1,8 +1,16 @@
 package v1;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.text.NumberFormat;
+import java.text.ParseException;
 import java.util.Enumeration;
+import java.util.LinkedList;
+import java.util.Locale;
 import java.util.Properties;
 import java.util.Scanner;
 import java.util.concurrent.PriorityBlockingQueue;
@@ -14,6 +22,7 @@ import java.util.concurrent.PriorityBlockingQueue;
  * strictly text and have another format. So no property files
  * https://www.cs.swarthmore.edu/~newhall/unixhelp/Java_files.html
  * http://stackoverflow.com/questions/731365/reading-and-displaying-data-from-a-txt-file
+ * http://stackoverflow.com/questions/8877483/how-to-read-data-from-a-text-file-and-save-some-data-from-it-to-an-array
  * use scanner class for this
  */
 
@@ -22,7 +31,7 @@ public class FileScanner {
 	private Scanner reader;
 	//Contains in this particular order: M, T_d, T_w, T_b, T_in, T_out
 	private int[] config;
-	private Company[] companies;
+	private LinkedList<Company> companies;
 	
 	/**
 	 * Sets up the reader and asks which configuration should be run
@@ -38,28 +47,15 @@ public class FileScanner {
 			}
 			configNo = keyboard.nextInt();
 		} while(configNo<=0);
-		keyboard.close();
-		prop = new Properties();
-		InputStream input = null;		
+		keyboard.close();			
+		String dat = "config" + configNo + ".txt";
+		
 		try {
-			String propFileName = "config" + configNo + ".properties";
-			input = getClass().getClassLoader().getResourceAsStream(propFileName);
-			if (input != null) {
-				prop.load(input);
-			} else {
-				throw new FileNotFoundException();
-			}	
-		} catch (IOException ex) {
-			ex.printStackTrace();
-		} finally {
-			if (input != null) {
-				try {
-					input.close();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
+			reader = new Scanner(new File("resources/" + dat));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
 		}
+
 	}
 	
 	/**
@@ -67,13 +63,20 @@ public class FileScanner {
 	 * reads the config file and retrieves all the configuration variables.
 	 */
 	public void setup() {
-		config = new int[6];	
-		config[0] = Integer.parseInt(prop.getProperty("M"));
-		config[1] = Integer.parseInt(prop.getProperty("T_d"));
-		config[2] = Integer.parseInt(prop.getProperty("T_w"));
-		config[3] = Integer.parseInt(prop.getProperty("T_b"));
-		config[4] = Integer.parseInt(prop.getProperty("T_in"));
-		config[5] = Integer.parseInt(prop.getProperty("T_out"));	
+		config = new int[6];
+		String temp;
+		while(reader.hasNext()) {
+			temp = reader.next();
+			if(temp.equals("M")) {
+				for(int j=0; j<6; j++) {
+					config[j] = Integer.parseInt(reader.next());
+					if(j!=5) {
+						reader.next();
+					}
+				}
+				break;
+			}
+		}
 		createEconomy();
 	}
 	
@@ -81,21 +84,31 @@ public class FileScanner {
 	 * Searches the config for company entries, creates an array, and fills it with companies and their corresponding balance
 	 */
 	private void createEconomy() {
-		Enumeration<?> enumerate = prop.propertyNames();
+		companies = new LinkedList<Company>();
 		String temp; 
-		int i = 0;
-		while(enumerate.hasMoreElements()) {
-			temp = (String) enumerate.nextElement();
+		int i = 1;
+		while(reader.hasNext()) {
+			temp = reader.next();
+			if(temp.equals("Time")) {
+				break;
+			}
+			System.out.println(temp);
 			if(temp.startsWith("Company")) {
+				reader.next();
+				String balance = reader.next();
+				//cuts the dollar sign
+				balance = balance.substring(1);	
+				//cuts out the commas
+				int balanceInt = Integer.valueOf(balance.replaceAll(",", "").toString());	
+				Company corporation = new Company(i, balanceInt);
+				companies.add(corporation);
 				i++;
 			}
 		}
-		companies = new Company[i];
-		for(int j=0; j<companies.length; j++) {
-			int balance = Integer.parseInt(prop.getProperty("Company" + (j+1)));
-			Company corporation = new Company(j+1, balance);
-			companies[j] = corporation;
+		for(Company company : companies) {
+			System.out.println(company);
 		}
+
 	}
 	
 	/**

@@ -7,7 +7,7 @@ import java.util.concurrent.PriorityBlockingQueue;
 
 public class Bank {
 	
-	private Reader reader;
+	private FileScanner reader;
 	private PriorityBlockingQueue<Job> schedule;
 	//is used for adding jobs
 	private PriorityBlockingQueue<Job> temp;
@@ -25,7 +25,7 @@ public class Bank {
 	/**
 	 * Sets up the bank as well as its tellers and saves all needed informations for the remainder of the program in local variables
 	 */
-	public Bank(Reader reader) {
+	public Bank(FileScanner reader) {
 		this.reader = reader;
 		this.timer = 0;
 		this.done = false;
