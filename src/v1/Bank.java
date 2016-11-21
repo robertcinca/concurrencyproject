@@ -61,6 +61,7 @@ public class Bank {
 			e2.printStackTrace();
 		}
 		System.out.println("----- Time = " +timer+ " -----");
+		
 		//MAIN LOOP
 		while(true) {
 			
@@ -103,6 +104,7 @@ public class Bank {
 			///this barrier is used so scheduling can be done before tellers pick tasks from the schedule
 			barrier2.await();
 			
+			//checks if all tasks are done
 			if(busyCount==0 && schedule.isEmpty() && queue.isEmpty() && reader.isDone(timer)) {
 				done=true;
 				System.out.println("All jobs are done");
@@ -128,17 +130,14 @@ public class Bank {
 		Thread.sleep(4);
 	}
 	
-	public CyclicBarrier getBarrier1() {
-		return barrier1;
-	}
-	public CyclicBarrier getBarrier2() {
-		return barrier2;
-	}
-	public CyclicBarrier getBarrier3() {
-		return barrier3;
-	}
-	public CyclicBarrier getBarrier4() {
-		return barrier4;
+	public CyclicBarrier getBarrier(int barrierNo) {
+		switch(barrierNo) {
+		case 1: return barrier1;
+		case 2: return barrier2;
+		case 3: return barrier3;
+		case 4: return barrier4;
+		default: return barrier1;
+		}
 	}
 
 	public int getTimer() {

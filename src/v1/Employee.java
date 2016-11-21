@@ -13,36 +13,54 @@ public class Employee {
 	}
 	
 
-	public void doTask(int transactionType, int amount, int admitted, int tellerNo, int timer, int arrived) {
+	public void doTask(int transactionType, int amount, int admitted, int timer, int arrived, int processingTime, BankStaff teller) {
 		if(transactionType == 1) {
-			deposit(amount, admitted, tellerNo, timer, arrived);
+			deposit(amount, processingTime, admitted, teller, timer, arrived);
 		} else if(transactionType == 2) {
-			withdraw(amount, admitted, tellerNo, timer, arrived);
+			withdraw(amount, processingTime, admitted, teller, timer, arrived);
 		} else {
-			checkBalance(admitted, tellerNo, timer, arrived);
+			checkBalance(admitted, processingTime, teller, timer, arrived);
 		}
 	}
 	
-	private void deposit(int amount, int admitted, int tellerNo, int timer, int arrived) {
-		//here one of the lockmechanisms presented in lecture should be implemented or trylock
-		employer.getLock().writeLock().lock();	
+	private void deposit(int amount, int processingTime, int admitted, BankStaff teller, int timer, int arrived) {
+		//there is a problem when employees are waiting to acquire a lock, they are not passing barriers
+		employer.getLock().writeLock().lock();
+		while(teller.getEmployer().getTimer() < (admitted +processingTime)) {
+			teller.awaitBarrier(1);
+			teller.awaitBarrier(2);
+			teller.awaitBarrier(3);
+			teller.awaitBarrier(4);
+		}
 		employer.setBalance(employer.getBalance() + amount);
-		System.out.println("(" +timer+ ") Employee " +employeeID+ ", with help of Teller " +tellerNo+ ", deposits "  +amount+
+		System.out.println("(" +timer+ ") Employee " +employeeID+ ", with help of Teller " +teller.getID()+ ", deposits "  +amount+
 				" into " +employer+ ". Admitted at time " +admitted+ ", arrived at " +arrived);
 		employer.getLock().writeLock().unlock();
 	}
 	
-	private void withdraw(int amount, int admitted, int tellerNo, int timer, int arrived) {
+	private void withdraw(int amount, int processingTime, int admitted, BankStaff teller, int timer, int arrived) {
 		employer.getLock().writeLock().lock();
+		while(teller.getEmployer().getTimer() < (admitted +processingTime)) {
+			teller.awaitBarrier(1);
+			teller.awaitBarrier(2);
+			teller.awaitBarrier(3);
+			teller.awaitBarrier(4);
+		}
 		employer.setBalance(employer.getBalance() - amount);
-		System.out.println("(" +timer+ ") Employee " +employeeID+ ", with help of Teller " +tellerNo+ ", withdraws " +amount+
+		System.out.println("(" +timer+ ") Employee " +employeeID+ ", with help of Teller " +teller.getID()+ ", withdraws " +amount+
 				" from " +employer+ ". Admitted at time " +admitted+ ", arrived at " +arrived);
 		employer.getLock().writeLock().unlock();
 	}
 	
-	public void checkBalance(int admitted, int tellerNo, int timer, int arrived) {
+	public void checkBalance(int admitted, int processingTime, BankStaff teller, int timer, int arrived) {
 		employer.getLock().readLock().lock();
-		System.out.println("(" +timer+ ") Employee " +employeeID+ ", with help of Teller " +tellerNo+ ", checks balance of " +employer+
+		while(teller.getEmployer().getTimer() < (admitted +processingTime)) {
+			teller.awaitBarrier(1);
+			teller.awaitBarrier(2);
+			teller.awaitBarrier(3);
+			teller.awaitBarrier(4);
+		}
+		System.out.println("(" +timer+ ") Employee " +employeeID+ ", with help of Teller " +teller.getID()+ ", checks balance of " +employer+
 				". It is " +employer.getBalance()+ ". Admitted at time " +admitted+ ", arrived at " +arrived);
 		employer.getLock().readLock().unlock();
 	}

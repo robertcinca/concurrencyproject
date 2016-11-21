@@ -3,17 +3,17 @@ package v1;
 public class Job implements Comparable<Job> {
 
 	private Employee employee;
+	private BankStaff teller;
 	private int transactionType;
 	private int processingTime;
 	private int amount;
 	private int time;
 	private int admitted;
-	private int tellerNo;
 	private boolean queued;
 	private int[] queueingTimes;
 	
 	
-	public Job(Employee employee, int time, int transactionType, int amount, int processingTime, int T_in, int T_out ) {
+	public Job(Employee employee, int time, int transactionType, int amount, int processingTime, int T_in, int T_out) {
 		this.employee = employee;
 		this.time = time;
 		this.transactionType = transactionType;
@@ -24,13 +24,13 @@ public class Job implements Comparable<Job> {
 		this.queueingTimes[1] = T_out;
 	}
 	
-	public void setAdmitted(int admitted, int tellerNo) {
+	public void setAdmitted(int admitted, BankStaff teller) {
 		this.admitted = admitted;
-		this.tellerNo = tellerNo;
+		this.teller = teller;
 	}
 	
 	public void execute(int timer) {
-		employee.doTask(transactionType, amount, admitted, tellerNo, timer, time);	
+		employee.doTask(transactionType, amount, admitted, timer, time, processingTime, teller);	
 		employee = null;
 	}
 
