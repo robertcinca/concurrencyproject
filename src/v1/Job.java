@@ -30,7 +30,7 @@ public class Job implements Comparable<Job> {
 	}
 	
 	public void execute(int timer) {
-		employee.doTask(transactionType, amount, admitted, tellerNo, timer);	
+		employee.doTask(transactionType, amount, admitted, tellerNo, timer, time);	
 		employee = null;
 	}
 
