@@ -18,8 +18,7 @@ public class BankStaff implements Runnable {
 	@Override
 	public void run() {
 		System.out.println("Teller " +tellerID+ " starts his day. Start " + Thread.currentThread().getName());
-		while(true) {	
-			
+		while(true) {		
 			//all tellers that have a job do that now, this should maybe done before the first barrier, there might be a need for a third one			
 			if(busy) {
 				if(task.getAdmitted() + task.getProcessingTime() <= employer.getTimer()) {
@@ -57,7 +56,11 @@ public class BankStaff implements Runnable {
 				task = employer.getSchedule().poll();
 				if(!(task == null)) {
 					busy = true;
-					task.setAdmitted(employer.getTimer(), tellerID);
+					if(task.getQueued()==true) { 
+						task.setAdmitted((employer.getTimer()+task.getQueueingTimes(1)), tellerID);
+					} else {
+						task.setAdmitted(employer.getTimer(), tellerID);
+					}
 					System.out.println("("+employer.getTimer()+") Teller " +tellerID+ " takes on Employee " +task.getEmployee()+ ".");
 				}
 			}

@@ -61,6 +61,7 @@ public class Bank {
 			e2.printStackTrace();
 		}
 		System.out.println("----- Time = " +timer+ " -----");
+		//MAIN LOOP
 		while(true) {
 			
 			//this barrier is used so tellers can finish tasks before the new busycount and schedule allocation is done
