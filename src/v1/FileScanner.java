@@ -10,11 +10,16 @@ import java.util.concurrent.PriorityBlockingQueue;
 /**
  * @author Lorenz
  * Don't touch code, magic!
+ * This actually needs to be redone. The prof uploaded some new files, they are
+ * strictly text and have another format. So no property files
+ * https://www.cs.swarthmore.edu/~newhall/unixhelp/Java_files.html
+ * http://stackoverflow.com/questions/731365/reading-and-displaying-data-from-a-txt-file
+ * use scanner class for this
  */
 
-public class Reader {
+public class FileScanner {
 	
-	private Properties prop;
+	private Scanner reader;
 	//Contains in this particular order: M, T_d, T_w, T_b, T_in, T_out
 	private int[] config;
 	private Company[] companies;
@@ -22,7 +27,7 @@ public class Reader {
 	/**
 	 * Sets up the reader and asks which configuration should be run
 	 */
-	public Reader() {
+	public FileScanner() {
 		Scanner keyboard = new Scanner(System.in);
 		int configNo;
 		do {

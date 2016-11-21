@@ -1,0 +1,121 @@
+// input file 2
+
+M 10
+T_d 3
+T_w 3
+T_b 3
+T_in 1
+T_out 1
+
+Company1 balance $20,000,000
+Company2 balance $300,000,000
+Company3 balance $210,000,000
+Company4 balance $260,000,000
+Company5 balance $340,000,000
+Company6 balance $190,000,000
+Company7 balance $410,000,000
+Company8 balance $420,000,000
+Company9 balance $320,000,000
+Company10 balance $310,000,000
+
+
+Time 0: Employee 1 Company2; withdrawal $2200
+Time 2: Employee 2 Company3; check balance
+Time 3: Employee 3 Company9; check balance
+Time 4: Employee 4 Company4; deposit $4300
+Time 4: Employee 5 Company7; deposit $3200
+Time 4: Employee 6 Company1; withdrawal $3100
+Time 5: Employee 7 Company1; withdrawal $4500
+Time 5: Employee 8 Company7; withdrawal $100
+Time 5: Employee 9 Company3; deposit $3400
+Time 7: Employee 10 Company6; check balance
+Time 7: Employee 11 Company3; withdrawal $2300
+Time 7: Employee 12 Company6; check balance
+Time 9: Employee 13 Company3; withdrawal $2400
+Time 9: Employee 14 Company7; check balance
+Time 10: Employee 15 Company10; withdrawal $800
+Time 10: Employee 16 Company5; check balance
+Time 11: Employee 17 Company5; deposit $3300
+Time 11: Employee 18 Company6; withdrawal $2500
+Time 12: Employee 19 Company3; deposit $3500
+Time 12: Employee 20 Company3; check balance
+Time 12: Employee 21 Company5; check balance
+Time 12: Employee 22 Company9; check balance
+Time 12: Employee 23 Company7; withdrawal $1400
+Time 12: Employee 24 Company7; withdrawal $1700
+Time 14: Employee 25 Company10; check balance
+Time 14: Employee 26 Company2; withdrawal $4800
+Time 16: Employee 27 Company7; deposit $4700
+Time 16: Employee 28 Company6; check balance
+Time 16: Employee 29 Company1; withdrawal $800
+Time 16: Employee 30 Company5; deposit $4400
+Time 16: Employee 31 Company2; deposit $3200
+Time 16: Employee 32 Company7; deposit $2300
+Time 18: Employee 33 Company4; check balance
+Time 18: Employee 34 Company8; withdrawal $2400
+Time 20: Employee 35 Company5; check balance
+Time 21: Employee 36 Company3; deposit $1200
+Time 21: Employee 37 Company5; deposit $3900
+Time 21: Employee 38 Company5; check balance
+Time 21: Employee 39 Company10; deposit $2900
+Time 21: Employee 40 Company4; withdrawal $2900
+Time 21: Employee 41 Company2; withdrawal $4700
+Time 22: Employee 42 Company3; deposit $500
+Time 22: Employee 43 Company4; withdrawal $1300
+Time 24: Employee 44 Company8; check balance
+Time 24: Employee 45 Company3; check balance
+Time 24: Employee 46 Company3; check balance
+Time 26: Employee 47 Company6; check balance
+Time 26: Employee 48 Company4; withdrawal $2700
+Time 26: Employee 49 Company8; deposit $1900
+Time 26: Employee 50 Company2; deposit $4000
+Time 26: Employee 51 Company10; deposit $1700
+Time 26: Employee 52 Company2; check balance
+Time 26: Employee 53 Company4; withdrawal $1400
+Time 26: Employee 54 Company4; deposit $1400
+Time 26: Employee 55 Company8; check balance
+Time 27: Employee 56 Company5; check balance
+Time 27: Employee 57 Company10; withdrawal $800
+Time 27: Employee 58 Company8; deposit $4800
+Time 28: Employee 59 Company2; deposit $3700
+Time 28: Employee 60 Company4; deposit $1600
+Time 29: Employee 61 Company1; deposit $2400
+Time 29: Employee 62 Company4; withdrawal $4900
+Time 29: Employee 63 Company9; check balance
+Time 30: Employee 64 Company8; check balance
+Time 30: Employee 65 Company1; deposit $2200
+Time 30: Employee 66 Company4; check balance
+Time 31: Employee 67 Company10; deposit $2800
+Time 31: Employee 68 Company3; check balance
+Time 33: Employee 69 Company3; withdrawal $2900
+Time 33: Employee 70 Company6; deposit $4900
+Time 33: Employee 71 Company6; deposit $100
+Time 33: Employee 72 Company10; withdrawal $1200
+Time 35: Employee 73 Company3; deposit $2400
+Time 36: Employee 74 Company7; withdrawal $3300
+Time 37: Employee 75 Company3; withdrawal $2100
+Time 38: Employee 76 Company2; check balance
+Time 38: Employee 77 Company9; check balance
+Time 38: Employee 78 Company4; withdrawal $4700
+Time 40: Employee 79 Company4; deposit $1600
+Time 41: Employee 80 Company7; check balance
+Time 42: Employee 81 Company1; check balance
+Time 44: Employee 82 Company1; check balance
+Time 44: Employee 83 Company2; withdrawal $3200
+Time 46: Employee 84 Company5; deposit $3700
+Time 47: Employee 85 Company8; deposit $3800
+Time 47: Employee 86 Company5; deposit $1000
+Time 49: Employee 87 Company7; deposit $2200
+Time 49: Employee 88 Company4; withdrawal $2600
+Time 49: Employee 89 Company1; deposit $2000
+Time 49: Employee 90 Company6; deposit $4400
+Time 50: Employee 91 Company3; deposit $1300
+Time 50: Employee 92 Company10; check balance
+Time 51: Employee 93 Company8; withdrawal $600
+Time 51: Employee 94 Company10; check balance
+Time 51: Employee 95 Company10; withdrawal $800
+Time 52: Employee 96 Company3; deposit $4300
+Time 52: Employee 97 Company9; deposit $200
+Time 52: Employee 98 Company2; check balance
+Time 52: Employee 99 Company2; withdrawal $3600
+Time 54: Employee 100 Company4; withdrawal $2800

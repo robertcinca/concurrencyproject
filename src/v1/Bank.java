@@ -60,7 +60,7 @@ public class Bank {
 		} catch (InterruptedException e2) {
 			e2.printStackTrace();
 		}
-		System.out.println("XXX Time=" +timer);
+		System.out.println("----- Time = " +timer+ " -----");
 		while(true) {
 			
 			//this barrier is used so tellers can finish tasks before the new busycount and schedule allocation is done
