@@ -81,6 +81,7 @@ public class Bank {
 				queued.setQueueingTimes(0, -1);
 				if((busyCount - reader.getConfig(0) < 0) && queued.getQueueingTimes(0)<=0) {
 					schedule.add(queued);
+					busyCount++;
 					queue.remove(queued);
 					System.out.println("(" +timer+ ") Employee " +queued.getEmployee()+ " steps out of queue.");
 				}

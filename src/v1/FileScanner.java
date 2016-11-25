@@ -7,12 +7,6 @@ import java.util.concurrent.PriorityBlockingQueue;
 /**
  * @author Lorenz
  * Don't touch code, magic!
- * This actually needs to be redone. The prof uploaded some new files, they are
- * strictly text and have another format. So no property files
- * https://www.cs.swarthmore.edu/~newhall/unixhelp/Java_files.html
- * http://stackoverflow.com/questions/731365/reading-and-displaying-data-from-a-txt-file
- * http://stackoverflow.com/questions/8877483/how-to-read-data-from-a-text-file-and-save-some-data-from-it-to-an-array
- * use scanner class for this
  */
 
 public class FileScanner {
@@ -38,13 +32,15 @@ public class FileScanner {
 		} while(configNo<=0);
 		keyboard.close();			
 		data = "resources/config" + configNo + ".txt";
+		setup();
+		createEconomy();
 	}
 	
 	/**
 	 * fills the reader class with more details so main can pass it on to bank.
 	 * reads the config file and retrieves all the configuration variables.
 	 */
-	public void setup() {
+	private void setup() {
 		Scanner scanner = null;
 		try {
 			scanner = new Scanner(new File(data));
@@ -58,14 +54,11 @@ public class FileScanner {
 			if(temp.equals("M")) {
 				for(int j=0; j<6; j++) {
 					config[j] = Integer.parseInt(scanner.next());
-					if(j!=5) {
-						scanner.next();
-					}
+					scanner.next();
 				}
 				break;
 			}
 		}
-		createEconomy();
 	}
 	
 	/**
@@ -175,7 +168,9 @@ public class FileScanner {
 					Job newJob = new Job(emp, timer, transactionType,
 							amount , config[transactionType], config[4], config[5]);
 					list.add(newJob);	
-				}			
+				} else if(x>timer) {
+					break;
+				}
 			}
 		}	
 		scanner.close();

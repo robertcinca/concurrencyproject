@@ -1,6 +1,6 @@
 // input file 3
 
-M 20
+M 5
 T_d 3
 T_w 3
 T_b 3
