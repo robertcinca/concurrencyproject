@@ -24,6 +24,7 @@ public class BankFrame {
 	private static JScrollPane scroll = new JScrollPane(jTextArea1, 
 			JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
 			JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+	private final JButton btnRestartProgram = new JButton("Exit Program");
 	
 	
 	/**
@@ -87,8 +88,6 @@ public class BankFrame {
 					System.out.println("Please use console to manually enter a file number.");
 					chosenNumber = "4"; 
 				}
-				  
-
 				
 				int chosenFileNumber = Integer.parseInt(chosenNumber);
 				run(chosenFileNumber); //To run program
@@ -97,8 +96,29 @@ public class BankFrame {
 		btnStartTheBusiness.setForeground(Color.BLUE);
 		btnStartTheBusiness.setBackground(Color.PINK);
 		btnStartTheBusiness.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
-		btnStartTheBusiness.setBounds(126, 6, 182, 54);
+		btnStartTheBusiness.setBounds(31, 6, 182, 54);
 		frame.getContentPane().add(btnStartTheBusiness);
+		
+		btnRestartProgram.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String[] restartBox = { "Return to program","Exit program"};
+
+				String restartAnswer = (String) JOptionPane.showInputDialog(frame, 
+				        "How do you wish to proceed?",
+				        "WARNING!",
+				        JOptionPane.QUESTION_MESSAGE, 
+				        null, 
+				        restartBox, 
+				        restartBox[0]); 
+				if (restartAnswer == "Exit program"){
+					System.exit(0);
+				}
+			}
+		});
+		btnRestartProgram.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
+		btnRestartProgram.setForeground(Color.RED);
+		btnRestartProgram.setBounds(242, 6, 182, 54);
+		frame.getContentPane().add(btnRestartProgram);
 		
 	}
 	
@@ -165,5 +185,4 @@ public class BankFrame {
 	    System.setOut(new PrintStream(out, true));
 	    System.setErr(new PrintStream(out, true));
 	  }
- 	
 }
