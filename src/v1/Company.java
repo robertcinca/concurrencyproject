@@ -1,4 +1,5 @@
 package v1;
+
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 public class Company {
@@ -33,4 +34,5 @@ public class Company {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
+	
 }

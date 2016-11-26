@@ -1,13 +1,9 @@
 package v1;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.concurrent.PriorityBlockingQueue;
-
-/**
- * @author Lorenz
- * Don't touch code, magic!
- */
 
 public class FileScanner {
 	
@@ -136,35 +132,27 @@ public class FileScanner {
 				if(x == timer) {	
 					scanner.next();
 					int id = Integer.parseInt(scanner.next());
-					//takes the next value and cuts out the companypart
-					temp = scanner.next();
+					temp = scanner.next(); //takes the next value and cuts out the companypart
 					size = temp.length();
 					int employer = Integer.parseInt((temp.substring(7, size-1)));
-					Employee emp = new Employee(id, companies[(employer-1)]);	
-					
+					Employee emp = new Employee(id, companies[(employer-1)]);		
 					int transactionType;
 					int amount = 0;
 					temp = scanner.next();
-					
 					if(temp.equals("deposit")) {
 						transactionType = 1;
 						String amountTemp = scanner.next();
-						//cuts the dollar sign
-						amountTemp = amountTemp.substring(1);	
-						//cuts out the commas
-						amount = Integer.valueOf(amountTemp.replaceAll(",", "").toString());					
+						amountTemp = amountTemp.substring(1); //cuts the dollar sign
+						amount = Integer.valueOf(amountTemp.replaceAll(",", "").toString()); //cuts out the commas			
 					} else if(temp.equals("withdrawal")) {
 						transactionType = 2;
-						String amountTemp = scanner.next();
-						//cuts the dollar sign
-						amountTemp = amountTemp.substring(1);	
-						//cuts out the commas
-						amount = Integer.valueOf(amountTemp.replaceAll(",", "").toString());				
+						String amountTemp = scanner.next();	
+						amountTemp = amountTemp.substring(1); //cuts the dollar sign	
+						amount = Integer.valueOf(amountTemp.replaceAll(",", "").toString()); //cuts out the commas				
 					} else {
 						transactionType = 3;
 						amount = 0;
 					}	
-					//calls the only constructor in job and fills it
 					Job newJob = new Job(emp, timer, transactionType,
 							amount , config[transactionType], config[4], config[5]);
 					list.add(newJob);	
@@ -178,7 +166,7 @@ public class FileScanner {
 	}
 	
 	/**
-	 * 
+	 * Checks if there are more jobs to do in the .txt file
 	 */
 	public boolean isDone(int timer) {
 		Scanner scanner = null;

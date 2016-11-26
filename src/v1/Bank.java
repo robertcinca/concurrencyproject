@@ -8,22 +8,20 @@ import java.util.concurrent.PriorityBlockingQueue;
 public class Bank {
 	
 	private FileScanner reader;
-	private PriorityBlockingQueue<Job> schedule;
-	//is used for adding jobs
-	private PriorityBlockingQueue<Job> temp;
-	//this queue represents the actual queue
-	private PriorityBlockingQueue<Job> queue;
+	private PriorityBlockingQueue<Job> schedule; //jobs that are now under work
+	private PriorityBlockingQueue<Job> temp; //an auxiliary queue used for adding jobs
+	private PriorityBlockingQueue<Job> queue; //represents the actual queue
 	private LinkedList<BankStaff> employees;
-	private int timer;
+	private int timer; //global timer
 	private CyclicBarrier barrier1;
 	private CyclicBarrier barrier2;
 	private CyclicBarrier barrier3;
 	private CyclicBarrier barrier4;
-	private int busyCount;
-	private boolean done;
+	private int busyCount; //number of busy tellers
+	private boolean done; //is the program done?
 	
 	/**
-	 * Sets up the bank as well as its tellers and saves all needed informations for the remainder of the program in local variables
+	 * Sets up the bank as well as its tellers and saves all needed informations (especially reader) for the remainder of the program in local variables
 	 */
 	public Bank(FileScanner reader) {
 		this.reader = reader;
@@ -44,40 +42,32 @@ public class Bank {
 	
 	/**
 	 * This method is the program's core method. It runs in a loop, fetches new jobs, handles the thread queue and
-	 * the global time variable.
-	 * @throws BrokenBarrierException 
-	 * @throws InterruptedException 
+	 * manages the global time variable.
+	 * For better understanding, especially of the concurrent mechanisms, his method is visualized in the report which is turned in as
+	 * a hardcopy.
 	 */
-	public void doBusiness() throws InterruptedException, BrokenBarrierException {	
-		//starts all the threads
-		for(BankStaff employee : employees) {
+	public void doBusiness()  {	
+		for(BankStaff employee : employees) { //starts all the threads
 			Thread thread = new Thread(employee);
 			thread.start();
 		}
-		//gives threads time to start
-		try {
+		try { //gives threads time to start
 			Thread.sleep(1);
 		} catch (InterruptedException e2) {
 			e2.printStackTrace();
 		}
 		System.out.println("----- Time = " +timer+ " -----");
-		
-		//MAIN LOOP
-		while(true) {
+		while(true) { //MAIN LOOP
 			
-			//this barrier is used so tellers can finish tasks before the new busycount and schedule allocation is done
-			barrier1.await();
+			awaitBarrier(1); //used so tellers can finish tasks before the new busycount and schedule allocation is done
 			
-			//counts how many employees are currently busy
-			busyCount = 0;
+			busyCount = 0; //counts how many employees are currently busy
 			for(BankStaff employee : employees) {
 				if(employee.getStatus()) {
 					busyCount++;
 				}
-			}
-			
-			//check if employees can step out of the queue
-			for(Job queued : queue) {
+			}	
+			for(Job queued : queue) { //check if employees can step out of the queue
 				queued.setQueueingTimes(0, -1);
 				if((busyCount - reader.getConfig(0) < 0) && queued.getQueueingTimes(0)<=0) {
 					schedule.add(queued);
@@ -86,64 +76,83 @@ public class Bank {
 					System.out.println("(" +timer+ ") Employee " +queued.getEmployee()+ " steps out of queue.");
 				}
 			}
-			
-			//reads from the config and distributes job either to the queue or directly to the schedule
-			temp = reader.assignJobs(timer);
+			temp = reader.assignJobs(timer); //reads all jobs that arrive at timer and distributes them either to the queue or directly to the schedule
 			for(Job job : temp) {
-				//when all tellers are busy, employees dont get added to the schedule but have to walk to the queue
-				if(busyCount - reader.getConfig(0) < 0) {
+				if(busyCount - reader.getConfig(0) < 0) { //job is added to schedule if teller available
 					schedule.add(job);	
 					busyCount++;
-				} else {
+				} else { //job is added to queue if all telelrs are busy
 					job.setQueued(true);
-					//tellers should compare priority of jobs they take, queued jobs have lower priority,
 					System.out.println("(" +timer+ ") Employee " +job.getEmployee()+ " is going to the queue");
 					queue.add(job);
 				}
 			}
 			
-			///this barrier is used so scheduling can be done before tellers pick tasks from the schedule
-			barrier2.await();
+			awaitBarrier(2); //used so scheduling can be done before tellers pick tasks from the schedule
 			
-			//checks if all tasks are done
-			if(busyCount==0 && schedule.isEmpty() && queue.isEmpty() && reader.isDone(timer)) {
+			if(busyCount==0 && schedule.isEmpty() && queue.isEmpty() && reader.isDone(timer)) { //checks if all tasks are done
 				done=true;
 				System.out.println("All jobs are done");
 			}
 			
-			//wait for employees to finish their turn so the timer can be incremented
-			barrier3.await();
+			awaitBarrier(3); //wait for employees to finish their turn so the timer can be incremented
 		
-			timer++;
+			timer++; //increments global time
 			if(!done) {
 				System.out.println("----- Time = " +timer+ " -----");
 			}
 			
-			barrier4.await();
+			awaitBarrier(4);
 			
 			if(done==true) {
 				break;
 			}
 		
 		}
-		
-		//give workers chance to end day
-		Thread.sleep(4);
+		try { //give workers chance to end day, makes output nice
+			Thread.sleep(4);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		} 
 	}
 	
-	public CyclicBarrier getBarrier(int barrierNo) {
+	/**
+	 * This is used to give all other threads access to the CyclicBarriers, thus public. It is all contained within one method to make 
+	 * the code more readable, since the await() instruction is called quite often and requires a try-multicatch every single time.
+	 */
+	public void awaitBarrier(int barrierNo) {
 		switch(barrierNo) {
-		case 1: return barrier1;
-		case 2: return barrier2;
-		case 3: return barrier3;
-		case 4: return barrier4;
-		default: return barrier1;
+		case 1: try {
+				barrier1.await();
+			} catch (InterruptedException | BrokenBarrierException e) {
+				e.printStackTrace();
+			}
+			break;
+		case 2: try {
+				 barrier2.await();
+			} catch (InterruptedException | BrokenBarrierException e) {
+				e.printStackTrace();
+			}
+			break;
+		case 3: try {
+				barrier3.await();
+			} catch (InterruptedException | BrokenBarrierException e) {
+				e.printStackTrace();
+			}
+			break;
+		case 4: try {
+				barrier4.await();
+			} catch (InterruptedException | BrokenBarrierException e) {
+				e.printStackTrace();
+			}
+			break;
+		default: break;
 		}
 	}
 
 	public int getTimer() {
 		return timer;
-	}
+	}	
 	
 	public PriorityBlockingQueue<Job> getSchedule() {
 		return schedule;

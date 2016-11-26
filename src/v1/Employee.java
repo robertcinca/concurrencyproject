@@ -2,8 +2,6 @@ package v1;
 
 import java.util.concurrent.TimeUnit;
 
-//all the actions in this task should return a value to teller instead of running in here. this makes it possible to implement cyclic barrier
-
 public class Employee {
 
 	private int employeeID;
@@ -14,7 +12,6 @@ public class Employee {
 		this.employer = employer;
 	}
 	
-
 	public void doTask(int transactionType, int amount, int admitted, int timer, int arrived, int processingTime, BankStaff teller) {
 		if(transactionType == 1) {
 			deposit(amount, processingTime, admitted, teller, arrived);
@@ -26,26 +23,25 @@ public class Employee {
 	}
 	
 	private void deposit(int amount, int processingTime, int admitted, BankStaff teller, int arrived) {
-		//there is a problem when employees are waiting to acquire a lock, they are not passing barriers
 		while(true) {
 			try {
 				if(employer.getLock().writeLock().tryLock(0, TimeUnit.SECONDS)) {
 					break;
 				} else {
-					teller.awaitBarrier(1);
-					teller.awaitBarrier(2);
-					teller.awaitBarrier(3);
-					teller.awaitBarrier(4);
+					teller.getEmployer().awaitBarrier(1);
+					teller.getEmployer().awaitBarrier(2);
+					teller.getEmployer().awaitBarrier(3);
+					teller.getEmployer().awaitBarrier(4);
 				}
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
 		while(teller.getEmployer().getTimer() < (admitted +processingTime)) {
-			teller.awaitBarrier(1);
-			teller.awaitBarrier(2);
-			teller.awaitBarrier(3);
-			teller.awaitBarrier(4);
+			teller.getEmployer().awaitBarrier(1);
+			teller.getEmployer().awaitBarrier(2);
+			teller.getEmployer().awaitBarrier(3);
+			teller.getEmployer().awaitBarrier(4);
 		}
 		employer.setBalance(employer.getBalance() + amount);
 		System.out.println("(" +teller.getEmployer().getTimer()+ ") Employee " +employeeID+ ", with help of Teller " +teller.getID()+ ", deposits $"  +amount+
@@ -59,20 +55,20 @@ public class Employee {
 				if(employer.getLock().writeLock().tryLock(0, TimeUnit.SECONDS)) {
 					break;
 				} else {
-					teller.awaitBarrier(1);
-					teller.awaitBarrier(2);
-					teller.awaitBarrier(3);
-					teller.awaitBarrier(4);
+					teller.getEmployer().awaitBarrier(1);
+					teller.getEmployer().awaitBarrier(2);
+					teller.getEmployer().awaitBarrier(3);
+					teller.getEmployer().awaitBarrier(4);
 				}
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
 		while(teller.getEmployer().getTimer() < (admitted +processingTime)) {
-			teller.awaitBarrier(1);
-			teller.awaitBarrier(2);
-			teller.awaitBarrier(3);
-			teller.awaitBarrier(4);
+			teller.getEmployer().awaitBarrier(1);
+			teller.getEmployer().awaitBarrier(2);
+			teller.getEmployer().awaitBarrier(3);
+			teller.getEmployer().awaitBarrier(4);
 		}
 		employer.setBalance(employer.getBalance() - amount);
 		System.out.println("(" +teller.getEmployer().getTimer()+ ") Employee " +employeeID+ ", with help of Teller " +teller.getID()+ ", withdraws $" +amount+
@@ -86,20 +82,20 @@ public class Employee {
 				if(employer.getLock().readLock().tryLock(0, TimeUnit.SECONDS)) {
 					break;
 				} else {
-					teller.awaitBarrier(1);
-					teller.awaitBarrier(2);
-					teller.awaitBarrier(3);
-					teller.awaitBarrier(4);
+					teller.getEmployer().awaitBarrier(1);
+					teller.getEmployer().awaitBarrier(2);
+					teller.getEmployer().awaitBarrier(3);
+					teller.getEmployer().awaitBarrier(4);
 				}
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 		}
 		while(teller.getEmployer().getTimer() < (admitted +processingTime)) {
-			teller.awaitBarrier(1);
-			teller.awaitBarrier(2);
-			teller.awaitBarrier(3);
-			teller.awaitBarrier(4);
+			teller.getEmployer().awaitBarrier(1);
+			teller.getEmployer().awaitBarrier(2);
+			teller.getEmployer().awaitBarrier(3);
+			teller.getEmployer().awaitBarrier(4);
 		}
 		System.out.println("(" +teller.getEmployer().getTimer()+ ") Employee " +employeeID+ ", with help of Teller " +teller.getID()+ ", checks balance of " +employer+
 				". It is $" +employer.getBalance()+ ". Admitted at time " +admitted+ ", arrived at " +arrived);

@@ -12,7 +12,6 @@ public class Job implements Comparable<Job> {
 	private boolean queued;
 	private int[] queueingTimes;
 	
-	
 	public Job(Employee employee, int time, int transactionType, int amount, int processingTime, int T_in, int T_out) {
 		this.employee = employee;
 		this.time = time;
@@ -63,7 +62,5 @@ public class Job implements Comparable<Job> {
 	public void setQueueingTimes(int i, int j) {
 		queueingTimes[i] = queueingTimes[i] + j;
 	}
-
-
 	
 }

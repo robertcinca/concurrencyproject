@@ -1,7 +1,5 @@
 package v1;
 
-import java.util.concurrent.BrokenBarrierException;
-
 public class BankStaff implements Runnable {
 
 	private Bank employer;
@@ -15,65 +13,26 @@ public class BankStaff implements Runnable {
 		task = null;
 	}
 	
-	//this makes away with a lot of annoying try catch declarations
-	public void awaitBarrier(int barrierNo) {
-		switch(barrierNo) {
-		case 1: try {
-				employer.getBarrier(1).await();
-			} catch (InterruptedException | BrokenBarrierException e) {
-				e.printStackTrace();
-			}
-			break;
-		case 2: try {
-				employer.getBarrier(2).await();
-			} catch (InterruptedException | BrokenBarrierException e) {
-				e.printStackTrace();
-			}
-			break;
-		case 3: try {
-				employer.getBarrier(3).await();
-			} catch (InterruptedException | BrokenBarrierException e) {
-				e.printStackTrace();
-			}
-			break;
-		case 4: try {
-				employer.getBarrier(4).await();
-			} catch (InterruptedException | BrokenBarrierException e) {
-				e.printStackTrace();
-			}
-			break;
-		default: break;
-		}
-	}
-	
 	@Override
 	public void run() {
 		System.out.println("Teller " +tellerID+ " starts his day. Start " + Thread.currentThread().getName());
-		while(true) {		
-			//all tellers that have a job do that now, this should maybe done before the first barrier, there might be a need for a third one			
-			if(busy) {
-				if(task.getQueued()) {
+		while(true) { //MAIN LOOP FOR TELLER			
+			if(busy) { //if teller has job, work on that now
+				if(task.getQueued()) { //is the task coming from the queue
 					if(task.getQueueingTimes(1)<=0) {
 						task.setQueued(false);
 					} else {
-						task.setQueueingTimes(1, -1);
+						task.setQueueingTimes(1, -1); //decrements T_out
 					}
 				} else {	
-					//this should solve the concurrency problem described in the last commit
-					task.execute(employer.getTimer());
-					busy = false;
+					task.execute(employer.getTimer()); //executes assigned task
+					busy = false; //after task is executed (linear thread), employee is not busy and task is null
 					task = null;
 				}
-			}
-			
-			//This barrier is used so tellers can finish tasks before the new busycount and schedule allocation is done
-			awaitBarrier(1);
-			
-			//this barrier is used so scheduling can be done before tellers pick tasks from the schedule
-			awaitBarrier(2);
-			
-			//idling employees try to acquire new job
-			if(!busy){		
+			}					
+			employer.awaitBarrier(1); //used so tellers can finish tasks before the new busycount and schedule allocation is done			
+			employer.awaitBarrier(2); //used so scheduling can be done before tellers pick tasks from the schedule	
+			if(!busy){	//idling employees try to acquire new job	
 				task = employer.getSchedule().poll();
 				if(!(task == null)) {
 					busy = true;
@@ -84,17 +43,12 @@ public class BankStaff implements Runnable {
 					}
 					System.out.println("("+employer.getTimer()+") Teller " +tellerID+ " takes on Employee " +task.getEmployee()+ ".");
 				}
-			}
-			
-			//wait for employees to finish their turn so the timer can be incremented			
-			awaitBarrier(3);
-			
-			awaitBarrier(4);
-			
+			}				
+			employer.awaitBarrier(3); //wait for employees to finish their turn so the timer can be incremented	
+			employer.awaitBarrier(4);
 			if(employer.getDone()) {
 				break;
 			}
-			
 		}
 		System.out.println("Teller " +tellerID+ " ends his day. Kill " + Thread.currentThread().getName());
 	}
@@ -110,6 +64,5 @@ public class BankStaff implements Runnable {
 	public int getID() {
 		return tellerID;
 	}
-
 	
 }
