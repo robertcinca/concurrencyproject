@@ -58,9 +58,7 @@ public class Bank {
 		}
 		System.out.println("----- Time = " +timer+ " -----");
 		while(true) { //MAIN LOOP
-			
 			awaitBarrier(1); //used so tellers can finish tasks before the new busycount and schedule allocation is done
-			
 			busyCount = 0; //counts how many employees are currently busy
 			for(BankStaff employee : employees) {
 				if(employee.getStatus()) {
@@ -87,27 +85,20 @@ public class Bank {
 					queue.add(job);
 				}
 			}
-			
 			awaitBarrier(2); //used so scheduling can be done before tellers pick tasks from the schedule
-			
 			if(busyCount==0 && schedule.isEmpty() && queue.isEmpty() && reader.isDone(timer)) { //checks if all tasks are done
 				done=true;
 				System.out.println("All jobs are done");
-			}
-			
+			}	
 			awaitBarrier(3); //wait for employees to finish their turn so the timer can be incremented
-		
 			timer++; //increments global time
 			if(!done) {
 				System.out.println("----- Time = " +timer+ " -----");
 			}
-			
-			awaitBarrier(4);
-			
+			awaitBarrier(4);	
 			if(done==true) {
 				break;
-			}
-		
+			}	
 		}
 		try { //give workers chance to end day, makes output nice
 			Thread.sleep(4);
