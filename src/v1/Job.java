@@ -35,14 +35,8 @@ public class Job implements Comparable<Job> {
 	}
 
 	@Override
-	public int compareTo(Job o) {
-		if( o.getTime() < time) {
-			return -1;
-		} else if( o.getTime() > time) {
-			return 1;
-		} else {
-			return 0;
-		}
+	public int compareTo(Job other) {
+		return Integer.compare(this.time, other.time);
 	}
 
 	public int getTime() {
