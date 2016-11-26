@@ -11,12 +11,14 @@ public class FileScanner {
 	//Contains in this particular order: M, T_d, T_w, T_b, T_in, T_out
 	private int[] config;
 	private Company[] companies;
-	private boolean fileExists;
 	
 	/**
 	 * Sets up the reader and asks which configuration should be run
 	 */
 	public FileScanner(int chosenFileNumber) {
+		boolean fileExists;
+		boolean printStream = true;
+		//If Option 'Other' is selected in GUI, this manual selection will run in the console.
 		if (chosenFileNumber == 4) {
 			Scanner keyboard = new Scanner(System.in);
 			do {
@@ -30,22 +32,47 @@ public class FileScanner {
 				data = "resources/config" + chosenFileNumber + ".txt";
 				File varTmpDir = new File(data);
 				fileExists = varTmpDir.exists();
-				if (fileExists)
+				if (!fileExists)
+					System.out.println("This is not a valid file name.");
+			} while(fileExists == false);
+			
+			System.out.println("File exists!");
+			System.out.println("Do you wish to print results in Console or Frame?");
+			System.out.println("(Enter 'console' or 'frame')");
+			
+			String manualConfigRun;
+			boolean manualConfigRunBool;
+			
+			do {
+				manualConfigRun = keyboard.next();
+				
+				if (manualConfigRun.equals("console") || manualConfigRun.equals("frame"))
 				{
-					break;
+					manualConfigRunBool = true;
 					
+					switch(manualConfigRun) {
+					   case "console" :
+						   printStream = false;
+					      break;
+					   
+					   default : 
+					      break;
+					}
 				}
 				else
 				{
-					System.out.println("This is not a valid file name.");
+					manualConfigRunBool = false;
+					System.out.println("This is not a valid selection. Please try again.");
+					System.out.println("Hint: enter console or frame.");
 				}
-			} while(fileExists == false);
+			} while(manualConfigRunBool == false);
+			
 			keyboard.close();
 		}
 		
-		
 		data = "resources/config" + chosenFileNumber + ".txt";
 		
+		BankFrame.printStream(printStream);
 		setup();
 		createEconomy();
 

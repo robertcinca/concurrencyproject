@@ -1,7 +1,5 @@
 package v1;
 
-import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -21,7 +19,7 @@ import javax.swing.JTextArea;
 public class BankFrame {
 
 	JFrame frame;
-	private JTextArea jTextArea1 = new JTextArea();
+	private static JTextArea jTextArea1 = new JTextArea();
 	
 	/**
 	 * Launch the application. Only needed if you want to run the Interface on its own.
@@ -59,14 +57,12 @@ public class BankFrame {
 		JButton btnStartTheBusiness = new JButton("Start the Business Day!");
 		btnStartTheBusiness.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-		//		JOptionPane.showMessageDialog(btnStartTheBusiness, "test");
-//				JOptionPane.showOptionDialog(btnStartTheBusiness, "Choose file", null, 0, 0, null, 1, 1);
 				
 				String[] fileNumber = { "1","2","3","Other" };
 
 				String chosenNumber = (String) JOptionPane.showInputDialog(frame, 
 				        "Which configuration should be run?",
-				        "Chosen Number",
+				        "Choose a Number",
 				        JOptionPane.QUESTION_MESSAGE, 
 				        null, 
 				        fileNumber, 
@@ -76,9 +72,15 @@ public class BankFrame {
 				if (chosenNumber == "Other"){
 					System.out.println("Entering manual configuration mode...reverting to console use");
 					System.out.println("Please use console to manually enter a file number.");
-					chosenNumber = "4";
+					chosenNumber = "4"; 
 				}
-
+				if (chosenNumber == null)
+				{
+					System.out.println("WARNING: File Choosing Operation Cancelled!");
+					System.out.println("Entering manual configuration mode...reverting to console use");
+					System.out.println("Please use console to manually enter a file number.");
+					chosenNumber = "4"; 
+				}
 				  
 				
 				//Create text area with bank data when button is pressed.
@@ -105,16 +107,26 @@ public class BankFrame {
 		FileScanner reader = new FileScanner(chosenFileNumber);
 		Bank bank = new Bank(reader);
 		
-		redirectSystemStreams(); //Redirects print statements
-		
 		System.out.println("Bank is now open!");
 		bank.doBusiness();
 		System.out.println("Bank is now closed");
                     
     }
 	
+	public static void printStream(boolean printStream)
+	{
+		if (printStream == true)
+			redirectSystemStreams(); //Redirects print statements
+		else {
+			System.out.println("PRINTING TO CONSOLE");
+			jTextArea1.append("PRINTING TO CONSOLE\n");
+			jTextArea1.append("Check console for program execution");
+		}
+		
+	}
+	
 	//The following codes set where the text from console get redirected. In this case, jTextArea1    
-	  private void updateTextArea(final String text) {
+	  private static void updateTextArea(final String text) {
 	    SwingUtilities.invokeLater(new Runnable() {
 	      public void run() {
 	        jTextArea1.append(text);
@@ -124,7 +136,7 @@ public class BankFrame {
 	  }
 	 
 	//Methods that do the Redirect to jTextArea1. 
-	  private void redirectSystemStreams() {
+	  private static void redirectSystemStreams() {
 	    OutputStream out = new OutputStream() {
 	      @Override
 	      public void write(int b) throws IOException {
