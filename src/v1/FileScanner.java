@@ -19,13 +19,13 @@ public class FileScanner {
 		Scanner keyboard = new Scanner(System.in);
 		int configNo;
 		do {
-			System.out.println("Which configuration should be run? (1-3)");
+			System.out.println("Which configuration should be run? (Options: 1, 2 or 3)");
 			while(!keyboard.hasNextInt()) {
 				System.out.println("This is not a number.");
 				keyboard.next();
 			}
 			configNo = keyboard.nextInt();
-		} while(configNo<=0);
+		} while(configNo<=0 || configNo > 3);
 		keyboard.close();			
 		data = "resources/config" + configNo + ".txt";
 		setup();
