@@ -11,26 +11,46 @@ public class FileScanner {
 	//Contains in this particular order: M, T_d, T_w, T_b, T_in, T_out
 	private int[] config;
 	private Company[] companies;
+	private boolean fileExists;
 	
 	/**
 	 * Sets up the reader and asks which configuration should be run
 	 */
-	public FileScanner() {
-		Scanner keyboard = new Scanner(System.in);
-		int configNo;
-		do {
-			System.out.println("Which configuration should be run? (Options: 1, 2 or 3)");
-			while(!keyboard.hasNextInt()) {
-				System.out.println("This is not a number.");
-				keyboard.next();
-			}
-			configNo = keyboard.nextInt();
-		} while(configNo<=0 || configNo > 3);
-		keyboard.close();			
-		data = "resources/config" + configNo + ".txt";
+	public FileScanner(int chosenFileNumber) {
+		if (chosenFileNumber == 4) {
+			Scanner keyboard = new Scanner(System.in);
+			do {
+				System.out.println("Which manual configuration should be run? (If in doubt, use 1, 2 or 3!)");
+				while(!keyboard.hasNextInt()) {
+					System.out.println("This is not a number.");
+					keyboard.next();
+				}
+				chosenFileNumber = keyboard.nextInt();
+				
+				data = "resources/config" + chosenFileNumber + ".txt";
+				File varTmpDir = new File(data);
+				fileExists = varTmpDir.exists();
+				if (fileExists)
+				{
+					break;
+					
+				}
+				else
+				{
+					System.out.println("This is not a valid file name.");
+				}
+			} while(fileExists == false);
+			keyboard.close();
+		}
+		
+		
+		data = "resources/config" + chosenFileNumber + ".txt";
+		
 		setup();
 		createEconomy();
+
 	}
+
 	
 	/**
 	 * fills the reader class with more details so main can pass it on to bank.
