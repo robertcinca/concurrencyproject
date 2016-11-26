@@ -3,6 +3,7 @@ package v1;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
 import java.awt.Font;
@@ -20,6 +21,10 @@ public class BankFrame {
 
 	JFrame frame;
 	private static JTextArea jTextArea1 = new JTextArea();
+	private static JScrollPane scroll = new JScrollPane(jTextArea1, 
+			JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
+			JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+	
 	
 	/**
 	 * Launch the application. Only needed if you want to run the Interface on its own.
@@ -49,6 +54,7 @@ public class BankFrame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
+		frame.getContentPane().add(scroll);
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
@@ -82,11 +88,7 @@ public class BankFrame {
 					chosenNumber = "4"; 
 				}
 				  
-				
-				//Create text area with bank data when button is pressed.
-				jTextArea1.setBounds(6, 62, 438, 181);
-				frame.getContentPane().add(jTextArea1);
-				jTextArea1.setEditable(false);
+
 				
 				int chosenFileNumber = Integer.parseInt(chosenNumber);
 				run(chosenFileNumber); //To run program
@@ -98,8 +100,6 @@ public class BankFrame {
 		btnStartTheBusiness.setBounds(126, 6, 182, 54);
 		frame.getContentPane().add(btnStartTheBusiness);
 		
-
-
 	}
 	
 	public void run(int chosenFileNumber)
@@ -116,7 +116,9 @@ public class BankFrame {
 	public static void printStream(boolean printStream)
 	{
 		if (printStream == true)
+		{	
 			redirectSystemStreams(); //Redirects print statements
+		}
 		else {
 			System.out.println("PRINTING TO CONSOLE");
 			jTextArea1.append("PRINTING TO CONSOLE\n");
@@ -129,7 +131,13 @@ public class BankFrame {
 	  private static void updateTextArea(final String text) {
 	    SwingUtilities.invokeLater(new Runnable() {
 	      public void run() {
-	        jTextArea1.append(text);
+				
+				//Create text area with bank data when button is pressed.
+				scroll.setBounds(6, 62, 438, 181);	
+				//frame.add(scroll);
+				
+				jTextArea1.setEditable(false);
+				jTextArea1.append(text);
 	        
 	      }
 	    });
