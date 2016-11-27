@@ -12,6 +12,9 @@ public class Employee {
 		this.employer = employer;
 	}
 	
+	/*
+	 * Transfers an incoming task to the appropriate handling method
+	 */
 	public void doTask(int transactionType, int amount, int admitted, int timer, int arrived, int processingTime, BankStaff teller) {
 		if(transactionType == 1) {
 			deposit(amount, processingTime, admitted, teller, arrived);
@@ -22,12 +25,15 @@ public class Employee {
 		}
 	}
 	
+	/*
+	 * Executes a job. The on-code comments in this method apply in the withdraw and check methods as well
+	 */
 	private void deposit(int amount, int processingTime, int admitted, BankStaff teller, int arrived) {
 		while(true) {
 			try {
-				if(employer.getLock().writeLock().tryLock(0, TimeUnit.SECONDS)) {
+				if(employer.getLock().writeLock().tryLock(0, TimeUnit.SECONDS)) { //tries to acquire a writelock. trylock avoid deadlocks
 					break;
-				} else {
+				} else { //if lock couldnt be acquired, this thread has to wait one turn before trying again
 					teller.getEmployer().awaitBarrier(1);
 					teller.getEmployer().awaitBarrier(2);
 					teller.getEmployer().awaitBarrier(3);
@@ -37,7 +43,7 @@ public class Employee {
 				e.printStackTrace();
 			}
 		}
-		while(teller.getEmployer().getTimer() < (admitted +processingTime)) {
+		while(teller.getEmployer().getTimer() < (admitted +processingTime)) { //executes the job. after each pass, timer is incremented by one
 			teller.getEmployer().awaitBarrier(1);
 			teller.getEmployer().awaitBarrier(2);
 			teller.getEmployer().awaitBarrier(3);
@@ -46,7 +52,7 @@ public class Employee {
 		employer.setBalance(employer.getBalance() + amount);
 		System.out.println("(" +teller.getEmployer().getTimer()+ ") Employee " +employeeID+ ", with help of Teller " +teller.getID()+ ", deposits $"  +amount+
 				" into " +employer+ ". Admitted at time " +admitted+ ", arrived at " +arrived);
-		employer.getLock().writeLock().unlock();
+		employer.getLock().writeLock().unlock(); //releases the lock
 	}
 	
 	private void withdraw(int amount, int processingTime, int admitted, BankStaff teller, int arrived) {

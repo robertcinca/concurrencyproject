@@ -11,7 +11,7 @@ public class FileScanner {
 	private int[] config; //Contains in this particular order: M, T_d, T_w, T_b, T_in, T_out
 	private Company[] companies;
 	
-	/**
+	/*
 	 * Sets up the reader and asks which configuration should be run
 	 */
 	public FileScanner(int chosenFileNumber) {
@@ -78,8 +78,8 @@ public class FileScanner {
 	}
 
 	
-	/**
-	 * fills the reader class with more details so main can pass it on to bank.
+	/*
+	 * Fills the reader class with more details so main can pass it on to bank.
 	 * reads the config file and retrieves all the configuration variables.
 	 */
 	private void setup() {
@@ -104,7 +104,7 @@ public class FileScanner {
 		scanner.close();
 	}
 	
-	/**
+	/*
 	 * Searches the config-file for company entries to count how many there are, 
 	 * creates an array depending on the result, and then searches a second time
 	 * to fill the array with company-instances and their corresponding balances.
@@ -154,7 +154,7 @@ public class FileScanner {
 		scanner2.close();
 	}
 	
-	/**
+	/*
 	 * This method searches the config file for events.
 	 * @param timer: The current state of the timer
 	 * @return a list which contains the events at timer, if any
@@ -212,7 +212,7 @@ public class FileScanner {
 		return list;
 	}
 	
-	/**
+	/*
 	 * Checks if there are more jobs to do in the .txt file
 	 */
 	public boolean isDone(int timer) {

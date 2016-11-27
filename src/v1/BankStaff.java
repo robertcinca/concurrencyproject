@@ -13,6 +13,10 @@ public class BankStaff implements Runnable {
 		task = null;
 	}
 	
+	/*
+	 * This is basically the method of each thread that corresponds with Bank's doBusiness() method.
+	 * Runs in a loop, further functionality is explained with in-code comments.
+	 */
 	@Override
 	public void run() {
 		System.out.println("Teller " +tellerID+ " starts his day. Start " + Thread.currentThread().getName());

@@ -27,7 +27,7 @@ public class BankFrame {
 	private final JButton btnRestartProgram = new JButton("Exit Program");
 	
 	
-	/**
+	/*
 	 * Launch the application. Only needed if you want to run the Interface on its own.
 	 */
 //	public static void main(String[] args) {	

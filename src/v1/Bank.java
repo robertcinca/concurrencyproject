@@ -20,7 +20,7 @@ public class Bank {
 	private int busyCount; //number of busy tellers
 	private boolean done; //is the program done?
 	
-	/**
+	/*
 	 * Sets up the bank as well as its tellers and saves all needed informations (especially reader) for the remainder of the program in local variables
 	 */
 	public Bank(FileScanner reader) {
@@ -40,7 +40,7 @@ public class Bank {
 		}
 	}
 	
-	/**
+	/*
 	 * This method is the program's core method. It runs in a loop, fetches new jobs, handles the thread queue and
 	 * manages the global time variable.
 	 * For better understanding, especially of the concurrent mechanisms, his method is visualized in the report which is turned in as
@@ -107,7 +107,7 @@ public class Bank {
 		} 
 	}
 	
-	/**
+	/*
 	 * This is used to give all other threads access to the CyclicBarriers, thus public. It is all contained within one method to make 
 	 * the code more readable, since the await() instruction is called quite often and requires a try-multicatch every single time.
 	 */
