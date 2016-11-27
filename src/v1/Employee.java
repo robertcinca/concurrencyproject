@@ -7,7 +7,7 @@ public class Employee {
 	private int employeeID;
 	private Company employer;
 	
-	Employee(int ID, Company employer) {
+	public Employee(int ID, Company employer) {
 		this.employeeID = ID;
 		this.employer = employer;
 	}
