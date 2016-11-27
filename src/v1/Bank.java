@@ -79,7 +79,7 @@ public class Bank {
 				if(busyCount - reader.getConfig(0) < 0) { //job is added to schedule if teller available
 					schedule.add(job);	
 					busyCount++;
-				} else { //job is added to queue if all telelrs are busy
+				} else { //job is added to queue if all tellers are busy
 					job.setQueued(true);
 					System.out.println("(" +timer+ ") Employee " +job.getEmployee()+ " is going to the queue");
 					queue.add(job);

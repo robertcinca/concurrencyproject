@@ -262,4 +262,5 @@ public class FileScanner {
 	public int getConfig(int x) {
 		return config[x];
 	}
+	
 }
