@@ -47,7 +47,7 @@ public class Bank {
 	 * a hardcopy.
 	 */
 	public void doBusiness()  {	
-		for(BankStaff employee : employees) { //starts all the threads
+		for(BankStaff employee : employees) { //starts all other threads
 			Thread thread = new Thread(employee);
 			thread.start();
 		}

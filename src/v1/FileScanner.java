@@ -8,8 +8,7 @@ import java.util.concurrent.PriorityBlockingQueue;
 public class FileScanner {
 	
 	private String data;
-	//Contains in this particular order: M, T_d, T_w, T_b, T_in, T_out
-	private int[] config;
+	private int[] config; //Contains in this particular order: M, T_d, T_w, T_b, T_in, T_out
 	private Company[] companies;
 	
 	/**
@@ -102,13 +101,16 @@ public class FileScanner {
 				break;
 			}
 		}
+		scanner.close();
 	}
 	
 	/**
-	 * Searches the config for company entries, creates an array, and fills it with companies and their corresponding balance
+	 * Searches the config-file for company entries to count how many there are, 
+	 * creates an array depending on the result, and then searches a second time
+	 * to fill the array with company-instances and their corresponding balances.
 	 */
 	private void createEconomy() {
-		Scanner scanner = null;
+		Scanner scanner = null; //used for counting how many companies there are
 		try {
 			scanner = new Scanner(new File(data));
 		} catch (FileNotFoundException e) {
@@ -118,7 +120,7 @@ public class FileScanner {
 		int i = 0;
 		while(scanner.hasNext()) {
 			temp = scanner.next();
-			if(temp.startsWith("Time")) {
+			if(temp.startsWith("Time")) { //if this occurs, the configuration details have all been read
 				break;
 			}
 			if(temp.startsWith("Company")) {
@@ -127,7 +129,7 @@ public class FileScanner {
 		}
 		scanner.close();
 		companies = new Company[i];
-		Scanner scanner2 = null;
+		Scanner scanner2 = null; //used to fill the array
 		try {
 			scanner2 = new Scanner(new File(data));
 		} catch (FileNotFoundException e) {
@@ -142,11 +144,9 @@ public class FileScanner {
 			if(temp.startsWith("Company")) {
 				scanner2.next();
 				temp = scanner2.next();
-				//cuts the dollar sign
-				temp = temp.substring(1);	
-				//cuts out the commas
-				int balanceInt = Integer.valueOf(temp.replaceAll(",", "").toString());	
-				Company corporation = new Company(j, balanceInt);
+				temp = temp.substring(1); //cuts the dollar sign	
+				int balanceInt = Integer.valueOf(temp.replaceAll(",", "").toString()); //cuts out the commas	
+				Company corporation = new Company(j, balanceInt); //creates company instance
 				companies[j-1] = corporation;
 				j++;
 			}
@@ -176,10 +176,10 @@ public class FileScanner {
 				size = temp.length();
 				temp = temp.substring(0, size-1);
 				int x = Integer.parseInt(temp);
-				if(x == timer) {	
+				if(x == timer) { //if the time in the file corresponds with the parameter, a job instance is created
 					scanner.next();
 					int id = Integer.parseInt(scanner.next());
-					temp = scanner.next(); //takes the next value and cuts out the companypart
+					temp = scanner.next(); //takes the next value and cuts out the company-part
 					size = temp.length();
 					int employer = Integer.parseInt((temp.substring(7, size-1)));
 					Employee emp = new Employee(id, companies[(employer-1)]);		
@@ -203,7 +203,7 @@ public class FileScanner {
 					Job newJob = new Job(emp, timer, transactionType,
 							amount , config[transactionType], config[4], config[5]);
 					list.add(newJob);	
-				} else if(x>timer) {
+				} else if(x>timer) { //since the config is in chronological order, search can be interrupted once x is bigger than the parameter
 					break;
 				}
 			}
@@ -216,7 +216,7 @@ public class FileScanner {
 	 * Checks if there are more jobs to do in the .txt file
 	 */
 	public boolean isDone(int timer) {
-		Scanner scanner = null;
+		Scanner scanner = null; //counts all the jobs in the file
 		try {
 			scanner = new Scanner(new File(data));
 		} catch (FileNotFoundException e) {
@@ -232,7 +232,7 @@ public class FileScanner {
 			}
 		}
 		scanner.close();
-		Scanner scanner2 = null;
+		Scanner scanner2 = null; //counts, with timer, how many jobs in the file are already done
 		try {
 			scanner2 = new Scanner(new File(data));
 		} catch (FileNotFoundException e) {
