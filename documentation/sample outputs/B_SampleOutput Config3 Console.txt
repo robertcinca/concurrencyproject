@@ -1,0 +1,2688 @@
+Entering manual configuration mode...reverting to console use
+Please use console to manually enter a file number.
+Which manual configuration should be run? (If in doubt, use 1, 2 or 3!)
+File exists!
+Do you wish to print results in Console or Frame?
+(Enter 'console' or 'frame')
+PRINTING TO CONSOLE
+Bank is now open!
+Teller 1 starts his day. Start Thread-0
+Teller 2 starts his day. Start Thread-1
+Teller 3 starts his day. Start Thread-2
+Teller 4 starts his day. Start Thread-3
+Teller 5 starts his day. Start Thread-4
+Teller 6 starts his day. Start Thread-5
+Teller 7 starts his day. Start Thread-6
+Teller 8 starts his day. Start Thread-7
+Teller 9 starts his day. Start Thread-8
+Teller 10 starts his day. Start Thread-9
+Teller 11 starts his day. Start Thread-10
+Teller 12 starts his day. Start Thread-11
+Teller 13 starts his day. Start Thread-12
+Teller 14 starts his day. Start Thread-13
+Teller 15 starts his day. Start Thread-14
+Teller 16 starts his day. Start Thread-15
+Teller 17 starts his day. Start Thread-16
+Teller 18 starts his day. Start Thread-17
+Teller 19 starts his day. Start Thread-18
+Teller 20 starts his day. Start Thread-19
+----- Time = 0 -----
+----- Time = 1 -----
+(1) Teller 18 takes on Employee 1.
+(1) Teller 19 takes on Employee 4.
+(1) Teller 20 takes on Employee 3.
+(1) Teller 1 takes on Employee 2.
+----- Time = 2 -----
+(2) Teller 14 takes on Employee 5.
+----- Time = 3 -----
+(3) Teller 10 takes on Employee 6.
+----- Time = 4 -----
+(4) Employee 1, with help of Teller 18, checks balance of company 3. It is $300000000. Admitted at time 1, arrived at 1
+(4) Employee 4, with help of Teller 19, deposits $3700 into company 2. Admitted at time 1, arrived at 1
+(4) Employee 3, with help of Teller 20, checks balance of company 9. It is $300000000. Admitted at time 1, arrived at 1
+(4) Employee 2, with help of Teller 1, deposits $3600 into company 8. Admitted at time 1, arrived at 1
+(4) Teller 6 takes on Employee 7.
+(4) Teller 7 takes on Employee 9.
+(4) Teller 8 takes on Employee 8.
+----- Time = 5 -----
+(5) Employee 5, with help of Teller 14, withdraws $500 from company 3. Admitted at time 2, arrived at 2
+(5) Teller 2 takes on Employee 10.
+(5) Teller 3 takes on Employee 13.
+(5) Teller 4 takes on Employee 12.
+(5) Teller 5 takes on Employee 11.
+----- Time = 6 -----
+(6) Employee 6, with help of Teller 10, checks balance of company 5. It is $330000000. Admitted at time 3, arrived at 3
+----- Time = 7 -----
+(7) Employee 7, with help of Teller 6, withdraws $4400 from company 4. Admitted at time 4, arrived at 4
+(7) Employee 8, with help of Teller 8, withdraws $2400 from company 8. Admitted at time 4, arrived at 4
+(7) Teller 15 takes on Employee 14.
+(7) Teller 18 takes on Employee 15.
+(7) Teller 17 takes on Employee 16.
+----- Time = 8 -----
+(8) Employee 10, with help of Teller 2, deposits $1900 into company 3. Admitted at time 5, arrived at 5
+(8) Employee 13, with help of Teller 3, checks balance of company 5. It is $330000000. Admitted at time 5, arrived at 5
+(8) Employee 11, with help of Teller 5, deposits $2600 into company 8. Admitted at time 5, arrived at 5
+(8) Employee 12, with help of Teller 4, checks balance of company 2. It is $40003700. Admitted at time 5, arrived at 5
+(8) Teller 10 takes on Employee 17.
+(8) Teller 13 takes on Employee 20.
+(8) Teller 14 takes on Employee 19.
+(8) Teller 16 takes on Employee 18.
+----- Time = 9 -----
+(9) Teller 9 takes on Employee 21.
+----- Time = 10 -----
+(10) Employee 14, with help of Teller 15, withdraws $4800 from company 4. Admitted at time 7, arrived at 7
+(10) Employee 15, with help of Teller 18, checks balance of company 5. It is $330000000. Admitted at time 7, arrived at 7
+(10) Employee 16, with help of Teller 17, deposits $2800 into company 3. Admitted at time 7, arrived at 7
+(10) Employee 9, with help of Teller 7, deposits $800 into company 5. Admitted at time 4, arrived at 4
+----- Time = 11 -----
+(11) Employee 17, with help of Teller 10, withdraws $3700 from company 4. Admitted at time 8, arrived at 8
+(11) Employee 20, with help of Teller 13, withdraws $1600 from company 10. Admitted at time 8, arrived at 8
+(11) Employee 19, with help of Teller 14, checks balance of company 1. It is $300000000. Admitted at time 8, arrived at 8
+(11) Employee 18, with help of Teller 16, withdraws $2600 from company 8. Admitted at time 8, arrived at 8
+(11) Teller 17 takes on Employee 22.
+(11) Teller 2 takes on Employee 23.
+----- Time = 12 -----
+(12) Employee 21, with help of Teller 9, checks balance of company 10. It is $369998400. Admitted at time 9, arrived at 9
+(12) Teller 15 takes on Employee 24.
+(12) Teller 20 takes on Employee 28.
+(12) Teller 1 takes on Employee 27.
+(12) Teller 18 takes on Employee 26.
+(12) Teller 3 takes on Employee 25.
+----- Time = 13 -----
+----- Time = 14 -----
+(14) Employee 22, with help of Teller 17, checks balance of company 2. It is $40003700. Admitted at time 11, arrived at 11
+(14) Employee 23, with help of Teller 2, checks balance of company 9. It is $300000000. Admitted at time 11, arrived at 11
+(14) Teller 11 takes on Employee 29.
+----- Time = 15 -----
+(15) Employee 24, with help of Teller 15, checks balance of company 3. It is $300004200. Admitted at time 12, arrived at 12
+(15) Employee 28, with help of Teller 20, checks balance of company 4. It is $269987100. Admitted at time 12, arrived at 12
+(15) Employee 27, with help of Teller 1, deposits $3200 into company 5. Admitted at time 12, arrived at 12
+(15) Employee 26, with help of Teller 18, withdraws $100 from company 1. Admitted at time 12, arrived at 12
+(15) Employee 25, with help of Teller 3, checks balance of company 2. It is $40003700. Admitted at time 12, arrived at 12
+(15) Teller 7 takes on Employee 30.
+(15) Teller 4 takes on Employee 37.
+(15) Teller 8 takes on Employee 36.
+(15) Teller 9 takes on Employee 35.
+(15) Teller 12 takes on Employee 34.
+(15) Teller 10 takes on Employee 33.
+(15) Teller 13 takes on Employee 32.
+(15) Teller 14 takes on Employee 31.
+----- Time = 16 -----
+----- Time = 17 -----
+(17) Employee 29, with help of Teller 11, deposits $4400 into company 7. Admitted at time 14, arrived at 14
+(17) Teller 20 takes on Employee 38.
+----- Time = 18 -----
+(18) Employee 30, with help of Teller 7, checks balance of company 9. It is $300000000. Admitted at time 15, arrived at 15
+(18) Employee 37, with help of Teller 4, checks balance of company 10. It is $369998400. Admitted at time 15, arrived at 15
+(18) Employee 36, with help of Teller 8, deposits $2700 into company 1. Admitted at time 15, arrived at 15
+(18) Employee 35, with help of Teller 9, deposits $1800 into company 1. Admitted at time 15, arrived at 15
+(18) Employee 34, with help of Teller 12, deposits $2600 into company 8. Admitted at time 15, arrived at 15
+(18) Employee 33, with help of Teller 10, checks balance of company 3. It is $300004200. Admitted at time 15, arrived at 15
+(18) Employee 32, with help of Teller 13, checks balance of company 1. It is $300004400. Admitted at time 15, arrived at 15
+(18) Employee 31, with help of Teller 14, withdraws $500 from company 3. Admitted at time 15, arrived at 15
+----- Time = 19 -----
+(19) Teller 12 takes on Employee 39.
+----- Time = 20 -----
+(20) Employee 38, with help of Teller 20, checks balance of company 1. It is $300004400. Admitted at time 17, arrived at 17
+----- Time = 21 -----
+(21) Teller 5 takes on Employee 40.
+(21) Teller 7 takes on Employee 41.
+----- Time = 22 -----
+(22) Employee 39, with help of Teller 12, withdraws $3800 from company 7. Admitted at time 19, arrived at 19
+----- Time = 23 -----
+(23) Teller 15 takes on Employee 42.
+----- Time = 24 -----
+(24) Employee 40, with help of Teller 5, deposits $1300 into company 8. Admitted at time 21, arrived at 21
+(24) Employee 41, with help of Teller 7, deposits $1400 into company 8. Admitted at time 21, arrived at 21
+----- Time = 25 -----
+(25) Teller 10 takes on Employee 44.
+(25) Teller 12 takes on Employee 43.
+----- Time = 26 -----
+(26) Employee 42, with help of Teller 15, checks balance of company 3. It is $300003700. Admitted at time 23, arrived at 23
+----- Time = 27 -----
+(27) Teller 7 takes on Employee 45.
+----- Time = 28 -----
+(28) Employee 44, with help of Teller 10, deposits $800 into company 2. Admitted at time 25, arrived at 25
+(28) Employee 43, with help of Teller 12, checks balance of company 7. It is $440000600. Admitted at time 25, arrived at 25
+----- Time = 29 -----
+(29) Teller 3 takes on Employee 47.
+(29) Teller 17 takes on Employee 46.
+----- Time = 30 -----
+(30) Employee 45, with help of Teller 7, withdraws $4800 from company 6. Admitted at time 27, arrived at 27
+(30) Teller 7 takes on Employee 48.
+----- Time = 31 -----
+(31) Teller 19 takes on Employee 49.
+(31) Teller 20 takes on Employee 50.
+----- Time = 32 -----
+(32) Employee 47, with help of Teller 3, deposits $2600 into company 5. Admitted at time 29, arrived at 29
+(32) Employee 46, with help of Teller 17, deposits $3000 into company 5. Admitted at time 29, arrived at 29
+----- Time = 33 -----
+(33) Employee 48, with help of Teller 7, deposits $1300 into company 2. Admitted at time 30, arrived at 30
+(33) Teller 8 takes on Employee 51.
+----- Time = 34 -----
+(34) Employee 49, with help of Teller 19, deposits $3300 into company 10. Admitted at time 31, arrived at 31
+(34) Employee 50, with help of Teller 20, withdraws $200 from company 9. Admitted at time 31, arrived at 31
+----- Time = 35 -----
+(35) Teller 5 takes on Employee 52.
+----- Time = 36 -----
+(36) Employee 51, with help of Teller 8, checks balance of company 2. It is $40005800. Admitted at time 33, arrived at 33
+(36) Teller 17 takes on Employee 53.
+(36) Teller 8 takes on Employee 61.
+(36) Teller 4 takes on Employee 60.
+(36) Teller 15 takes on Employee 59.
+(36) Teller 9 takes on Employee 58.
+(36) Teller 11 takes on Employee 57.
+(36) Teller 13 takes on Employee 56.
+(36) Teller 14 takes on Employee 55.
+(36) Teller 16 takes on Employee 54.
+----- Time = 37 -----
+----- Time = 38 -----
+(38) Employee 52, with help of Teller 5, checks balance of company 5. It is $330009600. Admitted at time 35, arrived at 35
+(38) Teller 3 takes on Employee 62.
+----- Time = 39 -----
+(39) Employee 53, with help of Teller 17, withdraws $4900 from company 8. Admitted at time 36, arrived at 36
+(39) Employee 59, with help of Teller 15, checks balance of company 1. It is $300004400. Admitted at time 36, arrived at 36
+(39) Employee 56, with help of Teller 13, checks balance of company 4. It is $269987100. Admitted at time 36, arrived at 36
+(39) Employee 60, with help of Teller 4, checks balance of company 5. It is $330009600. Admitted at time 36, arrived at 36
+(39) Employee 55, with help of Teller 14, withdraws $2900 from company 8. Admitted at time 36, arrived at 36
+(39) Employee 61, with help of Teller 8, checks balance of company 3. It is $300003700. Admitted at time 36, arrived at 36
+(39) Employee 57, with help of Teller 11, withdraws $3500 from company 1. Admitted at time 36, arrived at 36
+(39) Employee 58, with help of Teller 9, deposits $2600 into company 10. Admitted at time 36, arrived at 36
+----- Time = 40 -----
+(40) Employee 54, with help of Teller 16, deposits $4900 into company 10. Admitted at time 36, arrived at 36
+(40) Teller 16 takes on Employee 63.
+----- Time = 41 -----
+(41) Employee 62, with help of Teller 3, deposits $3700 into company 2. Admitted at time 38, arrived at 38
+(41) Teller 11 takes on Employee 64.
+----- Time = 42 -----
+----- Time = 43 -----
+(43) Employee 63, with help of Teller 16, deposits $4400 into company 2. Admitted at time 40, arrived at 40
+(43) Teller 16 takes on Employee 65.
+----- Time = 44 -----
+(44) Employee 64, with help of Teller 11, withdraws $2800 from company 5. Admitted at time 41, arrived at 41
+(44) Teller 11 takes on Employee 66.
+----- Time = 45 -----
+(45) Teller 10 takes on Employee 68.
+(45) Teller 7 takes on Employee 67.
+----- Time = 46 -----
+(46) Employee 65, with help of Teller 16, withdraws $200 from company 9. Admitted at time 43, arrived at 43
+----- Time = 47 -----
+(47) Employee 66, with help of Teller 11, checks balance of company 2. It is $40013900. Admitted at time 44, arrived at 44
+(47) Teller 16 takes on Employee 69.
+(47) Teller 20 takes on Employee 70.
+----- Time = 48 -----
+(48) Employee 67, with help of Teller 7, checks balance of company 10. It is $370009200. Admitted at time 45, arrived at 45
+(48) Employee 68, with help of Teller 10, deposits $2600 into company 9. Admitted at time 45, arrived at 45
+(48) Teller 10 takes on Employee 71.
+----- Time = 49 -----
+(49) Teller 19 takes on Employee 72.
+(49) Teller 14 takes on Employee 73.
+----- Time = 50 -----
+(50) Employee 69, with help of Teller 16, checks balance of company 2. It is $40013900. Admitted at time 47, arrived at 47
+(50) Employee 70, with help of Teller 20, withdraws $1700 from company 5. Admitted at time 47, arrived at 47
+----- Time = 51 -----
+(51) Employee 71, with help of Teller 10, withdraws $1100 from company 2. Admitted at time 48, arrived at 48
+(51) Teller 13 takes on Employee 74.
+----- Time = 52 -----
+(52) Employee 72, with help of Teller 19, deposits $2600 into company 8. Admitted at time 49, arrived at 49
+(52) Employee 73, with help of Teller 14, deposits $1400 into company 4. Admitted at time 49, arrived at 49
+(52) Teller 10 takes on Employee 75.
+----- Time = 53 -----
+----- Time = 54 -----
+(54) Employee 74, with help of Teller 13, checks balance of company 2. It is $40012800. Admitted at time 51, arrived at 51
+(54) Teller 6 takes on Employee 76.
+(54) Teller 14 takes on Employee 77.
+(54) Teller 17 takes on Employee 78.
+----- Time = 55 -----
+(55) Employee 75, with help of Teller 10, withdraws $4000 from company 5. Admitted at time 52, arrived at 52
+(55) Teller 19 takes on Employee 79.
+----- Time = 56 -----
+(56) Teller 10 takes on Employee 82.
+(56) Teller 20 takes on Employee 80.
+(56) Teller 13 takes on Employee 81.
+----- Time = 57 -----
+(57) Employee 76, with help of Teller 6, withdraws $5000 from company 10. Admitted at time 54, arrived at 54
+(57) Employee 77, with help of Teller 14, checks balance of company 2. It is $40012800. Admitted at time 54, arrived at 54
+(57) Employee 78, with help of Teller 17, withdraws $2200 from company 10. Admitted at time 54, arrived at 54
+(57) Teller 17 takes on Employee 83.
+(57) Teller 2 takes on Employee 84.
+----- Time = 58 -----
+(58) Employee 79, with help of Teller 19, withdraws $4900 from company 8. Admitted at time 55, arrived at 55
+(58) Teller 14 takes on Employee 85.
+----- Time = 59 -----
+(59) Employee 82, with help of Teller 10, deposits $1100 into company 2. Admitted at time 56, arrived at 56
+(59) Employee 80, with help of Teller 20, withdraws $900 from company 7. Admitted at time 56, arrived at 56
+(59) Employee 81, with help of Teller 13, deposits $3200 into company 2. Admitted at time 56, arrived at 56
+(59) Teller 13 takes on Employee 86.
+(59) Teller 8 takes on Employee 88.
+(59) Teller 16 takes on Employee 87.
+----- Time = 60 -----
+(60) Employee 83, with help of Teller 17, withdraws $4000 from company 1. Admitted at time 57, arrived at 57
+(60) Employee 84, with help of Teller 2, withdraws $1000 from company 4. Admitted at time 57, arrived at 57
+(60) Teller 9 takes on Employee 89.
+----- Time = 61 -----
+(61) Employee 85, with help of Teller 14, checks balance of company 3. It is $300003700. Admitted at time 58, arrived at 58
+----- Time = 62 -----
+(62) Employee 86, with help of Teller 13, withdraws $2600 from company 2. Admitted at time 59, arrived at 59
+(62) Employee 88, with help of Teller 8, deposits $3600 into company 9. Admitted at time 59, arrived at 59
+(62) Employee 87, with help of Teller 16, deposits $1900 into company 10. Admitted at time 59, arrived at 59
+(62) Teller 1 takes on Employee 90.
+----- Time = 63 -----
+(63) Employee 89, with help of Teller 9, checks balance of company 2. It is $40014500. Admitted at time 60, arrived at 60
+----- Time = 64 -----
+(64) Teller 10 takes on Employee 91.
+(64) Teller 14 takes on Employee 92.
+----- Time = 65 -----
+(65) Employee 90, with help of Teller 1, deposits $300 into company 2. Admitted at time 62, arrived at 62
+----- Time = 66 -----
+(66) Teller 1 takes on Employee 93.
+(66) Teller 11 takes on Employee 94.
+----- Time = 67 -----
+(67) Employee 91, with help of Teller 10, withdraws $3400 from company 6. Admitted at time 64, arrived at 64
+(67) Employee 92, with help of Teller 14, withdraws $1700 from company 9. Admitted at time 64, arrived at 64
+----- Time = 68 -----
+(68) Teller 15 takes on Employee 95.
+----- Time = 69 -----
+(69) Employee 93, with help of Teller 1, deposits $4700 into company 9. Admitted at time 66, arrived at 66
+(69) Employee 94, with help of Teller 11, checks balance of company 10. It is $370003900. Admitted at time 66, arrived at 66
+----- Time = 70 -----
+(70) Teller 12 takes on Employee 96.
+(70) Teller 4 takes on Employee 97.
+(70) Teller 9 takes on Employee 98.
+(70) Teller 10 takes on Employee 99.
+(70) Teller 5 takes on Employee 100.
+----- Time = 71 -----
+(71) Employee 95, with help of Teller 15, withdraws $3000 from company 2. Admitted at time 68, arrived at 68
+(71) Teller 1 takes on Employee 101.
+(71) Teller 11 takes on Employee 102.
+----- Time = 72 -----
+(72) Teller 15 takes on Employee 103.
+(72) Teller 18 takes on Employee 107.
+(72) Teller 16 takes on Employee 109.
+(72) Teller 6 takes on Employee 108.
+(72) Teller 13 takes on Employee 104.
+(72) Teller 17 takes on Employee 105.
+(72) Teller 14 takes on Employee 106.
+----- Time = 73 -----
+(73) Employee 96, with help of Teller 12, withdraws $1000 from company 3. Admitted at time 70, arrived at 70
+(73) Employee 97, with help of Teller 4, checks balance of company 6. It is $99991800. Admitted at time 70, arrived at 70
+(73) Employee 98, with help of Teller 9, checks balance of company 8. It is $349996400. Admitted at time 70, arrived at 70
+(73) Employee 99, with help of Teller 10, deposits $4500 into company 4. Admitted at time 70, arrived at 70
+(73) Employee 100, with help of Teller 5, checks balance of company 2. It is $40011800. Admitted at time 70, arrived at 70
+(73) Teller 3 takes on Employee 113.
+(73) Teller 5 takes on Employee 110.
+(73) Teller 20 takes on Employee 112.
+(73) Teller 12 takes on Employee 111.
+----- Time = 74 -----
+(74) Employee 102, with help of Teller 11, deposits $400 into company 5. Admitted at time 71, arrived at 71
+(74) Employee 101, with help of Teller 1, checks balance of company 8. It is $349996400. Admitted at time 71, arrived at 71
+(74) Teller 1 takes on Employee 114.
+----- Time = 75 -----
+(75) Employee 103, with help of Teller 15, deposits $1100 into company 8. Admitted at time 72, arrived at 72
+(75) Employee 109, with help of Teller 16, deposits $1500 into company 4. Admitted at time 72, arrived at 72
+(75) Employee 107, with help of Teller 18, deposits $4700 into company 1. Admitted at time 72, arrived at 72
+(75) Employee 108, with help of Teller 6, deposits $4100 into company 10. Admitted at time 72, arrived at 72
+(75) Employee 104, with help of Teller 13, checks balance of company 1. It is $300001600. Admitted at time 72, arrived at 72
+(75) Employee 105, with help of Teller 17, withdraws $3800 from company 7. Admitted at time 72, arrived at 72
+----- Time = 76 -----
+(76) Employee 113, with help of Teller 3, withdraws $2900 from company 9. Admitted at time 73, arrived at 73
+(76) Employee 110, with help of Teller 5, checks balance of company 10. It is $370008000. Admitted at time 73, arrived at 73
+(76) Employee 106, with help of Teller 14, deposits $2100 into company 1. Admitted at time 72, arrived at 72
+(76) Employee 111, with help of Teller 12, deposits $3000 into company 8. Admitted at time 73, arrived at 73
+(76) Employee 112, with help of Teller 20, checks balance of company 7. It is $439995900. Admitted at time 73, arrived at 73
+(76) Teller 8 takes on Employee 115.
+(76) Teller 10 takes on Employee 116.
+(76) Teller 17 takes on Employee 117.
+----- Time = 77 -----
+(77) Employee 114, with help of Teller 1, checks balance of company 6. It is $99991800. Admitted at time 74, arrived at 74
+----- Time = 78 -----
+(78) Teller 2 takes on Employee 118.
+(78) Teller 13 takes on Employee 119.
+----- Time = 79 -----
+(79) Employee 115, with help of Teller 8, withdraws $4800 from company 8. Admitted at time 76, arrived at 76
+(79) Employee 116, with help of Teller 10, deposits $1300 into company 1. Admitted at time 76, arrived at 76
+(79) Employee 117, with help of Teller 17, checks balance of company 1. It is $300005000. Admitted at time 76, arrived at 76
+----- Time = 80 -----
+(80) Teller 3 takes on Employee 120.
+----- Time = 81 -----
+(81) Employee 118, with help of Teller 2, checks balance of company 4. It is $269993500. Admitted at time 78, arrived at 78
+(81) Employee 119, with help of Teller 13, checks balance of company 10. It is $370008000. Admitted at time 78, arrived at 78
+----- Time = 82 -----
+(82) Teller 9 takes on Employee 122.
+(82) Teller 4 takes on Employee 121.
+----- Time = 83 -----
+(83) Employee 120, with help of Teller 3, checks balance of company 5. It is $330001500. Admitted at time 80, arrived at 80
+(83) Teller 11 takes on Employee 123.
+----- Time = 84 -----
+----- Time = 85 -----
+(85) Employee 122, with help of Teller 9, withdraws $3600 from company 9. Admitted at time 82, arrived at 82
+(85) Employee 121, with help of Teller 4, checks balance of company 9. It is $300002300. Admitted at time 82, arrived at 82
+(85) Teller 1 takes on Employee 124.
+----- Time = 86 -----
+(86) Employee 123, with help of Teller 11, deposits $200 into company 2. Admitted at time 83, arrived at 83
+(86) Teller 15 takes on Employee 125.
+(86) Teller 4 takes on Employee 126.
+----- Time = 87 -----
+(87) Teller 11 takes on Employee 127.
+(87) Teller 2 takes on Employee 128.
+----- Time = 88 -----
+(88) Employee 124, with help of Teller 1, checks balance of company 7. It is $439995900. Admitted at time 85, arrived at 85
+(88) Teller 16 takes on Employee 129.
+----- Time = 89 -----
+(89) Employee 125, with help of Teller 15, deposits $700 into company 8. Admitted at time 86, arrived at 86
+(89) Employee 126, with help of Teller 4, deposits $1800 into company 9. Admitted at time 86, arrived at 86
+(89) Teller 4 takes on Employee 130.
+----- Time = 90 -----
+(90) Employee 128, with help of Teller 2, deposits $3800 into company 9. Admitted at time 87, arrived at 87
+(90) Employee 127, with help of Teller 11, checks balance of company 7. It is $439995900. Admitted at time 87, arrived at 87
+----- Time = 91 -----
+(91) Employee 129, with help of Teller 16, checks balance of company 2. It is $40012000. Admitted at time 88, arrived at 88
+(91) Teller 16 takes on Employee 131.
+----- Time = 92 -----
+(92) Employee 130, with help of Teller 4, deposits $2700 into company 4. Admitted at time 89, arrived at 89
+----- Time = 93 -----
+(93) Teller 1 takes on Employee 133.
+(93) Teller 11 takes on Employee 132.
+----- Time = 94 -----
+(94) Employee 131, with help of Teller 16, checks balance of company 10. It is $370008000. Admitted at time 91, arrived at 91
+----- Time = 95 -----
+(95) Teller 19 takes on Employee 134.
+(95) Teller 12 takes on Employee 135.
+(95) Teller 20 takes on Employee 136.
+(95) Teller 4 takes on Employee 137.
+----- Time = 96 -----
+(96) Employee 133, with help of Teller 1, checks balance of company 6. It is $99991800. Admitted at time 93, arrived at 93
+(96) Employee 132, with help of Teller 11, deposits $1200 into company 9. Admitted at time 93, arrived at 93
+(96) Teller 11 takes on Employee 138.
+(96) Teller 10 takes on Employee 139.
+----- Time = 97 -----
+(97) Teller 6 takes on Employee 142.
+(97) Teller 1 takes on Employee 141.
+(97) Teller 8 takes on Employee 140.
+----- Time = 98 -----
+(98) Employee 134, with help of Teller 19, withdraws $4600 from company 5. Admitted at time 95, arrived at 95
+(98) Employee 135, with help of Teller 12, checks balance of company 7. It is $439995900. Admitted at time 95, arrived at 95
+(98) Employee 136, with help of Teller 20, deposits $400 into company 2. Admitted at time 95, arrived at 95
+(98) Employee 137, with help of Teller 4, checks balance of company 7. It is $439995900. Admitted at time 95, arrived at 95
+----- Time = 99 -----
+(99) Employee 138, with help of Teller 11, deposits $3800 into company 8. Admitted at time 96, arrived at 96
+(99) Employee 139, with help of Teller 10, withdraws $2400 from company 10. Admitted at time 96, arrived at 96
+(99) Teller 20 takes on Employee 143.
+(99) Teller 5 takes on Employee 144.
+(99) Teller 17 takes on Employee 145.
+----- Time = 100 -----
+(100) Employee 142, with help of Teller 6, deposits $2500 into company 2. Admitted at time 97, arrived at 97
+(100) Employee 141, with help of Teller 1, checks balance of company 4. It is $269996200. Admitted at time 97, arrived at 97
+(100) Employee 140, with help of Teller 8, withdraws $100 from company 3. Admitted at time 97, arrived at 97
+----- Time = 101 -----
+(101) Teller 7 takes on Employee 148.
+(101) Teller 8 takes on Employee 147.
+(101) Teller 1 takes on Employee 146.
+----- Time = 102 -----
+(102) Employee 143, with help of Teller 20, withdraws $1300 from company 10. Admitted at time 99, arrived at 99
+(102) Employee 144, with help of Teller 5, deposits $4700 into company 4. Admitted at time 99, arrived at 99
+(102) Employee 145, with help of Teller 17, withdraws $4200 from company 1. Admitted at time 99, arrived at 99
+(102) Teller 6 takes on Employee 149.
+----- Time = 103 -----
+----- Time = 104 -----
+(104) Employee 148, with help of Teller 7, checks balance of company 4. It is $270000900. Admitted at time 101, arrived at 101
+(104) Employee 147, with help of Teller 8, checks balance of company 5. It is $329996900. Admitted at time 101, arrived at 101
+(104) Employee 146, with help of Teller 1, checks balance of company 8. It is $350000200. Admitted at time 101, arrived at 101
+(104) Teller 5 takes on Employee 150.
+----- Time = 105 -----
+(105) Employee 149, with help of Teller 6, withdraws $500 from company 7. Admitted at time 102, arrived at 102
+(105) Teller 16 takes on Employee 151.
+----- Time = 106 -----
+(106) Teller 8 takes on Employee 152.
+----- Time = 107 -----
+(107) Employee 150, with help of Teller 5, deposits $2900 into company 7. Admitted at time 104, arrived at 104
+----- Time = 108 -----
+(108) Employee 151, with help of Teller 16, withdraws $300 from company 1. Admitted at time 105, arrived at 105
+(108) Teller 7 takes on Employee 154.
+(108) Teller 14 takes on Employee 153.
+----- Time = 109 -----
+(109) Employee 152, with help of Teller 8, deposits $3100 into company 5. Admitted at time 106, arrived at 106
+----- Time = 110 -----
+(110) Teller 10 takes on Employee 155.
+----- Time = 111 -----
+(111) Employee 154, with help of Teller 7, deposits $4700 into company 10. Admitted at time 108, arrived at 108
+----- Time = 112 -----
+(112) Employee 153, with help of Teller 14, deposits $1500 into company 10. Admitted at time 108, arrived at 108
+(112) Teller 11 takes on Employee 156.
+(112) Teller 17 takes on Employee 157.
+----- Time = 113 -----
+(113) Employee 155, with help of Teller 10, deposits $4500 into company 9. Admitted at time 110, arrived at 110
+----- Time = 114 -----
+(114) Teller 1 takes on Employee 158.
+(114) Teller 7 takes on Employee 159.
+----- Time = 115 -----
+(115) Employee 156, with help of Teller 11, deposits $3400 into company 5. Admitted at time 112, arrived at 112
+(115) Employee 157, with help of Teller 17, withdraws $5000 from company 6. Admitted at time 112, arrived at 112
+----- Time = 116 -----
+(116) Teller 6 takes on Employee 160.
+----- Time = 117 -----
+(117) Employee 158, with help of Teller 1, withdraws $4000 from company 6. Admitted at time 114, arrived at 114
+(117) Teller 11 takes on Employee 161.
+----- Time = 118 -----
+(118) Teller 16 takes on Employee 162.
+----- Time = 119 -----
+(119) Employee 160, with help of Teller 6, withdraws $3700 from company 7. Admitted at time 116, arrived at 116
+----- Time = 120 -----
+(120) Employee 161, with help of Teller 11, checks balance of company 6. It is $99982800. Admitted at time 117, arrived at 117
+(120) Employee 159, with help of Teller 7, deposits $1400 into company 6. Admitted at time 114, arrived at 114
+(120) Teller 7 takes on Employee 163.
+(120) Teller 8 takes on Employee 164.
+----- Time = 121 -----
+(121) Employee 162, with help of Teller 16, checks balance of company 9. It is $300013600. Admitted at time 118, arrived at 118
+----- Time = 122 -----
+(122) Teller 14 takes on Employee 168.
+(122) Teller 19 takes on Employee 167.
+(122) Teller 11 takes on Employee 165.
+(122) Teller 6 takes on Employee 166.
+----- Time = 123 -----
+(123) Employee 163, with help of Teller 7, deposits $3800 into company 9. Admitted at time 120, arrived at 120
+(123) Employee 164, with help of Teller 8, checks balance of company 3. It is $300002600. Admitted at time 120, arrived at 120
+(123) Teller 15 takes on Employee 169.
+(123) Teller 13 takes on Employee 171.
+(123) Teller 12 takes on Employee 170.
+----- Time = 124 -----
+(124) Teller 5 takes on Employee 173.
+(124) Teller 1 takes on Employee 172.
+----- Time = 125 -----
+(125) Employee 168, with help of Teller 14, deposits $3000 into company 3. Admitted at time 122, arrived at 122
+(125) Employee 167, with help of Teller 19, checks balance of company 1. It is $300000500. Admitted at time 122, arrived at 122
+(125) Employee 165, with help of Teller 11, withdraws $4900 from company 2. Admitted at time 122, arrived at 122
+(125) Teller 10 takes on Employee 174.
+----- Time = 126 -----
+(126) Employee 169, with help of Teller 15, deposits $600 into company 9. Admitted at time 123, arrived at 123
+(126) Employee 171, with help of Teller 13, checks balance of company 9. It is $300018000. Admitted at time 123, arrived at 123
+(126) Employee 170, with help of Teller 12, deposits $2200 into company 2. Admitted at time 123, arrived at 123
+(126) Employee 166, with help of Teller 6, deposits $1000 into company 9. Admitted at time 122, arrived at 122
+----- Time = 127 -----
+(127) Employee 173, with help of Teller 5, deposits $1800 into company 4. Admitted at time 124, arrived at 124
+(127) Employee 172, with help of Teller 1, checks balance of company 7. It is $439994600. Admitted at time 124, arrived at 124
+(127) Teller 1 takes on Employee 175.
+(127) Teller 7 takes on Employee 176.
+----- Time = 128 -----
+(128) Employee 174, with help of Teller 10, deposits $3100 into company 6. Admitted at time 125, arrived at 125
+----- Time = 129 -----
+(129) Teller 17 takes on Employee 177.
+(129) Teller 9 takes on Employee 178.
+----- Time = 130 -----
+(130) Employee 175, with help of Teller 1, withdraws $3300 from company 7. Admitted at time 127, arrived at 127
+(130) Employee 176, with help of Teller 7, checks balance of company 4. It is $270002700. Admitted at time 127, arrived at 127
+(130) Teller 6 takes on Employee 179.
+(130) Teller 18 takes on Employee 180.
+----- Time = 131 -----
+----- Time = 132 -----
+(132) Employee 177, with help of Teller 17, withdraws $300 from company 4. Admitted at time 129, arrived at 129
+(132) Employee 178, with help of Teller 9, checks balance of company 2. It is $40012200. Admitted at time 129, arrived at 129
+(132) Teller 7 takes on Employee 181.
+(132) Teller 10 takes on Employee 183.
+(132) Teller 19 takes on Employee 182.
+----- Time = 133 -----
+(133) Employee 179, with help of Teller 6, withdraws $3500 from company 3. Admitted at time 130, arrived at 130
+(133) Employee 180, with help of Teller 18, checks balance of company 1. It is $300000500. Admitted at time 130, arrived at 130
+(133) Teller 20 takes on Employee 184.
+----- Time = 134 -----
+----- Time = 135 -----
+(135) Employee 183, with help of Teller 10, withdraws $200 from company 9. Admitted at time 132, arrived at 132
+(135) Employee 181, with help of Teller 7, withdraws $1200 from company 1. Admitted at time 132, arrived at 132
+(135) Employee 182, with help of Teller 19, deposits $4100 into company 6. Admitted at time 132, arrived at 132
+(135) Teller 1 takes on Employee 185.
+----- Time = 136 -----
+(136) Employee 184, with help of Teller 20, checks balance of company 6. It is $99991400. Admitted at time 133, arrived at 133
+----- Time = 137 -----
+(137) Teller 6 takes on Employee 186.
+----- Time = 138 -----
+(138) Employee 185, with help of Teller 1, deposits $3200 into company 1. Admitted at time 135, arrived at 135
+----- Time = 139 -----
+(139) Teller 2 takes on Employee 187.
+----- Time = 140 -----
+(140) Employee 186, with help of Teller 6, checks balance of company 9. It is $300018800. Admitted at time 137, arrived at 137
+(140) Teller 12 takes on Employee 189.
+(140) Teller 7 takes on Employee 188.
+----- Time = 141 -----
+(141) Teller 6 takes on Employee 190.
+----- Time = 142 -----
+(142) Employee 187, with help of Teller 2, checks balance of company 7. It is $439991300. Admitted at time 139, arrived at 139
+----- Time = 143 -----
+(143) Employee 189, with help of Teller 12, checks balance of company 3. It is $300002100. Admitted at time 140, arrived at 140
+(143) Employee 188, with help of Teller 7, withdraws $1900 from company 6. Admitted at time 140, arrived at 140
+(143) Teller 8 takes on Employee 191.
+(143) Teller 2 takes on Employee 192.
+----- Time = 144 -----
+(144) Employee 190, with help of Teller 6, withdraws $500 from company 2. Admitted at time 141, arrived at 141
+----- Time = 145 -----
+(145) Teller 16 takes on Employee 193.
+----- Time = 146 -----
+(146) Employee 191, with help of Teller 8, checks balance of company 6. It is $99989500. Admitted at time 143, arrived at 143
+(146) Teller 18 takes on Employee 194.
+----- Time = 147 -----
+(147) Employee 192, with help of Teller 2, withdraws $1400 from company 6. Admitted at time 143, arrived at 143
+(147) Teller 12 takes on Employee 195.
+----- Time = 148 -----
+(148) Employee 193, with help of Teller 16, deposits $3500 into company 2. Admitted at time 145, arrived at 145
+(148) Teller 3 takes on Employee 196.
+(148) Teller 2 takes on Employee 197.
+----- Time = 149 -----
+(149) Employee 194, with help of Teller 18, checks balance of company 4. It is $270002400. Admitted at time 146, arrived at 146
+----- Time = 150 -----
+(150) Employee 195, with help of Teller 12, checks balance of company 4. It is $270002400. Admitted at time 147, arrived at 147
+(150) Teller 12 takes on Employee 198.
+(150) Teller 11 takes on Employee 200.
+(150) Teller 8 takes on Employee 199.
+----- Time = 151 -----
+(151) Employee 196, with help of Teller 3, checks balance of company 6. It is $99988100. Admitted at time 148, arrived at 148
+(151) Employee 197, with help of Teller 2, withdraws $4200 from company 8. Admitted at time 148, arrived at 148
+(151) Teller 18 takes on Employee 203.
+(151) Teller 10 takes on Employee 201.
+(151) Teller 20 takes on Employee 202.
+----- Time = 152 -----
+(152) Teller 14 takes on Employee 204.
+(152) Teller 13 takes on Employee 209.
+(152) Teller 9 takes on Employee 210.
+(152) Teller 1 takes on Employee 208.
+(152) Teller 16 takes on Employee 207.
+(152) Teller 15 takes on Employee 206.
+(152) Teller 4 takes on Employee 205.
+----- Time = 153 -----
+(153) Employee 198, with help of Teller 12, withdraws $4500 from company 10. Admitted at time 150, arrived at 150
+(153) Employee 200, with help of Teller 11, deposits $4500 into company 3. Admitted at time 150, arrived at 150
+(153) Employee 199, with help of Teller 8, deposits $1500 into company 4. Admitted at time 150, arrived at 150
+----- Time = 154 -----
+(154) Employee 203, with help of Teller 18, deposits $5000 into company 8. Admitted at time 151, arrived at 151
+(154) Employee 201, with help of Teller 10, withdraws $3000 from company 1. Admitted at time 151, arrived at 151
+(154) Employee 202, with help of Teller 20, checks balance of company 7. It is $439991300. Admitted at time 151, arrived at 151
+(154) Teller 5 takes on Employee 211.
+----- Time = 155 -----
+(155) Employee 206, with help of Teller 15, checks balance of company 6. It is $99988100. Admitted at time 152, arrived at 152
+(155) Employee 204, with help of Teller 14, deposits $4700 into company 2. Admitted at time 152, arrived at 152
+(155) Employee 209, with help of Teller 13, withdraws $4400 from company 8. Admitted at time 152, arrived at 152
+(155) Employee 210, with help of Teller 9, deposits $3000 into company 7. Admitted at time 152, arrived at 152
+(155) Employee 208, with help of Teller 1, deposits $4500 into company 3. Admitted at time 152, arrived at 152
+(155) Employee 205, with help of Teller 4, checks balance of company 10. It is $370006000. Admitted at time 152, arrived at 152
+(155) Employee 207, with help of Teller 16, checks balance of company 6. It is $99988100. Admitted at time 152, arrived at 152
+(155) Teller 16 takes on Employee 212.
+----- Time = 156 -----
+----- Time = 157 -----
+(157) Employee 211, with help of Teller 5, checks balance of company 4. It is $270003900. Admitted at time 154, arrived at 154
+(157) Teller 10 takes on Employee 213.
+----- Time = 158 -----
+(158) Employee 212, with help of Teller 16, withdraws $1500 from company 8. Admitted at time 155, arrived at 155
+(158) Teller 16 takes on Employee 214.
+----- Time = 159 -----
+----- Time = 160 -----
+(160) Employee 213, with help of Teller 10, withdraws $4100 from company 5. Admitted at time 157, arrived at 157
+(160) Teller 6 takes on Employee 215.
+----- Time = 161 -----
+(161) Employee 214, with help of Teller 16, withdraws $1000 from company 8. Admitted at time 158, arrived at 158
+(161) Teller 2 takes on Employee 216.
+----- Time = 162 -----
+(162) Teller 3 takes on Employee 217.
+(162) Teller 17 takes on Employee 218.
+(162) Teller 16 takes on Employee 220.
+(162) Teller 10 takes on Employee 219.
+----- Time = 163 -----
+(163) Employee 215, with help of Teller 6, deposits $4200 into company 2. Admitted at time 160, arrived at 160
+(163) Teller 1 takes on Employee 221.
+(163) Teller 4 takes on Employee 223.
+(163) Teller 7 takes on Employee 222.
+----- Time = 164 -----
+(164) Employee 216, with help of Teller 2, deposits $300 into company 4. Admitted at time 161, arrived at 161
+(164) Teller 2 takes on Employee 224.
+(164) Teller 8 takes on Employee 225.
+----- Time = 165 -----
+(165) Employee 217, with help of Teller 3, deposits $3600 into company 1. Admitted at time 162, arrived at 162
+(165) Employee 218, with help of Teller 17, checks balance of company 7. It is $439994300. Admitted at time 162, arrived at 162
+(165) Employee 220, with help of Teller 16, withdraws $700 from company 6. Admitted at time 162, arrived at 162
+(165) Employee 219, with help of Teller 10, deposits $3300 into company 4. Admitted at time 162, arrived at 162
+----- Time = 166 -----
+(166) Employee 221, with help of Teller 1, deposits $1700 into company 6. Admitted at time 163, arrived at 163
+(166) Employee 223, with help of Teller 4, withdraws $4300 from company 1. Admitted at time 163, arrived at 163
+(166) Employee 222, with help of Teller 7, checks balance of company 5. It is $329999300. Admitted at time 163, arrived at 163
+(166) Teller 7 takes on Employee 226.
+----- Time = 167 -----
+(167) Employee 224, with help of Teller 2, withdraws $1300 from company 8. Admitted at time 164, arrived at 164
+(167) Employee 225, with help of Teller 8, withdraws $3300 from company 6. Admitted at time 164, arrived at 164
+(167) Teller 16 takes on Employee 227.
+----- Time = 168 -----
+----- Time = 169 -----
+(169) Employee 226, with help of Teller 7, checks balance of company 2. It is $40024100. Admitted at time 166, arrived at 166
+(169) Teller 7 takes on Employee 228.
+(169) Teller 19 takes on Employee 229.
+----- Time = 170 -----
+(170) Employee 227, with help of Teller 16, deposits $1800 into company 6. Admitted at time 167, arrived at 167
+----- Time = 171 -----
+(171) Teller 15 takes on Employee 230.
+----- Time = 172 -----
+(172) Employee 228, with help of Teller 7, deposits $3400 into company 9. Admitted at time 169, arrived at 169
+(172) Employee 229, with help of Teller 19, withdraws $4200 from company 5. Admitted at time 169, arrived at 169
+(172) Teller 11 takes on Employee 231.
+----- Time = 173 -----
+----- Time = 174 -----
+(174) Employee 230, with help of Teller 15, withdraws $1500 from company 3. Admitted at time 171, arrived at 171
+(174) Teller 12 takes on Employee 237.
+(174) Teller 10 takes on Employee 236.
+(174) Teller 7 takes on Employee 235.
+(174) Teller 15 takes on Employee 232.
+(174) Teller 19 takes on Employee 233.
+(174) Teller 9 takes on Employee 234.
+----- Time = 175 -----
+(175) Employee 231, with help of Teller 11, deposits $2600 into company 10. Admitted at time 172, arrived at 172
+----- Time = 176 -----
+(176) Teller 11 takes on Employee 238.
+(176) Teller 2 takes on Employee 239.
+----- Time = 177 -----
+(177) Employee 237, with help of Teller 12, checks balance of company 5. It is $329995100. Admitted at time 174, arrived at 174
+(177) Employee 235, with help of Teller 7, withdraws $900 from company 7. Admitted at time 174, arrived at 174
+(177) Employee 236, with help of Teller 10, deposits $4000 into company 10. Admitted at time 174, arrived at 174
+(177) Employee 233, with help of Teller 19, withdraws $3700 from company 3. Admitted at time 174, arrived at 174
+(177) Employee 232, with help of Teller 15, deposits $2200 into company 8. Admitted at time 174, arrived at 174
+(177) Employee 234, with help of Teller 9, checks balance of company 9. It is $300022200. Admitted at time 174, arrived at 174
+----- Time = 178 -----
+(178) Teller 17 takes on Employee 240.
+----- Time = 179 -----
+(179) Employee 238, with help of Teller 11, withdraws $4900 from company 7. Admitted at time 176, arrived at 176
+(179) Employee 239, with help of Teller 2, checks balance of company 3. It is $300005900. Admitted at time 176, arrived at 176
+(179) Teller 3 takes on Employee 241.
+(179) Teller 16 takes on Employee 242.
+----- Time = 180 -----
+(180) Teller 20 takes on Employee 243.
+(180) Teller 6 takes on Employee 245.
+(180) Teller 15 takes on Employee 244.
+----- Time = 181 -----
+(181) Employee 240, with help of Teller 17, deposits $4900 into company 5. Admitted at time 178, arrived at 178
+----- Time = 182 -----
+(182) Employee 241, with help of Teller 3, deposits $800 into company 6. Admitted at time 179, arrived at 179
+(182) Employee 242, with help of Teller 16, checks balance of company 9. It is $300022200. Admitted at time 179, arrived at 179
+(182) Teller 2 takes on Employee 246.
+(182) Teller 5 takes on Employee 247.
+(182) Teller 10 takes on Employee 248.
+----- Time = 183 -----
+(183) Employee 243, with help of Teller 20, deposits $400 into company 7. Admitted at time 180, arrived at 180
+(183) Employee 244, with help of Teller 15, withdraws $3300 from company 3. Admitted at time 180, arrived at 180
+(183) Teller 11 takes on Employee 253.
+(183) Teller 17 takes on Employee 251.
+(183) Teller 18 takes on Employee 252.
+(183) Teller 7 takes on Employee 249.
+(183) Teller 19 takes on Employee 250.
+----- Time = 184 -----
+(184) Employee 245, with help of Teller 6, deposits $3400 into company 7. Admitted at time 180, arrived at 180
+(184) Teller 1 takes on Employee 254.
+----- Time = 185 -----
+(185) Employee 246, with help of Teller 2, deposits $3100 into company 9. Admitted at time 182, arrived at 182
+(185) Employee 248, with help of Teller 10, withdraws $1000 from company 10. Admitted at time 182, arrived at 182
+(185) Teller 15 takes on Employee 255.
+(185) Teller 3 takes on Employee 257.
+(185) Teller 16 takes on Employee 256.
+----- Time = 186 -----
+(186) Employee 253, with help of Teller 11, withdraws $1100 from company 9. Admitted at time 183, arrived at 183
+(186) Employee 251, with help of Teller 17, deposits $4700 into company 2. Admitted at time 183, arrived at 183
+(186) Employee 247, with help of Teller 5, withdraws $1900 from company 9. Admitted at time 182, arrived at 182
+(186) Employee 252, with help of Teller 18, deposits $2900 into company 8. Admitted at time 183, arrived at 183
+(186) Employee 249, with help of Teller 7, checks balance of company 8. It is $349997900. Admitted at time 183, arrived at 183
+(186) Employee 250, with help of Teller 19, withdraws $900 from company 2. Admitted at time 183, arrived at 183
+----- Time = 187 -----
+(187) Employee 254, with help of Teller 1, deposits $3900 into company 7. Admitted at time 184, arrived at 184
+(187) Teller 4 takes on Employee 258.
+(187) Teller 13 takes on Employee 259.
+----- Time = 188 -----
+(188) Employee 257, with help of Teller 3, checks balance of company 4. It is $270007500. Admitted at time 185, arrived at 185
+(188) Employee 255, with help of Teller 15, checks balance of company 7. It is $439996200. Admitted at time 185, arrived at 185
+(188) Employee 256, with help of Teller 16, deposits $1100 into company 9. Admitted at time 185, arrived at 185
+(188) Teller 6 takes on Employee 260.
+(188) Teller 19 takes on Employee 261.
+----- Time = 189 -----
+(189) Teller 7 takes on Employee 262.
+----- Time = 190 -----
+(190) Employee 259, with help of Teller 13, checks balance of company 2. It is $40027900. Admitted at time 187, arrived at 187
+(190) Employee 258, with help of Teller 4, withdraws $3100 from company 8. Admitted at time 187, arrived at 187
+(190) Teller 4 takes on Employee 263.
+----- Time = 191 -----
+(191) Employee 260, with help of Teller 6, checks balance of company 6. It is $99988400. Admitted at time 188, arrived at 188
+(191) Employee 261, with help of Teller 19, checks balance of company 6. It is $99988400. Admitted at time 188, arrived at 188
+----- Time = 192 -----
+(192) Employee 262, with help of Teller 7, checks balance of company 8. It is $349994800. Admitted at time 189, arrived at 189
+(192) Teller 7 takes on Employee 264.
+----- Time = 193 -----
+(193) Employee 263, with help of Teller 4, checks balance of company 1. It is $299998800. Admitted at time 190, arrived at 190
+(193) Teller 5 takes on Employee 266.
+(193) Teller 2 takes on Employee 265.
+----- Time = 194 -----
+----- Time = 195 -----
+(195) Employee 264, with help of Teller 7, deposits $5000 into company 9. Admitted at time 192, arrived at 192
+(195) Teller 6 takes on Employee 269.
+(195) Teller 7 takes on Employee 267.
+(195) Teller 11 takes on Employee 268.
+----- Time = 196 -----
+(196) Employee 266, with help of Teller 5, withdraws $4300 from company 10. Admitted at time 193, arrived at 193
+(196) Employee 265, with help of Teller 2, checks balance of company 4. It is $270007500. Admitted at time 193, arrived at 193
+----- Time = 197 -----
+(197) Teller 12 takes on Employee 270.
+----- Time = 198 -----
+(198) Employee 269, with help of Teller 6, deposits $300 into company 4. Admitted at time 195, arrived at 195
+(198) Employee 267, with help of Teller 7, withdraws $3100 from company 8. Admitted at time 195, arrived at 195
+----- Time = 199 -----
+(199) Employee 268, with help of Teller 11, withdraws $1300 from company 4. Admitted at time 195, arrived at 195
+(199) Teller 9 takes on Employee 271.
+----- Time = 200 -----
+(200) Employee 270, with help of Teller 12, checks balance of company 9. It is $300028400. Admitted at time 197, arrived at 197
+----- Time = 201 -----
+(201) Teller 14 takes on Employee 272.
+----- Time = 202 -----
+(202) Employee 271, with help of Teller 9, deposits $1800 into company 4. Admitted at time 199, arrived at 199
+(202) Teller 9 takes on Employee 273.
+(202) Teller 10 takes on Employee 274.
+(202) Teller 7 takes on Employee 275.
+(202) Teller 16 takes on Employee 276.
+(202) Teller 6 takes on Employee 277.
+----- Time = 203 -----
+----- Time = 204 -----
+(204) Employee 272, with help of Teller 14, deposits $1100 into company 1. Admitted at time 201, arrived at 201
+(204) Teller 14 takes on Employee 278.
+(204) Teller 3 takes on Employee 279.
+----- Time = 205 -----
+(205) Employee 273, with help of Teller 9, checks balance of company 7. It is $439996200. Admitted at time 202, arrived at 202
+(205) Employee 274, with help of Teller 10, deposits $2900 into company 1. Admitted at time 202, arrived at 202
+(205) Employee 275, with help of Teller 7, checks balance of company 4. It is $270008300. Admitted at time 202, arrived at 202
+(205) Employee 276, with help of Teller 16, checks balance of company 10. It is $370007300. Admitted at time 202, arrived at 202
+(205) Employee 277, with help of Teller 6, deposits $900 into company 9. Admitted at time 202, arrived at 202
+----- Time = 206 -----
+(206) Teller 17 takes on Employee 280.
+(206) Teller 16 takes on Employee 281.
+----- Time = 207 -----
+(207) Employee 279, with help of Teller 3, checks balance of company 6. It is $99988400. Admitted at time 204, arrived at 204
+(207) Employee 278, with help of Teller 14, checks balance of company 8. It is $349991700. Admitted at time 204, arrived at 204
+----- Time = 208 -----
+(208) Teller 7 takes on Employee 283.
+(208) Teller 4 takes on Employee 282.
+----- Time = 209 -----
+(209) Employee 280, with help of Teller 17, withdraws $4700 from company 9. Admitted at time 206, arrived at 206
+(209) Employee 281, with help of Teller 16, withdraws $3600 from company 2. Admitted at time 206, arrived at 206
+(209) Teller 15 takes on Employee 284.
+----- Time = 210 -----
+(210) Teller 10 takes on Employee 285.
+----- Time = 211 -----
+(211) Employee 283, with help of Teller 7, deposits $2100 into company 10. Admitted at time 208, arrived at 208
+(211) Employee 282, with help of Teller 4, withdraws $1200 from company 8. Admitted at time 208, arrived at 208
+----- Time = 212 -----
+(212) Employee 284, with help of Teller 15, withdraws $4200 from company 2. Admitted at time 209, arrived at 209
+(212) Teller 14 takes on Employee 286.
+(212) Teller 19 takes on Employee 288.
+(212) Teller 6 takes on Employee 289.
+(212) Teller 7 takes on Employee 287.
+----- Time = 213 -----
+(213) Employee 285, with help of Teller 10, deposits $4600 into company 7. Admitted at time 210, arrived at 210
+----- Time = 214 -----
+(214) Teller 8 takes on Employee 290.
+----- Time = 215 -----
+(215) Employee 288, with help of Teller 19, checks balance of company 5. It is $330000000. Admitted at time 212, arrived at 212
+(215) Employee 286, with help of Teller 14, deposits $3700 into company 3. Admitted at time 212, arrived at 212
+(215) Employee 287, with help of Teller 7, checks balance of company 1. It is $300002800. Admitted at time 212, arrived at 212
+(215) Employee 289, with help of Teller 6, withdraws $4400 from company 6. Admitted at time 212, arrived at 212
+----- Time = 216 -----
+(216) Teller 11 takes on Employee 291.
+----- Time = 217 -----
+(217) Employee 290, with help of Teller 8, checks balance of company 1. It is $300002800. Admitted at time 214, arrived at 214
+(217) Teller 6 takes on Employee 292.
+(217) Teller 17 takes on Employee 293.
+----- Time = 218 -----
+(218) Teller 15 takes on Employee 294.
+----- Time = 219 -----
+(219) Employee 291, with help of Teller 11, deposits $2500 into company 9. Admitted at time 216, arrived at 216
+----- Time = 220 -----
+(220) Employee 292, with help of Teller 6, withdraws $1500 from company 9. Admitted at time 217, arrived at 217
+(220) Employee 293, with help of Teller 17, checks balance of company 10. It is $370009400. Admitted at time 217, arrived at 217
+(220) Teller 1 takes on Employee 295.
+----- Time = 221 -----
+(221) Employee 294, with help of Teller 15, checks balance of company 5. It is $330000000. Admitted at time 218, arrived at 218
+(221) Teller 15 takes on Employee 296.
+----- Time = 222 -----
+----- Time = 223 -----
+(223) Employee 295, with help of Teller 1, checks balance of company 7. It is $440000800. Admitted at time 220, arrived at 220
+(223) Teller 9 takes on Employee 298.
+(223) Teller 1 takes on Employee 297.
+----- Time = 224 -----
+(224) Employee 296, with help of Teller 15, withdraws $4200 from company 4. Admitted at time 221, arrived at 221
+----- Time = 225 -----
+(225) Teller 4 takes on Employee 299.
+(225) Teller 6 takes on Employee 300.
+----- Time = 226 -----
+(226) Employee 298, with help of Teller 9, checks balance of company 2. It is $40020100. Admitted at time 223, arrived at 223
+(226) Employee 297, with help of Teller 1, checks balance of company 1. It is $300002800. Admitted at time 223, arrived at 223
+----- Time = 227 -----
+(227) Teller 9 takes on Employee 301.
+----- Time = 228 -----
+(228) Employee 299, with help of Teller 4, deposits $1500 into company 8. Admitted at time 225, arrived at 225
+(228) Employee 300, with help of Teller 6, checks balance of company 10. It is $370009400. Admitted at time 225, arrived at 225
+(228) Teller 7 takes on Employee 303.
+(228) Teller 6 takes on Employee 302.
+----- Time = 229 -----
+----- Time = 230 -----
+(230) Employee 301, with help of Teller 9, deposits $1400 into company 4. Admitted at time 227, arrived at 227
+(230) Teller 2 takes on Employee 304.
+----- Time = 231 -----
+(231) Employee 303, with help of Teller 7, withdraws $3100 from company 2. Admitted at time 228, arrived at 228
+(231) Employee 302, with help of Teller 6, deposits $4900 into company 3. Admitted at time 228, arrived at 228
+(231) Teller 6 takes on Employee 305.
+(231) Teller 12 takes on Employee 306.
+(231) Teller 11 takes on Employee 307.
+----- Time = 232 -----
+(232) Teller 20 takes on Employee 308.
+----- Time = 233 -----
+(233) Employee 304, with help of Teller 2, withdraws $4500 from company 5. Admitted at time 230, arrived at 230
+----- Time = 234 -----
+(234) Employee 305, with help of Teller 6, checks balance of company 4. It is $270005500. Admitted at time 231, arrived at 231
+(234) Employee 306, with help of Teller 12, withdraws $800 from company 7. Admitted at time 231, arrived at 231
+(234) Employee 307, with help of Teller 11, checks balance of company 9. It is $300025600. Admitted at time 231, arrived at 231
+(234) Teller 11 takes on Employee 309.
+----- Time = 235 -----
+(235) Employee 308, with help of Teller 20, checks balance of company 8. It is $349992000. Admitted at time 232, arrived at 232
+----- Time = 236 -----
+(236) Teller 16 takes on Employee 310.
+(236) Teller 2 takes on Employee 311.
+(236) Teller 6 takes on Employee 312.
+----- Time = 237 -----
+(237) Employee 309, with help of Teller 11, deposits $1600 into company 3. Admitted at time 234, arrived at 234
+(237) Teller 12 takes on Employee 313.
+(237) Teller 1 takes on Employee 314.
+----- Time = 238 -----
+(238) Teller 10 takes on Employee 315.
+----- Time = 239 -----
+(239) Employee 310, with help of Teller 16, checks balance of company 10. It is $370009400. Admitted at time 236, arrived at 236
+(239) Employee 311, with help of Teller 2, checks balance of company 8. It is $349992000. Admitted at time 236, arrived at 236
+(239) Employee 312, with help of Teller 6, deposits $2700 into company 4. Admitted at time 236, arrived at 236
+----- Time = 240 -----
+(240) Employee 313, with help of Teller 12, withdraws $2700 from company 5. Admitted at time 237, arrived at 237
+(240) Employee 314, with help of Teller 1, withdraws $3900 from company 4. Admitted at time 237, arrived at 237
+(240) Teller 20 takes on Employee 316.
+----- Time = 241 -----
+(241) Employee 315, with help of Teller 10, checks balance of company 10. It is $370009400. Admitted at time 238, arrived at 238
+(241) Teller 15 takes on Employee 324.
+(241) Teller 16 takes on Employee 322.
+(241) Teller 17 takes on Employee 323.
+(241) Teller 12 takes on Employee 321.
+(241) Teller 2 takes on Employee 320.
+(241) Teller 18 takes on Employee 317.
+(241) Teller 3 takes on Employee 319.
+(241) Teller 7 takes on Employee 318.
+----- Time = 242 -----
+----- Time = 243 -----
+(243) Employee 316, with help of Teller 20, withdraws $4000 from company 6. Admitted at time 240, arrived at 240
+(243) Teller 14 takes on Employee 325.
+(243) Teller 20 takes on Employee 329.
+(243) Teller 1 takes on Employee 328.
+(243) Teller 10 takes on Employee 327.
+(243) Teller 6 takes on Employee 326.
+----- Time = 244 -----
+(244) Employee 324, with help of Teller 15, withdraws $4400 from company 1. Admitted at time 241, arrived at 241
+(244) Employee 321, with help of Teller 12, deposits $4600 into company 4. Admitted at time 241, arrived at 241
+(244) Employee 322, with help of Teller 16, deposits $4400 into company 8. Admitted at time 241, arrived at 241
+(244) Employee 319, with help of Teller 3, withdraws $2500 from company 2. Admitted at time 241, arrived at 241
+(244) Employee 317, with help of Teller 18, withdraws $100 from company 9. Admitted at time 241, arrived at 241
+(244) Employee 318, with help of Teller 7, checks balance of company 6. It is $99980000. Admitted at time 241, arrived at 241
+(244) Employee 320, with help of Teller 2, checks balance of company 5. It is $329992800. Admitted at time 241, arrived at 241
+----- Time = 245 -----
+(245) Employee 323, with help of Teller 17, deposits $1300 into company 8. Admitted at time 241, arrived at 241
+(245) Teller 8 takes on Employee 330.
+----- Time = 246 -----
+(246) Employee 325, with help of Teller 14, withdraws $100 from company 5. Admitted at time 243, arrived at 243
+(246) Employee 328, with help of Teller 1, deposits $4200 into company 10. Admitted at time 243, arrived at 243
+(246) Employee 329, with help of Teller 20, checks balance of company 4. It is $270008900. Admitted at time 243, arrived at 243
+(246) Employee 326, with help of Teller 6, withdraws $3700 from company 7. Admitted at time 243, arrived at 243
+(246) Employee 327, with help of Teller 10, deposits $1400 into company 1. Admitted at time 243, arrived at 243
+(246) Teller 15 takes on Employee 331.
+(246) Teller 12 takes on Employee 332.
+----- Time = 247 -----
+----- Time = 248 -----
+(248) Employee 330, with help of Teller 8, withdraws $4000 from company 9. Admitted at time 245, arrived at 245
+(248) Teller 13 takes on Employee 333.
+----- Time = 249 -----
+(249) Employee 331, with help of Teller 15, checks balance of company 6. It is $99980000. Admitted at time 246, arrived at 246
+(249) Employee 332, with help of Teller 12, deposits $2400 into company 8. Admitted at time 246, arrived at 246
+(249) Teller 16 takes on Employee 334.
+----- Time = 250 -----
+(250) Teller 10 takes on Employee 335.
+----- Time = 251 -----
+(251) Employee 333, with help of Teller 13, withdraws $4400 from company 10. Admitted at time 248, arrived at 248
+(251) Teller 19 takes on Employee 336.
+(251) Teller 8 takes on Employee 337.
+(251) Teller 3 takes on Employee 338.
+(251) Teller 17 takes on Employee 339.
+----- Time = 252 -----
+(252) Employee 334, with help of Teller 16, checks balance of company 2. It is $40014500. Admitted at time 249, arrived at 249
+(252) Teller 6 takes on Employee 340.
+----- Time = 253 -----
+(253) Employee 335, with help of Teller 10, deposits $600 into company 1. Admitted at time 250, arrived at 250
+----- Time = 254 -----
+(254) Employee 336, with help of Teller 19, withdraws $3300 from company 10. Admitted at time 251, arrived at 251
+(254) Employee 337, with help of Teller 8, deposits $3900 into company 4. Admitted at time 251, arrived at 251
+(254) Employee 338, with help of Teller 3, checks balance of company 10. It is $370005900. Admitted at time 251, arrived at 251
+(254) Teller 5 takes on Employee 341.
+----- Time = 255 -----
+(255) Employee 340, with help of Teller 6, checks balance of company 4. It is $270012800. Admitted at time 252, arrived at 252
+(255) Employee 339, with help of Teller 17, deposits $4800 into company 10. Admitted at time 251, arrived at 251
+(255) Teller 15 takes on Employee 342.
+----- Time = 256 -----
+----- Time = 257 -----
+(257) Employee 341, with help of Teller 5, withdraws $1300 from company 7. Admitted at time 254, arrived at 254
+(257) Teller 13 takes on Employee 343.
+----- Time = 258 -----
+(258) Employee 342, with help of Teller 15, withdraws $2100 from company 8. Admitted at time 255, arrived at 255
+----- Time = 259 -----
+(259) Teller 11 takes on Employee 344.
+(259) Teller 4 takes on Employee 345.
+----- Time = 260 -----
+(260) Employee 343, with help of Teller 13, deposits $3200 into company 5. Admitted at time 257, arrived at 257
+----- Time = 261 -----
+(261) Teller 2 takes on Employee 346.
+(261) Teller 14 takes on Employee 347.
+(261) Teller 20 takes on Employee 348.
+----- Time = 262 -----
+(262) Employee 345, with help of Teller 4, deposits $3600 into company 4. Admitted at time 259, arrived at 259
+(262) Employee 344, with help of Teller 11, withdraws $4900 from company 5. Admitted at time 259, arrived at 259
+(262) Teller 19 takes on Employee 349.
+----- Time = 263 -----
+----- Time = 264 -----
+(264) Employee 346, with help of Teller 2, withdraws $2700 from company 5. Admitted at time 261, arrived at 261
+(264) Employee 348, with help of Teller 20, withdraws $2900 from company 2. Admitted at time 261, arrived at 261
+(264) Employee 347, with help of Teller 14, deposits $1600 into company 4. Admitted at time 261, arrived at 261
+(264) Teller 16 takes on Employee 350.
+----- Time = 265 -----
+(265) Employee 349, with help of Teller 19, deposits $3400 into company 7. Admitted at time 262, arrived at 262
+----- Time = 266 -----
+(266) Teller 11 takes on Employee 351.
+(266) Teller 1 takes on Employee 352.
+----- Time = 267 -----
+(267) Employee 350, with help of Teller 16, deposits $1500 into company 10. Admitted at time 264, arrived at 264
+(267) Teller 9 takes on Employee 353.
+----- Time = 268 -----
+----- Time = 269 -----
+(269) Employee 351, with help of Teller 11, deposits $2000 into company 1. Admitted at time 266, arrived at 266
+(269) Employee 352, with help of Teller 1, deposits $600 into company 5. Admitted at time 266, arrived at 266
+(269) Teller 13 takes on Employee 354.
+(269) Teller 10 takes on Employee 356.
+(269) Teller 8 takes on Employee 357.
+(269) Teller 14 takes on Employee 358.
+(269) Teller 12 takes on Employee 355.
+----- Time = 270 -----
+(270) Employee 353, with help of Teller 9, checks balance of company 8. It is $349998000. Admitted at time 267, arrived at 267
+(270) Teller 19 takes on Employee 359.
+(270) Teller 4 takes on Employee 360.
+----- Time = 271 -----
+----- Time = 272 -----
+(272) Employee 354, with help of Teller 13, deposits $1000 into company 7. Admitted at time 269, arrived at 269
+(272) Employee 356, with help of Teller 10, checks balance of company 5. It is $329988900. Admitted at time 269, arrived at 269
+(272) Employee 357, with help of Teller 8, checks balance of company 9. It is $300021500. Admitted at time 269, arrived at 269
+(272) Employee 358, with help of Teller 14, withdraws $600 from company 10. Admitted at time 269, arrived at 269
+(272) Employee 355, with help of Teller 12, withdraws $2900 from company 4. Admitted at time 269, arrived at 269
+(272) Teller 17 takes on Employee 361.
+(272) Teller 20 takes on Employee 362.
+----- Time = 273 -----
+(273) Employee 359, with help of Teller 19, deposits $1400 into company 7. Admitted at time 270, arrived at 270
+(273) Employee 360, with help of Teller 4, deposits $2700 into company 1. Admitted at time 270, arrived at 270
+----- Time = 274 -----
+(274) Teller 12 takes on Employee 363.
+(274) Teller 1 takes on Employee 364.
+----- Time = 275 -----
+(275) Employee 361, with help of Teller 17, withdraws $1100 from company 10. Admitted at time 272, arrived at 272
+(275) Employee 362, with help of Teller 20, withdraws $1600 from company 7. Admitted at time 272, arrived at 272
+(275) Teller 6 takes on Employee 365.
+(275) Teller 9 takes on Employee 368.
+(275) Teller 2 takes on Employee 367.
+(275) Teller 5 takes on Employee 369.
+(275) Teller 7 takes on Employee 366.
+----- Time = 276 -----
+(276) Teller 20 takes on Employee 370.
+----- Time = 277 -----
+(277) Employee 363, with help of Teller 12, withdraws $1500 from company 1. Admitted at time 274, arrived at 274
+(277) Employee 364, with help of Teller 1, deposits $4100 into company 3. Admitted at time 274, arrived at 274
+(277) Teller 1 takes on Employee 371.
+----- Time = 278 -----
+(278) Employee 368, with help of Teller 9, deposits $4300 into company 6. Admitted at time 275, arrived at 275
+(278) Employee 367, with help of Teller 2, deposits $2000 into company 5. Admitted at time 275, arrived at 275
+(278) Employee 365, with help of Teller 6, deposits $500 into company 7. Admitted at time 275, arrived at 275
+(278) Employee 369, with help of Teller 5, withdraws $4500 from company 6. Admitted at time 275, arrived at 275
+(278) Employee 366, with help of Teller 7, deposits $4500 into company 9. Admitted at time 275, arrived at 275
+(278) Teller 10 takes on Employee 372.
+(278) Teller 12 takes on Employee 374.
+(278) Teller 17 takes on Employee 373.
+----- Time = 279 -----
+(279) Employee 370, with help of Teller 20, checks balance of company 1. It is $300003600. Admitted at time 276, arrived at 276
+(279) Teller 3 takes on Employee 375.
+----- Time = 280 -----
+(280) Employee 371, with help of Teller 1, withdraws $4000 from company 6. Admitted at time 277, arrived at 277
+----- Time = 281 -----
+(281) Employee 372, with help of Teller 10, deposits $3300 into company 1. Admitted at time 278, arrived at 278
+(281) Employee 374, with help of Teller 12, withdraws $100 from company 5. Admitted at time 278, arrived at 278
+(281) Employee 373, with help of Teller 17, withdraws $500 from company 10. Admitted at time 278, arrived at 278
+(281) Teller 14 takes on Employee 376.
+(281) Teller 15 takes on Employee 377.
+----- Time = 282 -----
+(282) Employee 375, with help of Teller 3, withdraws $1500 from company 9. Admitted at time 279, arrived at 279
+(282) Teller 7 takes on Employee 379.
+(282) Teller 11 takes on Employee 378.
+----- Time = 283 -----
+(283) Teller 18 takes on Employee 380.
+----- Time = 284 -----
+(284) Employee 376, with help of Teller 14, deposits $3900 into company 7. Admitted at time 281, arrived at 281
+(284) Employee 377, with help of Teller 15, checks balance of company 6. It is $99975800. Admitted at time 281, arrived at 281
+(284) Teller 15 takes on Employee 381.
+----- Time = 285 -----
+(285) Employee 378, with help of Teller 11, withdraws $900 from company 4. Admitted at time 282, arrived at 282
+(285) Employee 379, with help of Teller 7, deposits $1800 into company 6. Admitted at time 282, arrived at 282
+----- Time = 286 -----
+(286) Employee 380, with help of Teller 18, deposits $500 into company 8. Admitted at time 283, arrived at 283
+(286) Teller 1 takes on Employee 382.
+----- Time = 287 -----
+(287) Employee 381, with help of Teller 15, checks balance of company 4. It is $270014200. Admitted at time 284, arrived at 284
+(287) Teller 15 takes on Employee 383.
+(287) Teller 7 takes on Employee 384.
+(287) Teller 12 takes on Employee 385.
+(287) Teller 14 takes on Employee 386.
+(287) Teller 18 takes on Employee 387.
+----- Time = 288 -----
+(288) Teller 11 takes on Employee 388.
+(288) Teller 9 takes on Employee 392.
+(288) Teller 6 takes on Employee 390.
+(288) Teller 2 takes on Employee 393.
+(288) Teller 3 takes on Employee 394.
+(288) Teller 17 takes on Employee 389.
+(288) Teller 8 takes on Employee 391.
+----- Time = 289 -----
+(289) Employee 382, with help of Teller 1, deposits $600 into company 5. Admitted at time 286, arrived at 286
+----- Time = 290 -----
+(290) Employee 383, with help of Teller 15, deposits $1800 into company 6. Admitted at time 287, arrived at 287
+(290) Employee 384, with help of Teller 7, checks balance of company 7. It is $440003600. Admitted at time 287, arrived at 287
+(290) Employee 385, with help of Teller 12, withdraws $4200 from company 1. Admitted at time 287, arrived at 287
+(290) Employee 386, with help of Teller 14, withdraws $1300 from company 4. Admitted at time 287, arrived at 287
+(290) Teller 14 takes on Employee 395.
+----- Time = 291 -----
+(291) Employee 389, with help of Teller 17, checks balance of company 3. It is $300016900. Admitted at time 288, arrived at 288
+(291) Employee 391, with help of Teller 8, checks balance of company 10. It is $370010000. Admitted at time 288, arrived at 288
+(291) Employee 388, with help of Teller 11, withdraws $400 from company 2. Admitted at time 288, arrived at 288
+(291) Employee 392, with help of Teller 9, withdraws $2300 from company 8. Admitted at time 288, arrived at 288
+(291) Employee 390, with help of Teller 6, withdraws $1700 from company 5. Admitted at time 288, arrived at 288
+(291) Employee 393, with help of Teller 2, withdraws $4300 from company 1. Admitted at time 288, arrived at 288
+(291) Employee 394, with help of Teller 3, checks balance of company 10. It is $370010000. Admitted at time 288, arrived at 288
+(291) Teller 3 takes on Employee 396.
+(291) Teller 19 takes on Employee 401.
+(291) Teller 1 takes on Employee 402.
+(291) Teller 11 takes on Employee 398.
+(291) Teller 20 takes on Employee 404.
+(291) Teller 17 takes on Employee 403.
+(291) Teller 9 takes on Employee 397.
+(291) Teller 8 takes on Employee 399.
+(291) Teller 10 takes on Employee 400.
+----- Time = 292 -----
+(292) Teller 16 takes on Employee 405.
+(292) Teller 2 takes on Employee 406.
+----- Time = 293 -----
+(293) Teller 13 takes on Employee 407.
+(293) Teller 6 takes on Employee 408.
+----- Time = 294 -----
+(294) Employee 397, with help of Teller 9, checks balance of company 6. It is $99979400. Admitted at time 291, arrived at 291
+(294) Employee 399, with help of Teller 8, withdraws $400 from company 4. Admitted at time 291, arrived at 291
+(294) Employee 401, with help of Teller 19, checks balance of company 1. It is $299998400. Admitted at time 291, arrived at 291
+(294) Employee 400, with help of Teller 10, withdraws $900 from company 2. Admitted at time 291, arrived at 291
+(294) Employee 396, with help of Teller 3, checks balance of company 10. It is $370010000. Admitted at time 291, arrived at 291
+(294) Employee 402, with help of Teller 1, withdraws $500 from company 5. Admitted at time 291, arrived at 291
+(294) Employee 387, with help of Teller 18, withdraws $2200 from company 1. Admitted at time 287, arrived at 287
+(294) Employee 398, with help of Teller 11, checks balance of company 5. It is $329989200. Admitted at time 291, arrived at 291
+(294) Employee 404, with help of Teller 20, deposits $3300 into company 3. Admitted at time 291, arrived at 291
+(294) Employee 403, with help of Teller 17, checks balance of company 5. It is $329989200. Admitted at time 291, arrived at 291
+----- Time = 295 -----
+(295) Employee 405, with help of Teller 16, checks balance of company 4. It is $270012500. Admitted at time 292, arrived at 292
+(295) Employee 406, with help of Teller 2, checks balance of company 2. It is $40010300. Admitted at time 292, arrived at 292
+(295) Teller 5 takes on Employee 409.
+(295) Teller 7 takes on Employee 410.
+----- Time = 296 -----
+(296) Employee 407, with help of Teller 13, checks balance of company 7. It is $440003600. Admitted at time 293, arrived at 293
+(296) Employee 408, with help of Teller 6, checks balance of company 10. It is $370010000. Admitted at time 293, arrived at 293
+(296) Employee 395, with help of Teller 14, deposits $4500 into company 2. Admitted at time 290, arrived at 290
+(296) Teller 14 takes on Employee 411.
+(296) Teller 17 takes on Employee 412.
+(296) Teller 4 takes on Employee 413.
+(296) Teller 12 takes on Employee 415.
+(296) Teller 20 takes on Employee 414.
+----- Time = 297 -----
+----- Time = 298 -----
+(298) Employee 409, with help of Teller 5, withdraws $1200 from company 3. Admitted at time 295, arrived at 295
+(298) Employee 410, with help of Teller 7, deposits $600 into company 9. Admitted at time 295, arrived at 295
+(298) Teller 16 takes on Employee 416.
+----- Time = 299 -----
+(299) Employee 411, with help of Teller 14, checks balance of company 7. It is $440003600. Admitted at time 296, arrived at 296
+(299) Employee 413, with help of Teller 4, withdraws $200 from company 1. Admitted at time 296, arrived at 296
+(299) Employee 415, with help of Teller 12, checks balance of company 4. It is $270012500. Admitted at time 296, arrived at 296
+(299) Employee 412, with help of Teller 17, checks balance of company 7. It is $440003600. Admitted at time 296, arrived at 296
+(299) Employee 414, with help of Teller 20, deposits $600 into company 3. Admitted at time 296, arrived at 296
+(299) Teller 20 takes on Employee 417.
+(299) Teller 1 takes on Employee 418.
+----- Time = 300 -----
+----- Time = 301 -----
+(301) Teller 12 takes on Employee 419.
+----- Time = 302 -----
+(302) Employee 417, with help of Teller 20, deposits $3800 into company 9. Admitted at time 299, arrived at 299
+(302) Employee 418, with help of Teller 1, checks balance of company 4. It is $270012500. Admitted at time 299, arrived at 299
+(302) Employee 416, with help of Teller 16, withdraws $3000 from company 4. Admitted at time 298, arrived at 298
+(302) Teller 4 takes on Employee 420.
+(302) Teller 7 takes on Employee 421.
+(302) Teller 3 takes on Employee 422.
+(302) Teller 10 takes on Employee 423.
+----- Time = 303 -----
+----- Time = 304 -----
+(304) Employee 419, with help of Teller 12, deposits $1800 into company 8. Admitted at time 301, arrived at 301
+(304) Teller 19 takes on Employee 429.
+(304) Teller 16 takes on Employee 428.
+(304) Teller 5 takes on Employee 424.
+(304) Teller 14 takes on Employee 427.
+(304) Teller 13 takes on Employee 426.
+(304) Teller 17 takes on Employee 425.
+----- Time = 305 -----
+(305) Employee 420, with help of Teller 4, deposits $4600 into company 4. Admitted at time 302, arrived at 302
+(305) Employee 421, with help of Teller 7, deposits $3500 into company 4. Admitted at time 302, arrived at 302
+(305) Employee 422, with help of Teller 3, withdraws $4300 from company 1. Admitted at time 302, arrived at 302
+(305) Employee 423, with help of Teller 10, withdraws $2000 from company 10. Admitted at time 302, arrived at 302
+----- Time = 306 -----
+(306) Teller 11 takes on Employee 430.
+----- Time = 307 -----
+(307) Employee 429, with help of Teller 19, withdraws $2400 from company 2. Admitted at time 304, arrived at 304
+(307) Employee 428, with help of Teller 16, checks balance of company 10. It is $370008000. Admitted at time 304, arrived at 304
+(307) Employee 427, with help of Teller 14, deposits $4500 into company 9. Admitted at time 304, arrived at 304
+(307) Employee 424, with help of Teller 5, checks balance of company 5. It is $329989200. Admitted at time 304, arrived at 304
+(307) Employee 426, with help of Teller 13, checks balance of company 3. It is $300019600. Admitted at time 304, arrived at 304
+----- Time = 308 -----
+(308) Employee 425, with help of Teller 17, deposits $4600 into company 3. Admitted at time 304, arrived at 304
+(308) Teller 17 takes on Employee 431.
+(308) Teller 12 takes on Employee 432.
+(308) Teller 2 takes on Employee 433.
+----- Time = 309 -----
+(309) Employee 430, with help of Teller 11, checks balance of company 2. It is $40012400. Admitted at time 306, arrived at 306
+----- Time = 310 -----
+(310) Teller 4 takes on Employee 434.
+----- Time = 311 -----
+(311) Employee 432, with help of Teller 12, withdraws $2400 from company 3. Admitted at time 308, arrived at 308
+(311) Employee 431, with help of Teller 17, withdraws $4700 from company 5. Admitted at time 308, arrived at 308
+(311) Employee 433, with help of Teller 2, checks balance of company 7. It is $440003600. Admitted at time 308, arrived at 308
+(311) Teller 13 takes on Employee 439.
+(311) Teller 3 takes on Employee 437.
+(311) Teller 7 takes on Employee 436.
+(311) Teller 18 takes on Employee 435.
+(311) Teller 6 takes on Employee 438.
+----- Time = 312 -----
+(312) Teller 16 takes on Employee 440.
+----- Time = 313 -----
+(313) Employee 434, with help of Teller 4, withdraws $4500 from company 4. Admitted at time 310, arrived at 310
+----- Time = 314 -----
+(314) Employee 439, with help of Teller 13, deposits $3000 into company 6. Admitted at time 311, arrived at 311
+(314) Employee 436, with help of Teller 7, checks balance of company 10. It is $370008000. Admitted at time 311, arrived at 311
+(314) Employee 437, with help of Teller 3, deposits $1800 into company 9. Admitted at time 311, arrived at 311
+(314) Employee 435, with help of Teller 18, deposits $5000 into company 7. Admitted at time 311, arrived at 311
+(314) Teller 8 takes on Employee 441.
+(314) Teller 17 takes on Employee 442.
+(314) Teller 19 takes on Employee 444.
+(314) Teller 4 takes on Employee 443.
+----- Time = 315 -----
+(315) Employee 440, with help of Teller 16, checks balance of company 2. It is $40012400. Admitted at time 312, arrived at 312
+----- Time = 316 -----
+(316) Teller 9 takes on Employee 445.
+----- Time = 317 -----
+(317) Employee 441, with help of Teller 8, withdraws $2800 from company 2. Admitted at time 314, arrived at 314
+(317) Employee 444, with help of Teller 19, checks balance of company 10. It is $370008000. Admitted at time 314, arrived at 314
+(317) Employee 443, with help of Teller 4, checks balance of company 9. It is $300035200. Admitted at time 314, arrived at 314
+(317) Employee 442, with help of Teller 17, checks balance of company 4. It is $270013100. Admitted at time 314, arrived at 314
+(317) Teller 17 takes on Employee 446.
+----- Time = 318 -----
+(318) Employee 438, with help of Teller 6, withdraws $600 from company 9. Admitted at time 311, arrived at 311
+----- Time = 319 -----
+(319) Employee 445, with help of Teller 9, checks balance of company 6. It is $99982400. Admitted at time 316, arrived at 316
+(319) Teller 13 takes on Employee 447.
+----- Time = 320 -----
+(320) Employee 446, with help of Teller 17, withdraws $1400 from company 2. Admitted at time 317, arrived at 317
+(320) Teller 9 takes on Employee 448.
+----- Time = 321 -----
+----- Time = 322 -----
+(322) Employee 447, with help of Teller 13, checks balance of company 5. It is $329984500. Admitted at time 319, arrived at 319
+(322) Teller 14 takes on Employee 449.
+----- Time = 323 -----
+(323) Employee 448, with help of Teller 9, withdraws $4800 from company 5. Admitted at time 320, arrived at 320
+(323) Teller 18 takes on Employee 450.
+----- Time = 324 -----
+(324) Teller 13 takes on Employee 451.
+----- Time = 325 -----
+(325) Employee 449, with help of Teller 14, deposits $4200 into company 4. Admitted at time 322, arrived at 322
+(325) Teller 9 takes on Employee 452.
+----- Time = 326 -----
+(326) Employee 450, with help of Teller 18, checks balance of company 1. It is $299991700. Admitted at time 323, arrived at 323
+(326) Teller 14 takes on Employee 455.
+(326) Teller 16 takes on Employee 454.
+(326) Teller 18 takes on Employee 453.
+----- Time = 327 -----
+(327) Employee 451, with help of Teller 13, withdraws $4100 from company 6. Admitted at time 324, arrived at 324
+----- Time = 328 -----
+(328) Employee 452, with help of Teller 9, deposits $3300 into company 8. Admitted at time 325, arrived at 325
+(328) Teller 19 takes on Employee 456.
+----- Time = 329 -----
+(329) Employee 454, with help of Teller 16, checks balance of company 10. It is $370008000. Admitted at time 326, arrived at 326
+(329) Employee 455, with help of Teller 14, checks balance of company 4. It is $270017300. Admitted at time 326, arrived at 326
+(329) Employee 453, with help of Teller 18, withdraws $700 from company 4. Admitted at time 326, arrived at 326
+(329) Teller 20 takes on Employee 460.
+(329) Teller 15 takes on Employee 457.
+(329) Teller 4 takes on Employee 458.
+(329) Teller 8 takes on Employee 459.
+----- Time = 330 -----
+(330) Teller 18 takes on Employee 461.
+----- Time = 331 -----
+(331) Employee 456, with help of Teller 19, checks balance of company 7. It is $440008600. Admitted at time 328, arrived at 328
+----- Time = 332 -----
+(332) Employee 458, with help of Teller 4, deposits $1200 into company 2. Admitted at time 329, arrived at 329
+(332) Employee 457, with help of Teller 15, deposits $1000 into company 10. Admitted at time 329, arrived at 329
+(332) Employee 460, with help of Teller 20, deposits $2400 into company 6. Admitted at time 329, arrived at 329
+(332) Employee 459, with help of Teller 8, withdraws $2300 from company 7. Admitted at time 329, arrived at 329
+(332) Teller 19 takes on Employee 465.
+(332) Teller 17 takes on Employee 463.
+(332) Teller 2 takes on Employee 462.
+(332) Teller 6 takes on Employee 464.
+----- Time = 333 -----
+(333) Employee 461, with help of Teller 18, deposits $3400 into company 4. Admitted at time 330, arrived at 330
+(333) Teller 1 takes on Employee 466.
+----- Time = 334 -----
+(334) Teller 3 takes on Employee 467.
+(334) Teller 16 takes on Employee 468.
+----- Time = 335 -----
+(335) Employee 465, with help of Teller 19, withdraws $600 from company 6. Admitted at time 332, arrived at 332
+(335) Employee 463, with help of Teller 17, checks balance of company 9. It is $300034600. Admitted at time 332, arrived at 332
+(335) Employee 462, with help of Teller 2, withdraws $4500 from company 5. Admitted at time 332, arrived at 332
+(335) Employee 464, with help of Teller 6, deposits $4800 into company 6. Admitted at time 332, arrived at 332
+(335) Teller 8 takes on Employee 469.
+(335) Teller 18 takes on Employee 470.
+(335) Teller 11 takes on Employee 471.
+----- Time = 336 -----
+(336) Employee 466, with help of Teller 1, deposits $3900 into company 9. Admitted at time 333, arrived at 333
+----- Time = 337 -----
+(337) Employee 467, with help of Teller 3, checks balance of company 8. It is $350001300. Admitted at time 334, arrived at 334
+(337) Employee 468, with help of Teller 16, checks balance of company 3. It is $300021800. Admitted at time 334, arrived at 334
+(337) Teller 2 takes on Employee 473.
+(337) Teller 15 takes on Employee 472.
+----- Time = 338 -----
+(338) Employee 469, with help of Teller 8, deposits $2000 into company 7. Admitted at time 335, arrived at 335
+(338) Employee 471, with help of Teller 11, withdraws $2000 from company 8. Admitted at time 335, arrived at 335
+(338) Employee 470, with help of Teller 18, withdraws $4600 from company 4. Admitted at time 335, arrived at 335
+(338) Teller 7 takes on Employee 474.
+(338) Teller 17 takes on Employee 475.
+----- Time = 339 -----
+----- Time = 340 -----
+(340) Employee 473, with help of Teller 2, deposits $400 into company 10. Admitted at time 337, arrived at 337
+(340) Employee 472, with help of Teller 15, deposits $1500 into company 9. Admitted at time 337, arrived at 337
+(340) Teller 13 takes on Employee 476.
+(340) Teller 18 takes on Employee 479.
+(340) Teller 1 takes on Employee 478.
+(340) Teller 16 takes on Employee 477.
+(340) Teller 19 takes on Employee 480.
+(340) Teller 3 takes on Employee 481.
+----- Time = 341 -----
+(341) Employee 474, with help of Teller 7, checks balance of company 4. It is $270015400. Admitted at time 338, arrived at 338
+(341) Employee 475, with help of Teller 17, deposits $2900 into company 7. Admitted at time 338, arrived at 338
+(341) Teller 9 takes on Employee 482.
+(341) Teller 15 takes on Employee 483.
+----- Time = 342 -----
+(342) Teller 8 takes on Employee 486.
+(342) Teller 5 takes on Employee 484.
+(342) Teller 11 takes on Employee 485.
+----- Time = 343 -----
+(343) Employee 476, with help of Teller 13, deposits $4300 into company 1. Admitted at time 340, arrived at 340
+(343) Employee 479, with help of Teller 18, deposits $100 into company 9. Admitted at time 340, arrived at 340
+(343) Employee 478, with help of Teller 1, withdraws $1600 from company 1. Admitted at time 340, arrived at 340
+(343) Employee 477, with help of Teller 16, checks balance of company 5. It is $329975200. Admitted at time 340, arrived at 340
+(343) Employee 480, with help of Teller 19, checks balance of company 3. It is $300021800. Admitted at time 340, arrived at 340
+(343) Employee 481, with help of Teller 3, withdraws $100 from company 5. Admitted at time 340, arrived at 340
+----- Time = 344 -----
+(344) Employee 482, with help of Teller 9, checks balance of company 10. It is $370009400. Admitted at time 341, arrived at 341
+(344) Employee 483, with help of Teller 15, checks balance of company 7. It is $440011200. Admitted at time 341, arrived at 341
+(344) Teller 12 takes on Employee 487.
+(344) Teller 14 takes on Employee 489.
+(344) Teller 7 takes on Employee 490.
+(344) Teller 3 takes on Employee 488.
+----- Time = 345 -----
+(345) Employee 484, with help of Teller 5, checks balance of company 4. It is $270015400. Admitted at time 342, arrived at 342
+(345) Employee 485, with help of Teller 11, deposits $2000 into company 9. Admitted at time 342, arrived at 342
+(345) Employee 486, with help of Teller 8, checks balance of company 10. It is $370009400. Admitted at time 342, arrived at 342
+(345) Teller 19 takes on Employee 491.
+----- Time = 346 -----
+----- Time = 347 -----
+(347) Employee 487, with help of Teller 12, deposits $4400 into company 5. Admitted at time 344, arrived at 344
+(347) Employee 489, with help of Teller 14, deposits $1700 into company 4. Admitted at time 344, arrived at 344
+(347) Employee 488, with help of Teller 3, deposits $3300 into company 6. Admitted at time 344, arrived at 344
+(347) Teller 11 takes on Employee 492.
+----- Time = 348 -----
+(348) Employee 491, with help of Teller 19, checks balance of company 9. It is $300042100. Admitted at time 345, arrived at 345
+(348) Employee 490, with help of Teller 7, deposits $3200 into company 4. Admitted at time 344, arrived at 344
+(348) Teller 7 takes on Employee 493.
+(348) Teller 3 takes on Employee 494.
+----- Time = 349 -----
+(349) Teller 10 takes on Employee 498.
+(349) Teller 5 takes on Employee 496.
+(349) Teller 13 takes on Employee 495.
+(349) Teller 18 takes on Employee 497.
+----- Time = 350 -----
+(350) Employee 492, with help of Teller 11, withdraws $1000 from company 3. Admitted at time 347, arrived at 347
+(350) Teller 4 takes on Employee 499.
+(350) Teller 19 takes on Employee 501.
+(350) Teller 14 takes on Employee 500.
+----- Time = 351 -----
+(351) Employee 493, with help of Teller 7, deposits $2500 into company 3. Admitted at time 348, arrived at 348
+(351) Employee 494, with help of Teller 3, deposits $4200 into company 5. Admitted at time 348, arrived at 348
+(351) Teller 3 takes on Employee 502.
+(351) Teller 8 takes on Employee 505.
+(351) Teller 17 takes on Employee 506.
+(351) Teller 1 takes on Employee 504.
+(351) Teller 6 takes on Employee 503.
+----- Time = 352 -----
+(352) Employee 498, with help of Teller 10, deposits $1100 into company 6. Admitted at time 349, arrived at 349
+(352) Employee 496, with help of Teller 5, withdraws $2700 from company 5. Admitted at time 349, arrived at 349
+(352) Employee 495, with help of Teller 13, deposits $4500 into company 4. Admitted at time 349, arrived at 349
+(352) Employee 497, with help of Teller 18, deposits $2500 into company 3. Admitted at time 349, arrived at 349
+----- Time = 353 -----
+(353) Employee 501, with help of Teller 19, deposits $2000 into company 9. Admitted at time 350, arrived at 350
+(353) Employee 499, with help of Teller 4, checks balance of company 6. It is $99989300. Admitted at time 350, arrived at 350
+(353) Employee 500, with help of Teller 14, withdraws $700 from company 4. Admitted at time 350, arrived at 350
+(353) Teller 15 takes on Employee 507.
+(353) Teller 7 takes on Employee 509.
+(353) Teller 2 takes on Employee 508.
+----- Time = 354 -----
+(354) Employee 503, with help of Teller 6, checks balance of company 4. It is $270024100. Admitted at time 351, arrived at 351
+(354) Employee 502, with help of Teller 3, withdraws $4100 from company 8. Admitted at time 351, arrived at 351
+(354) Employee 505, with help of Teller 8, deposits $4800 into company 10. Admitted at time 351, arrived at 351
+(354) Employee 506, with help of Teller 17, checks balance of company 10. It is $370014200. Admitted at time 351, arrived at 351
+----- Time = 355 -----
+(355) Employee 504, with help of Teller 1, deposits $200 into company 10. Admitted at time 351, arrived at 351
+(355) Teller 5 takes on Employee 510.
+(355) Teller 17 takes on Employee 512.
+(355) Teller 20 takes on Employee 511.
+(355) Teller 18 takes on Employee 513.
+----- Time = 356 -----
+(356) Employee 509, with help of Teller 7, withdraws $300 from company 7. Admitted at time 353, arrived at 353
+(356) Employee 507, with help of Teller 15, deposits $4600 into company 6. Admitted at time 353, arrived at 353
+(356) Employee 508, with help of Teller 2, deposits $2700 into company 7. Admitted at time 353, arrived at 353
+(356) Teller 8 takes on Employee 514.
+(356) Teller 11 takes on Employee 516.
+(356) Teller 10 takes on Employee 517.
+(356) Teller 12 takes on Employee 515.
+----- Time = 357 -----
+(357) Teller 14 takes on Employee 518.
+(357) Teller 9 takes on Employee 521.
+(357) Teller 3 takes on Employee 522.
+(357) Teller 7 takes on Employee 520.
+(357) Teller 15 takes on Employee 519.
+----- Time = 358 -----
+(358) Employee 510, with help of Teller 5, deposits $800 into company 7. Admitted at time 355, arrived at 355
+(358) Employee 512, with help of Teller 17, withdraws $3300 from company 1. Admitted at time 355, arrived at 355
+(358) Employee 511, with help of Teller 20, withdraws $4800 from company 2. Admitted at time 355, arrived at 355
+(358) Employee 513, with help of Teller 18, deposits $2800 into company 2. Admitted at time 355, arrived at 355
+(358) Teller 6 takes on Employee 523.
+----- Time = 359 -----
+(359) Employee 514, with help of Teller 8, withdraws $3100 from company 6. Admitted at time 356, arrived at 356
+(359) Employee 517, with help of Teller 10, withdraws $1100 from company 7. Admitted at time 356, arrived at 356
+(359) Employee 516, with help of Teller 11, checks balance of company 6. It is $99990800. Admitted at time 356, arrived at 356
+----- Time = 360 -----
+(360) Employee 518, with help of Teller 14, deposits $4300 into company 9. Admitted at time 357, arrived at 357
+(360) Employee 522, with help of Teller 3, withdraws $2600 from company 3. Admitted at time 357, arrived at 357
+(360) Employee 521, with help of Teller 9, deposits $2400 into company 6. Admitted at time 357, arrived at 357
+(360) Employee 520, with help of Teller 7, withdraws $3600 from company 7. Admitted at time 357, arrived at 357
+(360) Employee 519, with help of Teller 15, deposits $500 into company 3. Admitted at time 357, arrived at 357
+(360) Teller 7 takes on Employee 524.
+----- Time = 361 -----
+(361) Employee 523, with help of Teller 6, withdraws $2700 from company 1. Admitted at time 358, arrived at 358
+(361) Employee 515, with help of Teller 12, withdraws $4600 from company 6. Admitted at time 356, arrived at 356
+(361) Teller 2 takes on Employee 525.
+(361) Teller 15 takes on Employee 527.
+(361) Teller 18 takes on Employee 526.
+----- Time = 362 -----
+----- Time = 363 -----
+(363) Employee 524, with help of Teller 7, withdraws $3100 from company 4. Admitted at time 360, arrived at 360
+(363) Teller 12 takes on Employee 532.
+(363) Teller 11 takes on Employee 531.
+(363) Teller 3 takes on Employee 528.
+(363) Teller 9 takes on Employee 530.
+(363) Teller 16 takes on Employee 529.
+----- Time = 364 -----
+(364) Employee 525, with help of Teller 2, withdraws $4700 from company 1. Admitted at time 361, arrived at 361
+(364) Employee 526, with help of Teller 18, deposits $3500 into company 9. Admitted at time 361, arrived at 361
+(364) Employee 527, with help of Teller 15, withdraws $1800 from company 8. Admitted at time 361, arrived at 361
+(364) Teller 7 takes on Employee 535.
+(364) Teller 14 takes on Employee 534.
+(364) Teller 6 takes on Employee 533.
+----- Time = 365 -----
+(365) Teller 8 takes on Employee 537.
+(365) Teller 20 takes on Employee 536.
+----- Time = 366 -----
+(366) Employee 532, with help of Teller 12, withdraws $2200 from company 10. Admitted at time 363, arrived at 363
+(366) Employee 528, with help of Teller 3, withdraws $3800 from company 6. Admitted at time 363, arrived at 363
+(366) Employee 531, with help of Teller 11, checks balance of company 8. It is $349993400. Admitted at time 363, arrived at 363
+(366) Employee 530, with help of Teller 9, withdraws $1700 from company 1. Admitted at time 363, arrived at 363
+(366) Employee 529, with help of Teller 16, withdraws $600 from company 10. Admitted at time 363, arrived at 363
+(366) Teller 16 takes on Employee 538.
+----- Time = 367 -----
+(367) Employee 535, with help of Teller 7, deposits $4600 into company 9. Admitted at time 364, arrived at 364
+(367) Employee 534, with help of Teller 14, deposits $3000 into company 5. Admitted at time 364, arrived at 364
+----- Time = 368 -----
+(368) Employee 537, with help of Teller 8, checks balance of company 4. It is $270021000. Admitted at time 365, arrived at 365
+(368) Employee 536, with help of Teller 20, withdraws $2300 from company 6. Admitted at time 365, arrived at 365
+(368) Employee 533, with help of Teller 6, deposits $3200 into company 5. Admitted at time 364, arrived at 364
+(368) Teller 9 takes on Employee 539.
+(368) Teller 15 takes on Employee 540.
+----- Time = 369 -----
+(369) Employee 538, with help of Teller 16, checks balance of company 4. It is $270021000. Admitted at time 366, arrived at 366
+----- Time = 370 -----
+(370) Teller 11 takes on Employee 541.
+(370) Teller 6 takes on Employee 542.
+----- Time = 371 -----
+(371) Employee 539, with help of Teller 9, withdraws $4000 from company 10. Admitted at time 368, arrived at 368
+(371) Employee 540, with help of Teller 15, deposits $4800 into company 1. Admitted at time 368, arrived at 368
+(371) Teller 18 takes on Employee 543.
+(371) Teller 14 takes on Employee 544.
+(371) Teller 3 takes on Employee 545.
+----- Time = 372 -----
+(372) Teller 12 takes on Employee 546.
+(372) Teller 16 takes on Employee 550.
+(372) Teller 20 takes on Employee 551.
+(372) Teller 8 takes on Employee 552.
+(372) Teller 19 takes on Employee 549.
+(372) Teller 9 takes on Employee 548.
+(372) Teller 4 takes on Employee 547.
+----- Time = 373 -----
+(373) Employee 541, with help of Teller 11, withdraws $5000 from company 8. Admitted at time 370, arrived at 370
+(373) Employee 542, with help of Teller 6, withdraws $3400 from company 5. Admitted at time 370, arrived at 370
+----- Time = 374 -----
+(374) Employee 543, with help of Teller 18, deposits $3700 into company 7. Admitted at time 371, arrived at 371
+(374) Employee 544, with help of Teller 14, checks balance of company 5. It is $329983800. Admitted at time 371, arrived at 371
+(374) Employee 545, with help of Teller 3, deposits $1600 into company 4. Admitted at time 371, arrived at 371
+(374) Teller 3 takes on Employee 553.
+----- Time = 375 -----
+(375) Employee 546, with help of Teller 12, checks balance of company 6. It is $99982500. Admitted at time 372, arrived at 372
+(375) Employee 550, with help of Teller 16, checks balance of company 6. It is $99982500. Admitted at time 372, arrived at 372
+(375) Employee 552, with help of Teller 8, checks balance of company 2. It is $40007400. Admitted at time 372, arrived at 372
+(375) Employee 551, with help of Teller 20, deposits $800 into company 7. Admitted at time 372, arrived at 372
+(375) Employee 547, with help of Teller 4, checks balance of company 8. It is $349988400. Admitted at time 372, arrived at 372
+(375) Employee 548, with help of Teller 9, withdraws $3300 from company 1. Admitted at time 372, arrived at 372
+(375) Employee 549, with help of Teller 19, checks balance of company 6. It is $99982500. Admitted at time 372, arrived at 372
+(375) Teller 19 takes on Employee 554.
+(375) Teller 1 takes on Employee 555.
+----- Time = 376 -----
+(376) Teller 13 takes on Employee 556.
+----- Time = 377 -----
+(377) Employee 553, with help of Teller 3, withdraws $4700 from company 3. Admitted at time 374, arrived at 374
+(377) Teller 20 takes on Employee 557.
+(377) Teller 15 takes on Employee 559.
+(377) Teller 14 takes on Employee 558.
+----- Time = 378 -----
+(378) Employee 554, with help of Teller 19, checks balance of company 6. It is $99982500. Admitted at time 375, arrived at 375
+(378) Employee 555, with help of Teller 1, deposits $2300 into company 6. Admitted at time 375, arrived at 375
+(378) Teller 8 takes on Employee 560.
+----- Time = 379 -----
+(379) Employee 556, with help of Teller 13, checks balance of company 7. It is $440014200. Admitted at time 376, arrived at 376
+----- Time = 380 -----
+(380) Employee 559, with help of Teller 15, checks balance of company 10. It is $370007600. Admitted at time 377, arrived at 377
+(380) Employee 557, with help of Teller 20, checks balance of company 1. It is $299983500. Admitted at time 377, arrived at 377
+(380) Employee 558, with help of Teller 14, deposits $2900 into company 5. Admitted at time 377, arrived at 377
+(380) Teller 18 takes on Employee 561.
+----- Time = 381 -----
+(381) Employee 560, with help of Teller 8, checks balance of company 9. It is $300056500. Admitted at time 378, arrived at 378
+----- Time = 382 -----
+(382) Teller 14 takes on Employee 562.
+(382) Teller 3 takes on Employee 566.
+(382) Teller 8 takes on Employee 564.
+(382) Teller 2 takes on Employee 563.
+(382) Teller 7 takes on Employee 565.
+----- Time = 383 -----
+(383) Employee 561, with help of Teller 18, checks balance of company 5. It is $329986700. Admitted at time 380, arrived at 380
+(383) Teller 5 takes on Employee 567.
+----- Time = 384 -----
+(384) Teller 15 takes on Employee 568.
+----- Time = 385 -----
+(385) Employee 562, with help of Teller 14, deposits $4800 into company 8. Admitted at time 382, arrived at 382
+(385) Employee 564, with help of Teller 8, deposits $3100 into company 2. Admitted at time 382, arrived at 382
+(385) Employee 563, with help of Teller 2, deposits $3400 into company 4. Admitted at time 382, arrived at 382
+(385) Employee 566, with help of Teller 3, withdraws $2800 from company 6. Admitted at time 382, arrived at 382
+(385) Employee 565, with help of Teller 7, checks balance of company 7. It is $440014200. Admitted at time 382, arrived at 382
+(385) Teller 1 takes on Employee 573.
+(385) Teller 18 takes on Employee 572.
+(385) Teller 20 takes on Employee 571.
+(385) Teller 19 takes on Employee 569.
+(385) Teller 4 takes on Employee 570.
+----- Time = 386 -----
+(386) Teller 17 takes on Employee 574.
+(386) Teller 10 takes on Employee 575.
+----- Time = 387 -----
+(387) Employee 568, with help of Teller 15, deposits $4500 into company 2. Admitted at time 384, arrived at 384
+(387) Teller 7 takes on Employee 576.
+(387) Teller 9 takes on Employee 578.
+(387) Teller 13 takes on Employee 577.
+----- Time = 388 -----
+(388) Employee 572, with help of Teller 18, withdraws $4500 from company 4. Admitted at time 385, arrived at 385
+(388) Employee 573, with help of Teller 1, withdraws $3800 from company 5. Admitted at time 385, arrived at 385
+(388) Employee 567, with help of Teller 5, withdraws $500 from company 4. Admitted at time 383, arrived at 383
+(388) Employee 569, with help of Teller 19, checks balance of company 6. It is $99982000. Admitted at time 385, arrived at 385
+(388) Employee 570, with help of Teller 4, withdraws $3800 from company 1. Admitted at time 385, arrived at 385
+(388) Teller 3 takes on Employee 579.
+(388) Teller 18 takes on Employee 580.
+(388) Teller 16 takes on Employee 581.
+(388) Teller 6 takes on Employee 582.
+----- Time = 389 -----
+(389) Employee 574, with help of Teller 17, withdraws $4100 from company 8. Admitted at time 386, arrived at 386
+(389) Employee 575, with help of Teller 10, checks balance of company 6. It is $99982000. Admitted at time 386, arrived at 386
+----- Time = 390 -----
+(390) Employee 576, with help of Teller 7, withdraws $2600 from company 5. Admitted at time 387, arrived at 387
+(390) Employee 571, with help of Teller 20, checks balance of company 5. It is $329980300. Admitted at time 385, arrived at 385
+(390) Employee 577, with help of Teller 13, withdraws $2700 from company 7. Admitted at time 387, arrived at 387
+(390) Teller 12 takes on Employee 583.
+(390) Teller 8 takes on Employee 584.
+----- Time = 391 -----
+(391) Employee 579, with help of Teller 3, deposits $1700 into company 4. Admitted at time 388, arrived at 388
+(391) Employee 580, with help of Teller 18, withdraws $4000 from company 1. Admitted at time 388, arrived at 388
+(391) Employee 582, with help of Teller 6, withdraws $4100 from company 8. Admitted at time 388, arrived at 388
+(391) Employee 578, with help of Teller 9, deposits $4200 into company 1. Admitted at time 387, arrived at 387
+(391) Teller 11 takes on Employee 585.
+----- Time = 392 -----
+----- Time = 393 -----
+(393) Employee 583, with help of Teller 12, withdraws $1300 from company 5. Admitted at time 390, arrived at 390
+(393) Employee 584, with help of Teller 8, deposits $2100 into company 7. Admitted at time 390, arrived at 390
+(393) Employee 581, with help of Teller 16, withdraws $600 from company 7. Admitted at time 388, arrived at 388
+(393) Teller 6 takes on Employee 586.
+(393) Teller 13 takes on Employee 588.
+(393) Teller 9 takes on Employee 587.
+----- Time = 394 -----
+(394) Employee 585, with help of Teller 11, checks balance of company 5. It is $329979000. Admitted at time 391, arrived at 391
+----- Time = 395 -----
+(395) Teller 8 takes on Employee 590.
+(395) Teller 3 takes on Employee 589.
+----- Time = 396 -----
+(396) Employee 587, with help of Teller 9, checks balance of company 3. It is $300019000. Admitted at time 393, arrived at 393
+(396) Employee 586, with help of Teller 6, deposits $3300 into company 4. Admitted at time 393, arrived at 393
+(396) Employee 588, with help of Teller 13, checks balance of company 4. It is $270026000. Admitted at time 393, arrived at 393
+(396) Teller 13 takes on Employee 591.
+(396) Teller 12 takes on Employee 597.
+(396) Teller 11 takes on Employee 596.
+(396) Teller 1 takes on Employee 595.
+(396) Teller 18 takes on Employee 594.
+(396) Teller 5 takes on Employee 593.
+(396) Teller 16 takes on Employee 592.
+----- Time = 397 -----
+(397) Teller 17 takes on Employee 599.
+(397) Teller 7 takes on Employee 598.
+----- Time = 398 -----
+(398) Employee 589, with help of Teller 3, deposits $800 into company 5. Admitted at time 395, arrived at 395
+(398) Employee 590, with help of Teller 8, deposits $3400 into company 2. Admitted at time 395, arrived at 395
+----- Time = 399 -----
+(399) Employee 597, with help of Teller 12, withdraws $2500 from company 8. Admitted at time 396, arrived at 396
+(399) Employee 596, with help of Teller 11, checks balance of company 6. It is $99982000. Admitted at time 396, arrived at 396
+(399) Employee 595, with help of Teller 1, deposits $5000 into company 9. Admitted at time 396, arrived at 396
+(399) Employee 591, with help of Teller 13, withdraws $2200 from company 3. Admitted at time 396, arrived at 396
+(399) Employee 593, with help of Teller 5, withdraws $1100 from company 9. Admitted at time 396, arrived at 396
+(399) Teller 8 takes on Employee 600.
+----- Time = 400 -----
+(400) Employee 599, with help of Teller 17, deposits $200 into company 4. Admitted at time 397, arrived at 397
+(400) Employee 598, with help of Teller 7, checks balance of company 7. It is $440013000. Admitted at time 397, arrived at 397
+(400) Employee 594, with help of Teller 18, checks balance of company 3. It is $300016800. Admitted at time 396, arrived at 396
+(400) Employee 592, with help of Teller 16, checks balance of company 9. It is $300060400. Admitted at time 396, arrived at 396
+----- Time = 401 -----
+(401) Teller 5 takes on Employee 601.
+(401) Teller 10 takes on Employee 604.
+(401) Teller 3 takes on Employee 603.
+(401) Teller 16 takes on Employee 602.
+----- Time = 402 -----
+(402) Employee 600, with help of Teller 8, checks balance of company 10. It is $370007600. Admitted at time 399, arrived at 399
+(402) Teller 13 takes on Employee 610.
+(402) Teller 18 takes on Employee 609.
+(402) Teller 7 takes on Employee 605.
+(402) Teller 19 takes on Employee 608.
+(402) Teller 4 takes on Employee 607.
+(402) Teller 9 takes on Employee 606.
+----- Time = 403 -----
+(403) Teller 11 takes on Employee 611.
+(403) Teller 1 takes on Employee 612.
+----- Time = 404 -----
+(404) Employee 601, with help of Teller 5, deposits $600 into company 10. Admitted at time 401, arrived at 401
+(404) Employee 604, with help of Teller 10, deposits $500 into company 10. Admitted at time 401, arrived at 401
+(404) Employee 603, with help of Teller 3, withdraws $1800 from company 3. Admitted at time 401, arrived at 401
+(404) Employee 602, with help of Teller 16, deposits $3000 into company 5. Admitted at time 401, arrived at 401
+(404) Teller 20 takes on Employee 613.
+----- Time = 405 -----
+(405) Employee 610, with help of Teller 13, withdraws $1900 from company 1. Admitted at time 402, arrived at 402
+(405) Employee 609, with help of Teller 18, deposits $1100 into company 3. Admitted at time 402, arrived at 402
+(405) Employee 605, with help of Teller 7, withdraws $4800 from company 3. Admitted at time 402, arrived at 402
+(405) Employee 608, with help of Teller 19, withdraws $3600 from company 10. Admitted at time 402, arrived at 402
+(405) Employee 607, with help of Teller 4, checks balance of company 10. It is $370005100. Admitted at time 402, arrived at 402
+(405) Employee 606, with help of Teller 9, deposits $3600 into company 2. Admitted at time 402, arrived at 402
+(405) Teller 6 takes on Employee 615.
+(405) Teller 14 takes on Employee 614.
+----- Time = 406 -----
+(406) Employee 611, with help of Teller 11, checks balance of company 10. It is $370005100. Admitted at time 403, arrived at 403
+(406) Employee 612, with help of Teller 1, withdraws $100 from company 5. Admitted at time 403, arrived at 403
+----- Time = 407 -----
+(407) Employee 613, with help of Teller 20, withdraws $200 from company 8. Admitted at time 404, arrived at 404
+(407) Teller 7 takes on Employee 616.
+(407) Teller 16 takes on Employee 619.
+(407) Teller 19 takes on Employee 618.
+(407) Teller 4 takes on Employee 617.
+----- Time = 408 -----
+(408) Employee 615, with help of Teller 6, checks balance of company 1. It is $299978000. Admitted at time 405, arrived at 405
+(408) Employee 614, with help of Teller 14, deposits $3100 into company 6. Admitted at time 405, arrived at 405
+----- Time = 409 -----
+(409) Teller 20 takes on Employee 620.
+(409) Teller 5 takes on Employee 630.
+(409) Teller 11 takes on Employee 631.
+(409) Teller 10 takes on Employee 629.
+(409) Teller 3 takes on Employee 628.
+(409) Teller 1 takes on Employee 627.
+(409) Teller 15 takes on Employee 626.
+(409) Teller 9 takes on Employee 625.
+(409) Teller 2 takes on Employee 624.
+(409) Teller 8 takes on Employee 623.
+(409) Teller 12 takes on Employee 622.
+(409) Teller 17 takes on Employee 621.
+----- Time = 410 -----
+(410) Employee 616, with help of Teller 7, withdraws $800 from company 10. Admitted at time 407, arrived at 407
+(410) Employee 619, with help of Teller 16, deposits $1400 into company 2. Admitted at time 407, arrived at 407
+(410) Employee 618, with help of Teller 19, withdraws $100 from company 3. Admitted at time 407, arrived at 407
+(410) Employee 617, with help of Teller 4, deposits $500 into company 6. Admitted at time 407, arrived at 407
+(410) Teller 4 takes on Employee 632.
+(410) Teller 18 takes on Employee 633.
+----- Time = 411 -----
+(411) Teller 13 takes on Employee 634.
+(411) Teller 14 takes on Employee 635.
+----- Time = 412 -----
+(412) Employee 623, with help of Teller 8, withdraws $500 from company 3. Admitted at time 409, arrived at 409
+(412) Employee 622, with help of Teller 12, deposits $1600 into company 4. Admitted at time 409, arrived at 409
+(412) Employee 620, with help of Teller 20, withdraws $2800 from company 9. Admitted at time 409, arrived at 409
+(412) Employee 630, with help of Teller 5, checks balance of company 6. It is $99985600. Admitted at time 409, arrived at 409
+(412) Employee 631, with help of Teller 11, checks balance of company 7. It is $440013000. Admitted at time 409, arrived at 409
+(412) Employee 629, with help of Teller 10, withdraws $2300 from company 3. Admitted at time 409, arrived at 409
+(412) Employee 627, with help of Teller 1, checks balance of company 1. It is $299978000. Admitted at time 409, arrived at 409
+(412) Employee 628, with help of Teller 3, deposits $2800 into company 10. Admitted at time 409, arrived at 409
+(412) Employee 625, with help of Teller 9, withdraws $2300 from company 7. Admitted at time 409, arrived at 409
+(412) Employee 624, with help of Teller 2, deposits $3400 into company 2. Admitted at time 409, arrived at 409
+----- Time = 413 -----
+(413) Employee 632, with help of Teller 4, deposits $1800 into company 1. Admitted at time 410, arrived at 410
+(413) Employee 633, with help of Teller 18, withdraws $3300 from company 8. Admitted at time 410, arrived at 410
+(413) Employee 621, with help of Teller 17, deposits $3900 into company 2. Admitted at time 409, arrived at 409
+(413) Employee 626, with help of Teller 15, deposits $3400 into company 1. Admitted at time 409, arrived at 409
+(413) Teller 16 takes on Employee 636.
+----- Time = 414 -----
+(414) Employee 634, with help of Teller 13, deposits $200 into company 5. Admitted at time 411, arrived at 411
+(414) Employee 635, with help of Teller 14, withdraws $3600 from company 7. Admitted at time 411, arrived at 411
+(414) Teller 7 takes on Employee 637.
+----- Time = 415 -----
+(415) Teller 17 takes on Employee 638.
+----- Time = 416 -----
+(416) Employee 636, with help of Teller 16, checks balance of company 10. It is $370007100. Admitted at time 413, arrived at 413
+(416) Teller 14 takes on Employee 641.
+(416) Teller 5 takes on Employee 639.
+(416) Teller 11 takes on Employee 640.
+----- Time = 417 -----
+(417) Employee 637, with help of Teller 7, deposits $1700 into company 7. Admitted at time 414, arrived at 414
+----- Time = 418 -----
+(418) Employee 638, with help of Teller 17, checks balance of company 2. It is $40030700. Admitted at time 415, arrived at 415
+(418) Teller 7 takes on Employee 642.
+----- Time = 419 -----
+(419) Employee 639, with help of Teller 5, deposits $3400 into company 6. Admitted at time 416, arrived at 416
+(419) Employee 641, with help of Teller 14, withdraws $3700 from company 3. Admitted at time 416, arrived at 416
+(419) Employee 640, with help of Teller 11, withdraws $4000 from company 10. Admitted at time 416, arrived at 416
+(419) Teller 8 takes on Employee 643.
+----- Time = 420 -----
+----- Time = 421 -----
+(421) Employee 642, with help of Teller 7, withdraws $5000 from company 8. Admitted at time 418, arrived at 418
+(421) Teller 7 takes on Employee 644.
+----- Time = 422 -----
+(422) Employee 643, with help of Teller 8, deposits $4100 into company 5. Admitted at time 419, arrived at 419
+----- Time = 423 -----
+(423) Teller 5 takes on Employee 647.
+(423) Teller 1 takes on Employee 646.
+(423) Teller 10 takes on Employee 645.
+----- Time = 424 -----
+(424) Employee 644, with help of Teller 7, withdraws $4500 from company 7. Admitted at time 421, arrived at 421
+(424) Teller 16 takes on Employee 648.
+(424) Teller 18 takes on Employee 649.
+----- Time = 425 -----
+----- Time = 426 -----
+(426) Employee 647, with help of Teller 5, deposits $3800 into company 9. Admitted at time 423, arrived at 423
+(426) Employee 646, with help of Teller 1, deposits $400 into company 7. Admitted at time 423, arrived at 423
+(426) Teller 4 takes on Employee 652.
+(426) Teller 17 takes on Employee 651.
+(426) Teller 12 takes on Employee 650.
+----- Time = 427 -----
+(427) Employee 648, with help of Teller 16, checks balance of company 6. It is $99989000. Admitted at time 424, arrived at 424
+(427) Employee 649, with help of Teller 18, deposits $2200 into company 5. Admitted at time 424, arrived at 424
+(427) Employee 645, with help of Teller 10, deposits $4600 into company 7. Admitted at time 423, arrived at 423
+----- Time = 428 -----
+(428) Teller 19 takes on Employee 653.
+(428) Teller 11 takes on Employee 654.
+----- Time = 429 -----
+(429) Employee 652, with help of Teller 4, checks balance of company 2. It is $40030700. Admitted at time 426, arrived at 426
+(429) Employee 651, with help of Teller 17, checks balance of company 3. It is $300004700. Admitted at time 426, arrived at 426
+(429) Employee 650, with help of Teller 12, withdraws $700 from company 10. Admitted at time 426, arrived at 426
+(429) Teller 9 takes on Employee 655.
+(429) Teller 1 takes on Employee 656.
+----- Time = 430 -----
+----- Time = 431 -----
+(431) Employee 653, with help of Teller 19, checks balance of company 5. It is $329989200. Admitted at time 428, arrived at 428
+(431) Employee 654, with help of Teller 11, checks balance of company 5. It is $329989200. Admitted at time 428, arrived at 428
+(431) Teller 20 takes on Employee 657.
+(431) Teller 14 takes on Employee 659.
+(431) Teller 15 takes on Employee 658.
+----- Time = 432 -----
+(432) Employee 655, with help of Teller 9, withdraws $4200 from company 5. Admitted at time 429, arrived at 429
+(432) Employee 656, with help of Teller 1, withdraws $4400 from company 4. Admitted at time 429, arrived at 429
+(432) Teller 8 takes on Employee 660.
+(432) Teller 4 takes on Employee 662.
+(432) Teller 3 takes on Employee 663.
+(432) Teller 17 takes on Employee 661.
+----- Time = 433 -----
+(433) Teller 1 takes on Employee 664.
+(433) Teller 11 takes on Employee 665.
+----- Time = 434 -----
+(434) Employee 659, with help of Teller 14, deposits $4300 into company 10. Admitted at time 431, arrived at 431
+(434) Employee 658, with help of Teller 15, deposits $4400 into company 2. Admitted at time 431, arrived at 431
+(434) Employee 657, with help of Teller 20, deposits $2900 into company 6. Admitted at time 431, arrived at 431
+----- Time = 435 -----
+(435) Employee 660, with help of Teller 8, withdraws $3700 from company 7. Admitted at time 432, arrived at 432
+(435) Employee 663, with help of Teller 3, deposits $3400 into company 10. Admitted at time 432, arrived at 432
+(435) Employee 661, with help of Teller 17, withdraws $1500 from company 8. Admitted at time 432, arrived at 432
+(435) Teller 10 takes on Employee 666.
+----- Time = 436 -----
+(436) Employee 664, with help of Teller 1, withdraws $3500 from company 6. Admitted at time 433, arrived at 433
+(436) Employee 665, with help of Teller 11, deposits $1100 into company 4. Admitted at time 433, arrived at 433
+----- Time = 437 -----
+(437) Employee 662, with help of Teller 4, checks balance of company 6. It is $99988400. Admitted at time 432, arrived at 432
+(437) Teller 4 takes on Employee 667.
+(437) Teller 12 takes on Employee 669.
+(437) Teller 20 takes on Employee 670.
+(437) Teller 5 takes on Employee 668.
+----- Time = 438 -----
+(438) Employee 666, with help of Teller 10, checks balance of company 6. It is $99988400. Admitted at time 435, arrived at 435
+(438) Teller 11 takes on Employee 671.
+----- Time = 439 -----
+----- Time = 440 -----
+(440) Employee 667, with help of Teller 4, checks balance of company 5. It is $329985000. Admitted at time 437, arrived at 437
+(440) Employee 669, with help of Teller 12, deposits $2800 into company 4. Admitted at time 437, arrived at 437
+(440) Teller 8 takes on Employee 677.
+(440) Teller 14 takes on Employee 675.
+(440) Teller 15 takes on Employee 674.
+(440) Teller 1 takes on Employee 676.
+(440) Teller 12 takes on Employee 672.
+(440) Teller 3 takes on Employee 673.
+----- Time = 441 -----
+(441) Employee 671, with help of Teller 11, checks balance of company 5. It is $329985000. Admitted at time 438, arrived at 438
+----- Time = 442 -----
+(442) Teller 19 takes on Employee 678.
+(442) Teller 10 takes on Employee 679.
+(442) Teller 13 takes on Employee 680.
+----- Time = 443 -----
+(443) Employee 677, with help of Teller 8, withdraws $4100 from company 2. Admitted at time 440, arrived at 440
+(443) Employee 675, with help of Teller 14, withdraws $4600 from company 6. Admitted at time 440, arrived at 440
+(443) Employee 676, with help of Teller 1, withdraws $1300 from company 9. Admitted at time 440, arrived at 440
+(443) Employee 674, with help of Teller 15, deposits $4300 into company 1. Admitted at time 440, arrived at 440
+(443) Employee 673, with help of Teller 3, withdraws $400 from company 10. Admitted at time 440, arrived at 440
+(443) Employee 672, with help of Teller 12, withdraws $3400 from company 5. Admitted at time 440, arrived at 440
+----- Time = 444 -----
+(444) Employee 670, with help of Teller 20, deposits $1100 into company 5. Admitted at time 437, arrived at 437
+(444) Employee 668, with help of Teller 5, deposits $1500 into company 5. Admitted at time 437, arrived at 437
+(444) Teller 2 takes on Employee 681.
+(444) Teller 3 takes on Employee 682.
+(444) Teller 9 takes on Employee 683.
+----- Time = 445 -----
+(445) Employee 678, with help of Teller 19, withdraws $600 from company 6. Admitted at time 442, arrived at 442
+(445) Employee 679, with help of Teller 10, withdraws $4400 from company 9. Admitted at time 442, arrived at 442
+(445) Employee 680, with help of Teller 13, withdraws $700 from company 9. Admitted at time 442, arrived at 442
+(445) Teller 1 takes on Employee 684.
+----- Time = 446 -----
+----- Time = 447 -----
+(447) Employee 681, with help of Teller 2, withdraws $2700 from company 1. Admitted at time 444, arrived at 444
+(447) Employee 682, with help of Teller 3, withdraws $1000 from company 4. Admitted at time 444, arrived at 444
+(447) Employee 683, with help of Teller 9, checks balance of company 3. It is $300004700. Admitted at time 444, arrived at 444
+(447) Teller 9 takes on Employee 685.
+(447) Teller 5 takes on Employee 689.
+(447) Teller 14 takes on Employee 687.
+(447) Teller 11 takes on Employee 688.
+(447) Teller 17 takes on Employee 686.
+----- Time = 448 -----
+(448) Employee 684, with help of Teller 1, checks balance of company 5. It is $329984200. Admitted at time 445, arrived at 445
+(448) Teller 10 takes on Employee 690.
+(448) Teller 13 takes on Employee 691.
+----- Time = 449 -----
+----- Time = 450 -----
+(450) Employee 685, with help of Teller 9, deposits $2800 into company 2. Admitted at time 447, arrived at 447
+(450) Employee 689, with help of Teller 5, checks balance of company 10. It is $370009700. Admitted at time 447, arrived at 447
+(450) Employee 687, with help of Teller 14, withdraws $4800 from company 10. Admitted at time 447, arrived at 447
+(450) Employee 688, with help of Teller 11, withdraws $3000 from company 7. Admitted at time 447, arrived at 447
+(450) Employee 686, with help of Teller 17, withdraws $1500 from company 4. Admitted at time 447, arrived at 447
+(450) Teller 4 takes on Employee 694.
+(450) Teller 2 takes on Employee 693.
+(450) Teller 1 takes on Employee 692.
+----- Time = 451 -----
+(451) Employee 690, with help of Teller 10, deposits $3500 into company 10. Admitted at time 448, arrived at 448
+(451) Employee 691, with help of Teller 13, deposits $1400 into company 2. Admitted at time 448, arrived at 448
+(451) Teller 6 takes on Employee 695.
+(451) Teller 17 takes on Employee 696.
+----- Time = 452 -----
+(452) Teller 14 takes on Employee 697.
+(452) Teller 7 takes on Employee 698.
+(452) Teller 11 takes on Employee 699.
+(452) Teller 13 takes on Employee 700.
+----- Time = 453 -----
+(453) Employee 694, with help of Teller 4, checks balance of company 4. It is $270024800. Admitted at time 450, arrived at 450
+(453) Employee 692, with help of Teller 1, withdraws $2600 from company 4. Admitted at time 450, arrived at 450
+(453) Teller 15 takes on Employee 705.
+(453) Teller 19 takes on Employee 703.
+(453) Teller 12 takes on Employee 704.
+(453) Teller 20 takes on Employee 702.
+(453) Teller 5 takes on Employee 701.
+----- Time = 454 -----
+(454) Employee 695, with help of Teller 6, withdraws $700 from company 10. Admitted at time 451, arrived at 451
+(454) Employee 696, with help of Teller 17, deposits $2400 into company 9. Admitted at time 451, arrived at 451
+----- Time = 455 -----
+(455) Employee 697, with help of Teller 14, withdraws $1700 from company 4. Admitted at time 452, arrived at 452
+(455) Employee 698, with help of Teller 7, withdraws $2800 from company 3. Admitted at time 452, arrived at 452
+(455) Employee 699, with help of Teller 11, checks balance of company 2. It is $40035200. Admitted at time 452, arrived at 452
+(455) Employee 700, with help of Teller 13, deposits $2900 into company 1. Admitted at time 452, arrived at 452
+(455) Employee 693, with help of Teller 2, deposits $2300 into company 4. Admitted at time 450, arrived at 450
+(455) Teller 9 takes on Employee 707.
+(455) Teller 2 takes on Employee 706.
+----- Time = 456 -----
+(456) Employee 703, with help of Teller 19, checks balance of company 5. It is $329984200. Admitted at time 453, arrived at 453
+(456) Employee 705, with help of Teller 15, checks balance of company 1. It is $299987700. Admitted at time 453, arrived at 453
+(456) Employee 702, with help of Teller 20, withdraws $600 from company 6. Admitted at time 453, arrived at 453
+(456) Employee 701, with help of Teller 5, checks balance of company 5. It is $329984200. Admitted at time 453, arrived at 453
+----- Time = 457 -----
+(457) Teller 11 takes on Employee 708.
+----- Time = 458 -----
+(458) Employee 707, with help of Teller 9, withdraws $1500 from company 6. Admitted at time 455, arrived at 455
+(458) Employee 706, with help of Teller 2, withdraws $2700 from company 2. Admitted at time 455, arrived at 455
+(458) Teller 17 takes on Employee 710.
+(458) Teller 2 takes on Employee 709.
+----- Time = 459 -----
+(459) Employee 704, with help of Teller 12, deposits $2300 into company 2. Admitted at time 453, arrived at 453
+(459) Teller 12 takes on Employee 711.
+(459) Teller 15 takes on Employee 713.
+(459) Teller 7 takes on Employee 714.
+(459) Teller 20 takes on Employee 712.
+----- Time = 460 -----
+(460) Employee 708, with help of Teller 11, withdraws $2500 from company 3. Admitted at time 457, arrived at 457
+(460) Teller 6 takes on Employee 715.
+----- Time = 461 -----
+(461) Employee 710, with help of Teller 17, deposits $1800 into company 5. Admitted at time 458, arrived at 458
+(461) Employee 709, with help of Teller 2, deposits $4000 into company 10. Admitted at time 458, arrived at 458
+(461) Teller 10 takes on Employee 716.
+(461) Teller 1 takes on Employee 722.
+(461) Teller 14 takes on Employee 721.
+(461) Teller 9 takes on Employee 720.
+(461) Teller 19 takes on Employee 719.
+(461) Teller 13 takes on Employee 718.
+(461) Teller 3 takes on Employee 717.
+----- Time = 462 -----
+(462) Employee 711, with help of Teller 12, withdraws $3400 from company 1. Admitted at time 459, arrived at 459
+(462) Employee 713, with help of Teller 15, deposits $1900 into company 3. Admitted at time 459, arrived at 459
+(462) Employee 714, with help of Teller 7, checks balance of company 8. It is $349972500. Admitted at time 459, arrived at 459
+(462) Employee 712, with help of Teller 20, checks balance of company 10. It is $370011700. Admitted at time 459, arrived at 459
+----- Time = 463 -----
+(463) Employee 715, with help of Teller 6, withdraws $400 from company 6. Admitted at time 460, arrived at 460
+(463) Teller 8 takes on Employee 723.
+----- Time = 464 -----
+(464) Employee 716, with help of Teller 10, checks balance of company 10. It is $370011700. Admitted at time 461, arrived at 461
+(464) Employee 722, with help of Teller 1, checks balance of company 3. It is $300001300. Admitted at time 461, arrived at 461
+(464) Employee 720, with help of Teller 9, deposits $3600 into company 6. Admitted at time 461, arrived at 461
+(464) Employee 719, with help of Teller 19, checks balance of company 1. It is $299984300. Admitted at time 461, arrived at 461
+(464) Employee 721, with help of Teller 14, withdraws $3500 from company 10. Admitted at time 461, arrived at 461
+(464) Employee 717, with help of Teller 3, deposits $3500 into company 5. Admitted at time 461, arrived at 461
+(464) Employee 718, with help of Teller 13, withdraws $400 from company 9. Admitted at time 461, arrived at 461
+----- Time = 465 -----
+(465) Teller 6 takes on Employee 730.
+(465) Teller 17 takes on Employee 729.
+(465) Teller 13 takes on Employee 728.
+(465) Teller 3 takes on Employee 724.
+(465) Teller 7 takes on Employee 727.
+(465) Teller 2 takes on Employee 726.
+(465) Teller 4 takes on Employee 725.
+----- Time = 466 -----
+(466) Employee 723, with help of Teller 8, checks balance of company 4. It is $270022800. Admitted at time 463, arrived at 463
+----- Time = 467 -----
+(467) Teller 10 takes on Employee 731.
+(467) Teller 9 takes on Employee 735.
+(467) Teller 1 takes on Employee 736.
+(467) Teller 12 takes on Employee 734.
+(467) Teller 5 takes on Employee 733.
+(467) Teller 19 takes on Employee 732.
+----- Time = 468 -----
+(468) Employee 730, with help of Teller 6, withdraws $5000 from company 10. Admitted at time 465, arrived at 465
+(468) Employee 729, with help of Teller 17, checks balance of company 10. It is $370003200. Admitted at time 465, arrived at 465
+(468) Employee 728, with help of Teller 13, checks balance of company 7. It is $440002600. Admitted at time 465, arrived at 465
+(468) Employee 724, with help of Teller 3, checks balance of company 4. It is $270022800. Admitted at time 465, arrived at 465
+(468) Employee 727, with help of Teller 7, checks balance of company 9. It is $300057000. Admitted at time 465, arrived at 465
+(468) Employee 726, with help of Teller 2, checks balance of company 4. It is $270022800. Admitted at time 465, arrived at 465
+(468) Employee 725, with help of Teller 4, withdraws $4700 from company 9. Admitted at time 465, arrived at 465
+----- Time = 469 -----
+(469) Teller 16 takes on Employee 737.
+(469) Teller 4 takes on Employee 738.
+----- Time = 470 -----
+(470) Employee 735, with help of Teller 9, withdraws $200 from company 5. Admitted at time 467, arrived at 467
+(470) Employee 731, with help of Teller 10, deposits $1200 into company 4. Admitted at time 467, arrived at 467
+(470) Employee 734, with help of Teller 12, deposits $2600 into company 10. Admitted at time 467, arrived at 467
+(470) Employee 732, with help of Teller 19, checks balance of company 5. It is $329989300. Admitted at time 467, arrived at 467
+(470) Employee 733, with help of Teller 5, deposits $4700 into company 2. Admitted at time 467, arrived at 467
+(470) Teller 3 takes on Employee 739.
+----- Time = 471 -----
+----- Time = 472 -----
+(472) Employee 737, with help of Teller 16, withdraws $2600 from company 1. Admitted at time 469, arrived at 469
+(472) Employee 738, with help of Teller 4, checks balance of company 4. It is $270024000. Admitted at time 469, arrived at 469
+(472) Employee 736, with help of Teller 1, deposits $4400 into company 4. Admitted at time 467, arrived at 467
+(472) Teller 14 takes on Employee 740.
+(472) Teller 19 takes on Employee 747.
+(472) Teller 6 takes on Employee 746.
+(472) Teller 17 takes on Employee 745.
+(472) Teller 5 takes on Employee 744.
+(472) Teller 13 takes on Employee 743.
+(472) Teller 7 takes on Employee 742.
+(472) Teller 2 takes on Employee 741.
+----- Time = 473 -----
+(473) Employee 739, with help of Teller 3, checks balance of company 1. It is $299981700. Admitted at time 470, arrived at 470
+(473) Teller 10 takes on Employee 748.
+(473) Teller 12 takes on Employee 753.
+(473) Teller 15 takes on Employee 752.
+(473) Teller 20 takes on Employee 751.
+(473) Teller 11 takes on Employee 750.
+(473) Teller 3 takes on Employee 749.
+----- Time = 474 -----
+----- Time = 475 -----
+(475) Employee 740, with help of Teller 14, withdraws $700 from company 3. Admitted at time 472, arrived at 472
+(475) Employee 747, with help of Teller 19, checks balance of company 3. It is $300000600. Admitted at time 472, arrived at 472
+(475) Employee 746, with help of Teller 6, withdraws $2600 from company 2. Admitted at time 472, arrived at 472
+(475) Employee 745, with help of Teller 17, checks balance of company 4. It is $270028400. Admitted at time 472, arrived at 472
+(475) Employee 744, with help of Teller 5, deposits $1800 into company 5. Admitted at time 472, arrived at 472
+(475) Employee 743, with help of Teller 13, deposits $1300 into company 2. Admitted at time 472, arrived at 472
+(475) Employee 742, with help of Teller 7, withdraws $3900 from company 3. Admitted at time 472, arrived at 472
+(475) Employee 741, with help of Teller 2, checks balance of company 4. It is $270028400. Admitted at time 472, arrived at 472
+(475) Teller 8 takes on Employee 754.
+(475) Teller 16 takes on Employee 755.
+----- Time = 476 -----
+(476) Employee 750, with help of Teller 11, deposits $2500 into company 2. Admitted at time 473, arrived at 473
+(476) Employee 749, with help of Teller 3, checks balance of company 3. It is $299996700. Admitted at time 473, arrived at 473
+(476) Employee 748, with help of Teller 10, checks balance of company 10. It is $370005800. Admitted at time 473, arrived at 473
+(476) Employee 753, with help of Teller 12, checks balance of company 2. It is $40040700. Admitted at time 473, arrived at 473
+(476) Employee 752, with help of Teller 15, checks balance of company 7. It is $440002600. Admitted at time 473, arrived at 473
+(476) Teller 7 takes on Employee 756.
+(476) Teller 2 takes on Employee 758.
+(476) Teller 11 takes on Employee 757.
+----- Time = 477 -----
+(477) Employee 751, with help of Teller 20, deposits $3400 into company 7. Admitted at time 473, arrived at 473
+(477) Teller 6 takes on Employee 759.
+----- Time = 478 -----
+(478) Employee 754, with help of Teller 8, withdraws $700 from company 7. Admitted at time 475, arrived at 475
+(478) Employee 755, with help of Teller 16, withdraws $4200 from company 9. Admitted at time 475, arrived at 475
+----- Time = 479 -----
+(479) Employee 756, with help of Teller 7, checks balance of company 1. It is $299981700. Admitted at time 476, arrived at 476
+(479) Employee 758, with help of Teller 2, checks balance of company 1. It is $299981700. Admitted at time 476, arrived at 476
+(479) Employee 757, with help of Teller 11, checks balance of company 3. It is $299996700. Admitted at time 476, arrived at 476
+(479) Teller 1 takes on Employee 760.
+(479) Teller 10 takes on Employee 761.
+----- Time = 480 -----
+(480) Employee 759, with help of Teller 6, deposits $1300 into company 9. Admitted at time 477, arrived at 477
+----- Time = 481 -----
+(481) Teller 3 takes on Employee 762.
+----- Time = 482 -----
+(482) Employee 760, with help of Teller 1, checks balance of company 8. It is $349972500. Admitted at time 479, arrived at 479
+(482) Employee 761, with help of Teller 10, checks balance of company 3. It is $299996700. Admitted at time 479, arrived at 479
+----- Time = 483 -----
+(483) Teller 13 takes on Employee 763.
+----- Time = 484 -----
+(484) Employee 762, with help of Teller 3, checks balance of company 8. It is $349972500. Admitted at time 481, arrived at 481
+(484) Teller 17 takes on Employee 765.
+(484) Teller 19 takes on Employee 764.
+----- Time = 485 -----
+(485) Teller 1 takes on Employee 766.
+(485) Teller 14 takes on Employee 767.
+----- Time = 486 -----
+(486) Employee 763, with help of Teller 13, deposits $2100 into company 3. Admitted at time 483, arrived at 483
+(486) Teller 3 takes on Employee 772.
+(486) Teller 12 takes on Employee 768.
+(486) Teller 15 takes on Employee 771.
+(486) Teller 10 takes on Employee 770.
+(486) Teller 5 takes on Employee 769.
+----- Time = 487 -----
+(487) Employee 765, with help of Teller 17, checks balance of company 4. It is $270028400. Admitted at time 484, arrived at 484
+(487) Teller 13 takes on Employee 773.
+----- Time = 488 -----
+(488) Employee 766, with help of Teller 1, deposits $700 into company 3. Admitted at time 485, arrived at 485
+(488) Employee 767, with help of Teller 14, deposits $4100 into company 1. Admitted at time 485, arrived at 485
+(488) Teller 16 takes on Employee 776.
+(488) Teller 4 takes on Employee 775.
+(488) Teller 18 takes on Employee 774.
+----- Time = 489 -----
+(489) Employee 764, with help of Teller 19, checks balance of company 3. It is $299999500. Admitted at time 484, arrived at 484
+(489) Employee 768, with help of Teller 12, deposits $1100 into company 6. Admitted at time 486, arrived at 486
+(489) Employee 771, with help of Teller 15, checks balance of company 8. It is $349972500. Admitted at time 486, arrived at 486
+(489) Employee 770, with help of Teller 10, deposits $4900 into company 2. Admitted at time 486, arrived at 486
+(489) Employee 772, with help of Teller 3, withdraws $2500 from company 4. Admitted at time 486, arrived at 486
+(489) Employee 769, with help of Teller 5, withdraws $4900 from company 9. Admitted at time 486, arrived at 486
+----- Time = 490 -----
+(490) Employee 773, with help of Teller 13, deposits $2200 into company 9. Admitted at time 487, arrived at 487
+(490) Teller 2 takes on Employee 777.
+----- Time = 491 -----
+(491) Employee 776, with help of Teller 16, deposits $4300 into company 3. Admitted at time 488, arrived at 488
+(491) Employee 775, with help of Teller 4, deposits $1600 into company 2. Admitted at time 488, arrived at 488
+(491) Employee 774, with help of Teller 18, checks balance of company 2. It is $40047200. Admitted at time 488, arrived at 488
+----- Time = 492 -----
+(492) Teller 14 takes on Employee 778.
+(492) Teller 15 takes on Employee 781.
+(492) Teller 10 takes on Employee 780.
+(492) Teller 3 takes on Employee 779.
+----- Time = 493 -----
+(493) Employee 777, with help of Teller 2, deposits $3900 into company 6. Admitted at time 490, arrived at 490
+----- Time = 494 -----
+(494) Teller 2 takes on Employee 782.
+(494) Teller 19 takes on Employee 784.
+(494) Teller 16 takes on Employee 783.
+----- Time = 495 -----
+(495) Employee 778, with help of Teller 14, checks balance of company 9. It is $300046700. Admitted at time 492, arrived at 492
+(495) Employee 781, with help of Teller 15, deposits $3700 into company 5. Admitted at time 492, arrived at 492
+(495) Employee 780, with help of Teller 10, deposits $3000 into company 3. Admitted at time 492, arrived at 492
+(495) Employee 779, with help of Teller 3, checks balance of company 3. It is $300006800. Admitted at time 492, arrived at 492
+----- Time = 496 -----
+(496) Teller 13 takes on Employee 785.
+----- Time = 497 -----
+(497) Employee 782, with help of Teller 2, deposits $100 into company 8. Admitted at time 494, arrived at 494
+(497) Employee 784, with help of Teller 19, checks balance of company 10. It is $370005800. Admitted at time 494, arrived at 494
+(497) Employee 783, with help of Teller 16, withdraws $3400 from company 6. Admitted at time 494, arrived at 494
+----- Time = 498 -----
+(498) Teller 4 takes on Employee 786.
+(498) Teller 1 takes on Employee 787.
+----- Time = 499 -----
+(499) Employee 785, with help of Teller 13, withdraws $4600 from company 8. Admitted at time 496, arrived at 496
+----- Time = 500 -----
+(500) Teller 17 takes on Employee 788.
+(500) Teller 8 takes on Employee 789.
+----- Time = 501 -----
+(501) Employee 787, with help of Teller 1, deposits $2400 into company 6. Admitted at time 498, arrived at 498
+(501) Employee 786, with help of Teller 4, deposits $1000 into company 10. Admitted at time 498, arrived at 498
+(501) Teller 20 takes on Employee 790.
+(501) Teller 11 takes on Employee 791.
+----- Time = 502 -----
+(502) Teller 13 takes on Employee 792.
+----- Time = 503 -----
+(503) Employee 789, with help of Teller 8, withdraws $1000 from company 3. Admitted at time 500, arrived at 500
+(503) Employee 788, with help of Teller 17, deposits $2500 into company 10. Admitted at time 500, arrived at 500
+----- Time = 504 -----
+(504) Employee 790, with help of Teller 20, withdraws $300 from company 5. Admitted at time 501, arrived at 501
+(504) Employee 791, with help of Teller 11, checks balance of company 1. It is $299985800. Admitted at time 501, arrived at 501
+(504) Employee 812 is going to the queue
+(504) Employee 813 is going to the queue
+(504) Teller 3 takes on Employee 793.
+(504) Teller 18 takes on Employee 809.
+(504) Teller 7 takes on Employee 808.
+(504) Teller 5 takes on Employee 810.
+(504) Teller 4 takes on Employee 811.
+(504) Teller 2 takes on Employee 806.
+(504) Teller 19 takes on Employee 805.
+(504) Teller 16 takes on Employee 804.
+(504) Teller 6 takes on Employee 807.
+(504) Teller 9 takes on Employee 803.
+(504) Teller 8 takes on Employee 802.
+(504) Teller 12 takes on Employee 801.
+(504) Teller 1 takes on Employee 800.
+(504) Teller 20 takes on Employee 799.
+(504) Teller 14 takes on Employee 798.
+(504) Teller 15 takes on Employee 797.
+(504) Teller 17 takes on Employee 795.
+(504) Teller 10 takes on Employee 794.
+(504) Teller 11 takes on Employee 796.
+----- Time = 505 -----
+(505) Employee 814 is going to the queue
+----- Time = 506 -----
+(506) Employee 815 is going to the queue
+(506) Employee 816 is going to the queue
+(506) Employee 817 is going to the queue
+----- Time = 507 -----
+(507) Employee 799, with help of Teller 20, withdraws $3000 from company 2. Admitted at time 504, arrived at 504
+(507) Employee 794, with help of Teller 10, deposits $2100 into company 5. Admitted at time 504, arrived at 504
+(507) Employee 796, with help of Teller 11, withdraws $900 from company 4. Admitted at time 504, arrived at 504
+(507) Employee 793, with help of Teller 3, deposits $200 into company 1. Admitted at time 504, arrived at 504
+(507) Employee 809, with help of Teller 18, deposits $4400 into company 10. Admitted at time 504, arrived at 504
+(507) Employee 811, with help of Teller 4, deposits $1200 into company 9. Admitted at time 504, arrived at 504
+(507) Employee 805, with help of Teller 19, withdraws $2200 from company 1. Admitted at time 504, arrived at 504
+(507) Employee 810, with help of Teller 5, checks balance of company 6. It is $99988300. Admitted at time 504, arrived at 504
+(507) Employee 801, with help of Teller 12, deposits $2400 into company 7. Admitted at time 504, arrived at 504
+(507) Employee 804, with help of Teller 16, checks balance of company 6. It is $99988300. Admitted at time 504, arrived at 504
+(507) Employee 806, with help of Teller 2, deposits $2400 into company 8. Admitted at time 504, arrived at 504
+(507) Employee 792, with help of Teller 13, withdraws $400 from company 5. Admitted at time 502, arrived at 502
+(507) Employee 812 steps out of queue.
+(507) Employee 813 steps out of queue.
+(507) Employee 814 steps out of queue.
+(507) Employee 815 steps out of queue.
+(507) Employee 816 steps out of queue.
+(507) Employee 817 steps out of queue.
+(507) Teller 13 takes on Employee 812.
+(507) Teller 11 takes on Employee 815.
+(507) Teller 3 takes on Employee 816.
+(507) Teller 10 takes on Employee 814.
+(507) Teller 20 takes on Employee 813.
+(507) Teller 18 takes on Employee 817.
+----- Time = 508 -----
+(508) Employee 800, with help of Teller 1, withdraws $4700 from company 5. Admitted at time 504, arrived at 504
+(508) Employee 798, with help of Teller 14, checks balance of company 2. It is $40044200. Admitted at time 504, arrived at 504
+(508) Employee 795, with help of Teller 17, checks balance of company 10. It is $370013700. Admitted at time 504, arrived at 504
+(508) Employee 797, with help of Teller 15, withdraws $1100 from company 5. Admitted at time 504, arrived at 504
+(508) Employee 808, with help of Teller 7, deposits $3900 into company 10. Admitted at time 504, arrived at 504
+(508) Employee 807, with help of Teller 6, withdraws $2300 from company 6. Admitted at time 504, arrived at 504
+(508) Employee 803, with help of Teller 9, withdraws $100 from company 5. Admitted at time 504, arrived at 504
+(508) Employee 802, with help of Teller 8, withdraws $3800 from company 6. Admitted at time 504, arrived at 504
+(508) Teller 12 takes on Employee 818.
+----- Time = 509 -----
+----- Time = 510 -----
+(510) Teller 19 takes on Employee 819.
+(510) Teller 8 takes on Employee 820.
+(510) Teller 5 takes on Employee 821.
+(510) Teller 9 takes on Employee 822.
+----- Time = 511 -----
+(511) Employee 814, with help of Teller 10, checks balance of company 9. It is $300047900. Admitted at time 508, arrived at 505
+(511) Employee 817, with help of Teller 18, withdraws $2900 from company 2. Admitted at time 508, arrived at 506
+(511) Employee 818, with help of Teller 12, deposits $3400 into company 1. Admitted at time 508, arrived at 508
+(511) Employee 812, with help of Teller 13, deposits $1600 into company 6. Admitted at time 508, arrived at 504
+(511) Employee 816, with help of Teller 3, deposits $4300 into company 10. Admitted at time 508, arrived at 506
+(511) Employee 815, with help of Teller 11, checks balance of company 3. It is $300005800. Admitted at time 508, arrived at 506
+----- Time = 512 -----
+(512) Employee 813, with help of Teller 20, deposits $2200 into company 10. Admitted at time 508, arrived at 504
+(512) Teller 15 takes on Employee 823.
+----- Time = 513 -----
+(513) Employee 819, with help of Teller 19, deposits $1600 into company 10. Admitted at time 510, arrived at 510
+(513) Employee 820, with help of Teller 8, withdraws $3900 from company 9. Admitted at time 510, arrived at 510
+(513) Employee 821, with help of Teller 5, withdraws $3500 from company 8. Admitted at time 510, arrived at 510
+(513) Employee 822, with help of Teller 9, checks balance of company 7. It is $440007700. Admitted at time 510, arrived at 510
+(513) Teller 9 takes on Employee 824.
+----- Time = 514 -----
+----- Time = 515 -----
+(515) Employee 823, with help of Teller 15, withdraws $3500 from company 4. Admitted at time 512, arrived at 512
+(515) Teller 8 takes on Employee 825.
+----- Time = 516 -----
+(516) Employee 824, with help of Teller 9, checks balance of company 4. It is $270021500. Admitted at time 513, arrived at 513
+(516) Teller 19 takes on Employee 826.
+(516) Teller 1 takes on Employee 827.
+----- Time = 517 -----
+(517) Teller 20 takes on Employee 829.
+(517) Teller 18 takes on Employee 828.
+----- Time = 518 -----
+(518) Employee 825, with help of Teller 8, checks balance of company 2. It is $40041300. Admitted at time 515, arrived at 515
+----- Time = 519 -----
+(519) Employee 826, with help of Teller 19, withdraws $4900 from company 8. Admitted at time 516, arrived at 516
+(519) Employee 827, with help of Teller 1, withdraws $800 from company 7. Admitted at time 516, arrived at 516
+(519) Teller 9 takes on Employee 830.
+(519) Teller 6 takes on Employee 831.
+(519) Teller 15 takes on Employee 832.
+----- Time = 520 -----
+(520) Employee 829, with help of Teller 20, withdraws $1800 from company 6. Admitted at time 517, arrived at 517
+(520) Employee 828, with help of Teller 18, withdraws $2500 from company 8. Admitted at time 517, arrived at 517
+(520) Teller 3 takes on Employee 833.
+----- Time = 521 -----
+(521) Teller 4 takes on Employee 834.
+(521) Teller 8 takes on Employee 839.
+(521) Teller 7 takes on Employee 840.
+(521) Teller 1 takes on Employee 841.
+(521) Teller 16 takes on Employee 836.
+(521) Teller 10 takes on Employee 837.
+(521) Teller 2 takes on Employee 835.
+(521) Teller 11 takes on Employee 838.
+----- Time = 522 -----
+(522) Employee 830, with help of Teller 9, withdraws $1000 from company 6. Admitted at time 519, arrived at 519
+(522) Employee 831, with help of Teller 6, checks balance of company 5. It is $329990300. Admitted at time 519, arrived at 519
+(522) Teller 13 takes on Employee 842.
+----- Time = 523 -----
+(523) Employee 832, with help of Teller 15, withdraws $3500 from company 5. Admitted at time 519, arrived at 519
+(523) Employee 833, with help of Teller 3, deposits $1200 into company 1. Admitted at time 520, arrived at 520
+(523) Employee 854 is going to the queue
+(523) Employee 855 is going to the queue
+(523) Employee 856 is going to the queue
+(523) Employee 857 is going to the queue
+(523) Employee 858 is going to the queue
+(523) Employee 859 is going to the queue
+(523) Teller 5 takes on Employee 843.
+(523) Teller 12 takes on Employee 853.
+(523) Teller 18 takes on Employee 852.
+(523) Teller 19 takes on Employee 851.
+(523) Teller 15 takes on Employee 850.
+(523) Teller 9 takes on Employee 849.
+(523) Teller 14 takes on Employee 848.
+(523) Teller 3 takes on Employee 847.
+(523) Teller 6 takes on Employee 846.
+(523) Teller 20 takes on Employee 844.
+(523) Teller 17 takes on Employee 845.
+----- Time = 524 -----
+(524) Employee 834, with help of Teller 4, withdraws $2100 from company 3. Admitted at time 521, arrived at 521
+(524) Employee 839, with help of Teller 8, deposits $600 into company 4. Admitted at time 521, arrived at 521
+(524) Employee 840, with help of Teller 7, deposits $2100 into company 2. Admitted at time 521, arrived at 521
+(524) Employee 841, with help of Teller 1, withdraws $600 from company 10. Admitted at time 521, arrived at 521
+(524) Employee 836, with help of Teller 16, deposits $2500 into company 1. Admitted at time 521, arrived at 521
+(524) Employee 835, with help of Teller 2, deposits $4500 into company 6. Admitted at time 521, arrived at 521
+(524) Employee 838, with help of Teller 11, deposits $2500 into company 7. Admitted at time 521, arrived at 521
+(524) Employee 837, with help of Teller 10, deposits $1000 into company 4. Admitted at time 521, arrived at 521
+(524) Employee 854 steps out of queue.
+(524) Employee 855 steps out of queue.
+(524) Employee 856 steps out of queue.
+(524) Employee 857 steps out of queue.
+(524) Employee 858 steps out of queue.
+(524) Employee 859 steps out of queue.
+(524) Employee 862 is going to the queue
+(524) Teller 4 takes on Employee 854.
+(524) Teller 8 takes on Employee 855.
+(524) Teller 7 takes on Employee 857.
+(524) Teller 1 takes on Employee 859.
+(524) Teller 16 takes on Employee 858.
+(524) Teller 2 takes on Employee 856.
+(524) Teller 10 takes on Employee 860.
+(524) Teller 11 takes on Employee 861.
+----- Time = 525 -----
+(525) Employee 842, with help of Teller 13, checks balance of company 4. It is $270023100. Admitted at time 522, arrived at 522
+(525) Employee 862 steps out of queue.
+(525) Teller 13 takes on Employee 862.
+----- Time = 526 -----
+(526) Employee 848, with help of Teller 14, deposits $3600 into company 1. Admitted at time 523, arrived at 523
+(526) Employee 846, with help of Teller 6, checks balance of company 2. It is $40043400. Admitted at time 523, arrived at 523
+(526) Employee 844, with help of Teller 20, checks balance of company 8. It is $349959500. Admitted at time 523, arrived at 523
+(526) Employee 853, with help of Teller 12, withdraws $5000 from company 6. Admitted at time 523, arrived at 523
+(526) Employee 845, with help of Teller 17, checks balance of company 8. It is $349959500. Admitted at time 523, arrived at 523
+(526) Employee 851, with help of Teller 19, withdraws $3300 from company 3. Admitted at time 523, arrived at 523
+(526) Employee 852, with help of Teller 18, checks balance of company 6. It is $99980500. Admitted at time 523, arrived at 523
+(526) Employee 850, with help of Teller 15, withdraws $2900 from company 5. Admitted at time 523, arrived at 523
+(526) Employee 849, with help of Teller 9, checks balance of company 9. It is $300044000. Admitted at time 523, arrived at 523
+(526) Teller 14 takes on Employee 863.
+(526) Teller 6 takes on Employee 866.
+(526) Teller 12 takes on Employee 864.
+(526) Teller 20 takes on Employee 865.
+----- Time = 527 -----
+(527) Employee 847, with help of Teller 3, withdraws $4100 from company 8. Admitted at time 523, arrived at 523
+(527) Employee 861, with help of Teller 11, checks balance of company 10. It is $370025100. Admitted at time 524, arrived at 524
+(527) Teller 9 takes on Employee 867.
+(527) Teller 3 takes on Employee 868.
+----- Time = 528 -----
+(528) Employee 858, with help of Teller 16, withdraws $400 from company 1. Admitted at time 525, arrived at 523
+(528) Employee 856, with help of Teller 2, checks balance of company 7. It is $440009400. Admitted at time 525, arrived at 523
+(528) Employee 860, with help of Teller 10, deposits $1900 into company 1. Admitted at time 524, arrived at 524
+(528) Employee 855, with help of Teller 8, withdraws $5000 from company 5. Admitted at time 525, arrived at 523
+(528) Teller 19 takes on Employee 869.
+----- Time = 529 -----
+(529) Employee 864, with help of Teller 12, checks balance of company 10. It is $370025100. Admitted at time 526, arrived at 526
+(529) Employee 857, with help of Teller 7, checks balance of company 5. It is $329978900. Admitted at time 525, arrived at 523
+(529) Employee 843, with help of Teller 5, withdraws $200 from company 10. Admitted at time 523, arrived at 523
+(529) Employee 863, with help of Teller 14, deposits $500 into company 6. Admitted at time 526, arrived at 526
+(529) Employee 866, with help of Teller 6, withdraws $3700 from company 3. Admitted at time 526, arrived at 526
+(529) Teller 6 takes on Employee 870.
+(529) Teller 11 takes on Employee 873.
+(529) Teller 16 takes on Employee 872.
+(529) Teller 18 takes on Employee 871.
+----- Time = 530 -----
+(530) Employee 868, with help of Teller 3, checks balance of company 1. It is $299996000. Admitted at time 527, arrived at 527
+(530) Employee 865, with help of Teller 20, deposits $1200 into company 10. Admitted at time 526, arrived at 526
+(530) Employee 859, with help of Teller 1, checks balance of company 6. It is $99981000. Admitted at time 525, arrived at 523
+(530) Employee 854, with help of Teller 4, deposits $2900 into company 1. Admitted at time 525, arrived at 523
+(530) Employee 867, with help of Teller 9, withdraws $4700 from company 9. Admitted at time 527, arrived at 527
+(530) Teller 5 takes on Employee 874.
+(530) Teller 14 takes on Employee 877.
+(530) Teller 3 takes on Employee 876.
+(530) Teller 17 takes on Employee 878.
+(530) Teller 20 takes on Employee 875.
+----- Time = 531 -----
+(531) Employee 869, with help of Teller 19, withdraws $2800 from company 3. Admitted at time 528, arrived at 528
+----- Time = 532 -----
+(532) Employee 870, with help of Teller 6, deposits $5000 into company 6. Admitted at time 529, arrived at 529
+(532) Employee 873, with help of Teller 11, deposits $3500 into company 9. Admitted at time 529, arrived at 529
+(532) Employee 872, with help of Teller 16, withdraws $1500 from company 7. Admitted at time 529, arrived at 529
+(532) Employee 862, with help of Teller 13, deposits $1700 into company 6. Admitted at time 526, arrived at 524
+(532) Teller 13 takes on Employee 879.
+(532) Teller 7 takes on Employee 880.
+(532) Teller 8 takes on Employee 881.
+----- Time = 533 -----
+(533) Employee 877, with help of Teller 14, deposits $2400 into company 5. Admitted at time 530, arrived at 530
+(533) Employee 874, with help of Teller 5, deposits $2600 into company 10. Admitted at time 530, arrived at 530
+(533) Employee 878, with help of Teller 17, deposits $2900 into company 7. Admitted at time 530, arrived at 530
+(533) Employee 875, with help of Teller 20, withdraws $1200 from company 1. Admitted at time 530, arrived at 530
+(533) Employee 871, with help of Teller 18, withdraws $3800 from company 7. Admitted at time 529, arrived at 529
+----- Time = 534 -----
+(534) Employee 876, with help of Teller 3, withdraws $3100 from company 10. Admitted at time 530, arrived at 530
+(534) Teller 12 takes on Employee 882.
+----- Time = 535 -----
+(535) Employee 879, with help of Teller 13, deposits $3900 into company 9. Admitted at time 532, arrived at 532
+(535) Employee 880, with help of Teller 7, checks balance of company 6. It is $99987700. Admitted at time 532, arrived at 532
+(535) Employee 881, with help of Teller 8, deposits $4400 into company 2. Admitted at time 532, arrived at 532
+(535) Teller 20 takes on Employee 883.
+(535) Teller 11 takes on Employee 884.
+----- Time = 536 -----
+(536) Teller 6 takes on Employee 885.
+----- Time = 537 -----
+(537) Employee 882, with help of Teller 12, checks balance of company 6. It is $99987700. Admitted at time 534, arrived at 534
+(537) Teller 4 takes on Employee 886.
+----- Time = 538 -----
+(538) Employee 884, with help of Teller 11, checks balance of company 6. It is $99987700. Admitted at time 535, arrived at 535
+(538) Teller 11 takes on Employee 887.
+----- Time = 539 -----
+(539) Employee 885, with help of Teller 6, checks balance of company 7. It is $440007000. Admitted at time 536, arrived at 536
+(539) Employee 883, with help of Teller 20, deposits $4600 into company 6. Admitted at time 535, arrived at 535
+----- Time = 540 -----
+(540) Employee 886, with help of Teller 4, checks balance of company 8. It is $349955400. Admitted at time 537, arrived at 537
+(540) Teller 9 takes on Employee 888.
+(540) Teller 7 takes on Employee 891.
+(540) Teller 8 takes on Employee 890.
+(540) Teller 10 takes on Employee 892.
+(540) Teller 1 takes on Employee 889.
+----- Time = 541 -----
+(541) Employee 887, with help of Teller 11, deposits $1100 into company 3. Admitted at time 538, arrived at 538
+(541) Teller 12 takes on Employee 893.
+----- Time = 542 -----
+(542) Teller 2 takes on Employee 894.
+(542) Teller 13 takes on Employee 896.
+(542) Teller 19 takes on Employee 897.
+(542) Teller 14 takes on Employee 895.
+----- Time = 543 -----
+(543) Employee 888, with help of Teller 9, withdraws $3600 from company 6. Admitted at time 540, arrived at 540
+(543) Employee 891, with help of Teller 7, checks balance of company 8. It is $349955400. Admitted at time 540, arrived at 540
+(543) Employee 890, with help of Teller 8, deposits $2000 into company 2. Admitted at time 540, arrived at 540
+(543) Employee 892, with help of Teller 10, deposits $4900 into company 6. Admitted at time 540, arrived at 540
+(543) Employee 889, with help of Teller 1, withdraws $3800 from company 5. Admitted at time 540, arrived at 540
+----- Time = 544 -----
+(544) Employee 893, with help of Teller 12, checks balance of company 8. It is $349955400. Admitted at time 541, arrived at 541
+(544) Teller 16 takes on Employee 898.
+----- Time = 545 -----
+(545) Employee 894, with help of Teller 2, withdraws $800 from company 3. Admitted at time 542, arrived at 542
+(545) Employee 896, with help of Teller 13, deposits $2200 into company 4. Admitted at time 542, arrived at 542
+(545) Employee 895, with help of Teller 14, withdraws $5000 from company 2. Admitted at time 542, arrived at 542
+(545) Employee 897, with help of Teller 19, checks balance of company 10. It is $370025600. Admitted at time 542, arrived at 542
+(545) Teller 19 takes on Employee 899.
+(545) Teller 3 takes on Employee 900.
+----- Time = 546 -----
+(546) Teller 5 takes on Employee 901.
+(546) Teller 18 takes on Employee 904.
+(546) Teller 15 takes on Employee 903.
+(546) Teller 6 takes on Employee 905.
+(546) Teller 17 takes on Employee 906.
+(546) Teller 20 takes on Employee 902.
+----- Time = 547 -----
+(547) Employee 898, with help of Teller 16, withdraws $1900 from company 2. Admitted at time 544, arrived at 544
+----- Time = 548 -----
+(548) Employee 899, with help of Teller 19, withdraws $2600 from company 7. Admitted at time 545, arrived at 545
+(548) Employee 900, with help of Teller 3, withdraws $3000 from company 1. Admitted at time 545, arrived at 545
+(548) Teller 10 takes on Employee 907.
+----- Time = 549 -----
+(549) Employee 901, with help of Teller 5, withdraws $1800 from company 8. Admitted at time 546, arrived at 546
+(549) Employee 903, with help of Teller 15, checks balance of company 5. It is $329977500. Admitted at time 546, arrived at 546
+(549) Employee 904, with help of Teller 18, checks balance of company 6. It is $99993600. Admitted at time 546, arrived at 546
+(549) Employee 905, with help of Teller 6, withdraws $3500 from company 3. Admitted at time 546, arrived at 546
+(549) Employee 906, with help of Teller 17, withdraws $900 from company 8. Admitted at time 546, arrived at 546
+(549) Employee 902, with help of Teller 20, withdraws $4500 from company 9. Admitted at time 546, arrived at 546
+(549) Teller 12 takes on Employee 910.
+(549) Teller 20 takes on Employee 908.
+(549) Teller 13 takes on Employee 909.
+----- Time = 550 -----
+(550) Teller 16 takes on Employee 911.
+(550) Teller 17 takes on Employee 913.
+(550) Teller 2 takes on Employee 912.
+----- Time = 551 -----
+(551) Employee 907, with help of Teller 10, deposits $800 into company 6. Admitted at time 548, arrived at 548
+----- Time = 552 -----
+(552) Employee 909, with help of Teller 13, deposits $4700 into company 4. Admitted at time 549, arrived at 549
+(552) Employee 910, with help of Teller 12, deposits $2800 into company 10. Admitted at time 549, arrived at 549
+(552) Employee 908, with help of Teller 20, checks balance of company 9. It is $300042200. Admitted at time 549, arrived at 549
+(552) Teller 20 takes on Employee 914.
+----- Time = 553 -----
+(553) Employee 911, with help of Teller 16, withdraws $800 from company 6. Admitted at time 550, arrived at 550
+(553) Employee 913, with help of Teller 17, checks balance of company 3. It is $299990700. Admitted at time 550, arrived at 550
+(553) Employee 912, with help of Teller 2, checks balance of company 2. It is $40042900. Admitted at time 550, arrived at 550
+----- Time = 554 -----
+(554) Teller 14 takes on Employee 915.
+----- Time = 555 -----
+(555) Employee 914, with help of Teller 20, withdraws $3000 from company 2. Admitted at time 552, arrived at 552
+----- Time = 556 -----
+(556) Teller 5 takes on Employee 916.
+(556) Teller 12 takes on Employee 917.
+(556) Teller 9 takes on Employee 918.
+----- Time = 557 -----
+(557) Employee 915, with help of Teller 14, deposits $4200 into company 4. Admitted at time 554, arrived at 554
+----- Time = 558 -----
+(558) Teller 13 takes on Employee 919.
+(558) Teller 2 takes on Employee 920.
+----- Time = 559 -----
+(559) Employee 916, with help of Teller 5, checks balance of company 3. It is $299990700. Admitted at time 556, arrived at 556
+(559) Employee 917, with help of Teller 12, checks balance of company 7. It is $440004400. Admitted at time 556, arrived at 556
+(559) Employee 918, with help of Teller 9, withdraws $4800 from company 3. Admitted at time 556, arrived at 556
+(559) Teller 7 takes on Employee 921.
+----- Time = 560 -----
+----- Time = 561 -----
+(561) Employee 919, with help of Teller 13, deposits $4600 into company 1. Admitted at time 558, arrived at 558
+(561) Employee 920, with help of Teller 2, deposits $2400 into company 8. Admitted at time 558, arrived at 558
+(561) Teller 6 takes on Employee 922.
+(561) Teller 11 takes on Employee 923.
+(561) Teller 18 takes on Employee 924.
+(561) Teller 16 takes on Employee 925.
+----- Time = 562 -----
+(562) Employee 921, with help of Teller 7, withdraws $2300 from company 3. Admitted at time 559, arrived at 559
+(562) Teller 12 takes on Employee 926.
+(562) Teller 8 takes on Employee 927.
+----- Time = 563 -----
+----- Time = 564 -----
+(564) Employee 922, with help of Teller 6, withdraws $1500 from company 4. Admitted at time 561, arrived at 561
+(564) Employee 923, with help of Teller 11, withdraws $3400 from company 10. Admitted at time 561, arrived at 561
+(564) Employee 925, with help of Teller 16, deposits $2000 into company 1. Admitted at time 561, arrived at 561
+(564) Teller 15 takes on Employee 928.
+----- Time = 565 -----
+(565) Employee 926, with help of Teller 12, checks balance of company 4. It is $270032700. Admitted at time 562, arrived at 562
+(565) Employee 927, with help of Teller 8, checks balance of company 1. It is $300001300. Admitted at time 562, arrived at 562
+(565) Employee 924, with help of Teller 18, deposits $3600 into company 4. Admitted at time 561, arrived at 561
+----- Time = 566 -----
+(566) Teller 18 takes on Employee 929.
+(566) Teller 13 takes on Employee 930.
+----- Time = 567 -----
+(567) Employee 928, with help of Teller 15, checks balance of company 7. It is $440004400. Admitted at time 564, arrived at 564
+----- Time = 568 -----
+(568) Teller 11 takes on Employee 931.
+(568) Teller 15 takes on Employee 938.
+(568) Teller 19 takes on Employee 937.
+(568) Teller 16 takes on Employee 936.
+(568) Teller 3 takes on Employee 935.
+(568) Teller 10 takes on Employee 934.
+(568) Teller 5 takes on Employee 933.
+(568) Teller 2 takes on Employee 932.
+----- Time = 569 -----
+(569) Employee 929, with help of Teller 18, checks balance of company 1. It is $300001300. Admitted at time 566, arrived at 566
+(569) Employee 930, with help of Teller 13, withdraws $4500 from company 5. Admitted at time 566, arrived at 566
+----- Time = 570 -----
+(570) Teller 9 takes on Employee 939.
+(570) Teller 20 takes on Employee 940.
+----- Time = 571 -----
+(571) Employee 931, with help of Teller 11, deposits $900 into company 10. Admitted at time 568, arrived at 568
+(571) Employee 937, with help of Teller 19, checks balance of company 5. It is $329973000. Admitted at time 568, arrived at 568
+(571) Employee 936, with help of Teller 16, deposits $3900 into company 4. Admitted at time 568, arrived at 568
+(571) Employee 934, with help of Teller 10, deposits $900 into company 6. Admitted at time 568, arrived at 568
+(571) Employee 935, with help of Teller 3, checks balance of company 1. It is $300001300. Admitted at time 568, arrived at 568
+(571) Employee 938, with help of Teller 15, checks balance of company 7. It is $440004400. Admitted at time 568, arrived at 568
+(571) Employee 932, with help of Teller 2, checks balance of company 4. It is $270040200. Admitted at time 568, arrived at 568
+(571) Teller 4 takes on Employee 941.
+(571) Teller 1 takes on Employee 942.
+----- Time = 572 -----
+(572) Employee 933, with help of Teller 5, deposits $300 into company 7. Admitted at time 568, arrived at 568
+(572) Teller 2 takes on Employee 943.
+(572) Teller 13 takes on Employee 945.
+(572) Teller 7 takes on Employee 944.
+----- Time = 573 -----
+(573) Employee 939, with help of Teller 9, checks balance of company 3. It is $299983600. Admitted at time 570, arrived at 570
+(573) Employee 940, with help of Teller 20, withdraws $2300 from company 2. Admitted at time 570, arrived at 570
+----- Time = 574 -----
+(574) Employee 941, with help of Teller 4, withdraws $3300 from company 9. Admitted at time 571, arrived at 571
+(574) Employee 942, with help of Teller 1, deposits $3700 into company 3. Admitted at time 571, arrived at 571
+(574) Teller 15 takes on Employee 948.
+(574) Teller 3 takes on Employee 946.
+(574) Teller 18 takes on Employee 947.
+----- Time = 575 -----
+(575) Employee 943, with help of Teller 2, checks balance of company 9. It is $300038900. Admitted at time 572, arrived at 572
+(575) Employee 945, with help of Teller 13, deposits $3600 into company 7. Admitted at time 572, arrived at 572
+(575) Employee 944, with help of Teller 7, checks balance of company 4. It is $270040200. Admitted at time 572, arrived at 572
+(575) Teller 19 takes on Employee 949.
+(575) Teller 5 takes on Employee 950.
+(575) Teller 10 takes on Employee 951.
+(575) Teller 16 takes on Employee 952.
+----- Time = 576 -----
+----- Time = 577 -----
+(577) Employee 948, with help of Teller 15, withdraws $5000 from company 5. Admitted at time 574, arrived at 574
+(577) Employee 946, with help of Teller 3, deposits $2100 into company 7. Admitted at time 574, arrived at 574
+(577) Employee 947, with help of Teller 18, withdraws $400 from company 4. Admitted at time 574, arrived at 574
+(577) Teller 7 takes on Employee 953.
+----- Time = 578 -----
+(578) Employee 949, with help of Teller 19, deposits $3400 into company 1. Admitted at time 575, arrived at 575
+(578) Employee 950, with help of Teller 5, checks balance of company 9. It is $300038900. Admitted at time 575, arrived at 575
+(578) Employee 951, with help of Teller 10, withdraws $4200 from company 3. Admitted at time 575, arrived at 575
+(578) Employee 952, with help of Teller 16, withdraws $3200 from company 10. Admitted at time 575, arrived at 575
+(578) Teller 17 takes on Employee 954.
+(578) Teller 20 takes on Employee 955.
+(578) Teller 9 takes on Employee 956.
+(578) Teller 1 takes on Employee 957.
+----- Time = 579 -----
+(579) Teller 18 takes on Employee 958.
+----- Time = 580 -----
+(580) Teller 3 takes on Employee 959.
+(580) Teller 6 takes on Employee 960.
+----- Time = 581 -----
+(581) Employee 954, with help of Teller 17, deposits $1700 into company 3. Admitted at time 578, arrived at 578
+(581) Employee 955, with help of Teller 20, deposits $700 into company 1. Admitted at time 578, arrived at 578
+(581) Employee 956, with help of Teller 9, checks balance of company 5. It is $329968000. Admitted at time 578, arrived at 578
+(581) Employee 957, with help of Teller 1, deposits $4000 into company 4. Admitted at time 578, arrived at 578
+(581) Teller 1 takes on Employee 961.
+(581) Teller 16 takes on Employee 962.
+----- Time = 582 -----
+(582) Employee 958, with help of Teller 18, withdraws $600 from company 3. Admitted at time 579, arrived at 579
+----- Time = 583 -----
+(583) Employee 959, with help of Teller 3, checks balance of company 2. It is $40037600. Admitted at time 580, arrived at 580
+(583) Employee 960, with help of Teller 6, withdraws $2000 from company 5. Admitted at time 580, arrived at 580
+(583) Employee 953, with help of Teller 7, deposits $100 into company 3. Admitted at time 577, arrived at 577
+(583) Teller 12 takes on Employee 963.
+----- Time = 584 -----
+(584) Employee 961, with help of Teller 1, deposits $4200 into company 7. Admitted at time 581, arrived at 581
+(584) Employee 962, with help of Teller 16, withdraws $3200 from company 9. Admitted at time 581, arrived at 581
+----- Time = 585 -----
+(585) Teller 15 takes on Employee 964.
+----- Time = 586 -----
+(586) Employee 963, with help of Teller 12, deposits $600 into company 1. Admitted at time 583, arrived at 583
+(586) Teller 17 takes on Employee 966.
+(586) Teller 16 takes on Employee 965.
+----- Time = 587 -----
+----- Time = 588 -----
+(588) Employee 964, with help of Teller 15, deposits $4600 into company 2. Admitted at time 585, arrived at 585
+(588) Teller 3 takes on Employee 967.
+(588) Teller 11 takes on Employee 968.
+----- Time = 589 -----
+(589) Employee 966, with help of Teller 17, deposits $3500 into company 2. Admitted at time 586, arrived at 586
+(589) Employee 965, with help of Teller 16, withdraws $3800 from company 7. Admitted at time 586, arrived at 586
+(589) Teller 4 takes on Employee 969.
+----- Time = 590 -----
+(590) Teller 15 takes on Employee 970.
+----- Time = 591 -----
+(591) Employee 967, with help of Teller 3, deposits $3600 into company 4. Admitted at time 588, arrived at 588
+----- Time = 592 -----
+(592) Employee 969, with help of Teller 4, withdraws $3500 from company 9. Admitted at time 589, arrived at 589
+(592) Employee 968, with help of Teller 11, deposits $1900 into company 4. Admitted at time 588, arrived at 588
+(592) Teller 9 takes on Employee 971.
+(592) Teller 16 takes on Employee 972.
+(592) Teller 5 takes on Employee 973.
+(592) Teller 17 takes on Employee 974.
+----- Time = 593 -----
+(593) Employee 970, with help of Teller 15, withdraws $400 from company 3. Admitted at time 590, arrived at 590
+----- Time = 594 -----
+(594) Teller 20 takes on Employee 975.
+----- Time = 595 -----
+(595) Employee 971, with help of Teller 9, checks balance of company 9. It is $300032200. Admitted at time 592, arrived at 592
+(595) Employee 972, with help of Teller 16, checks balance of company 1. It is $300006000. Admitted at time 592, arrived at 592
+(595) Employee 973, with help of Teller 5, deposits $3000 into company 7. Admitted at time 592, arrived at 592
+(595) Employee 974, with help of Teller 17, deposits $1100 into company 1. Admitted at time 592, arrived at 592
+----- Time = 596 -----
+(596) Teller 7 takes on Employee 976.
+----- Time = 597 -----
+(597) Employee 975, with help of Teller 20, deposits $2700 into company 6. Admitted at time 594, arrived at 594
+(597) Teller 1 takes on Employee 979.
+(597) Teller 6 takes on Employee 978.
+(597) Teller 12 takes on Employee 977.
+----- Time = 598 -----
+(598) Teller 13 takes on Employee 980.
+----- Time = 599 -----
+(599) Employee 976, with help of Teller 7, checks balance of company 7. It is $440013800. Admitted at time 596, arrived at 596
+(599) Teller 16 takes on Employee 981.
+(599) Teller 5 takes on Employee 985.
+(599) Teller 15 takes on Employee 983.
+(599) Teller 17 takes on Employee 984.
+(599) Teller 4 takes on Employee 982.
+(599) Teller 2 takes on Employee 986.
+----- Time = 600 -----
+(600) Employee 979, with help of Teller 1, deposits $4600 into company 2. Admitted at time 597, arrived at 597
+(600) Employee 978, with help of Teller 6, deposits $2500 into company 3. Admitted at time 597, arrived at 597
+(600) Employee 977, with help of Teller 12, withdraws $2200 from company 4. Admitted at time 597, arrived at 597
+(600) Teller 7 takes on Employee 987.
+----- Time = 601 -----
+(601) Employee 980, with help of Teller 13, withdraws $3300 from company 3. Admitted at time 598, arrived at 598
+----- Time = 602 -----
+(602) Employee 981, with help of Teller 16, withdraws $1500 from company 6. Admitted at time 599, arrived at 599
+(602) Employee 984, with help of Teller 17, deposits $2300 into company 1. Admitted at time 599, arrived at 599
+(602) Employee 983, with help of Teller 15, withdraws $4500 from company 8. Admitted at time 599, arrived at 599
+(602) Employee 985, with help of Teller 5, checks balance of company 10. It is $370022700. Admitted at time 599, arrived at 599
+(602) Teller 5 takes on Employee 988.
+----- Time = 603 -----
+(603) Employee 982, with help of Teller 4, deposits $2600 into company 10. Admitted at time 599, arrived at 599
+(603) Employee 986, with help of Teller 2, checks balance of company 8. It is $349950600. Admitted at time 599, arrived at 599
+(603) Teller 15 takes on Employee 989.
+(603) Teller 3 takes on Employee 992.
+(603) Teller 20 takes on Employee 990.
+(603) Teller 12 takes on Employee 991.
+----- Time = 604 -----
+(604) Teller 11 takes on Employee 993.
+----- Time = 605 -----
+(605) Employee 988, with help of Teller 5, deposits $700 into company 1. Admitted at time 602, arrived at 602
+(605) Teller 17 takes on Employee 994.
+----- Time = 606 -----
+(606) Employee 989, with help of Teller 15, withdraws $600 from company 2. Admitted at time 603, arrived at 603
+(606) Employee 992, with help of Teller 3, deposits $2100 into company 5. Admitted at time 603, arrived at 603
+(606) Employee 990, with help of Teller 20, deposits $1200 into company 6. Admitted at time 603, arrived at 603
+(606) Employee 991, with help of Teller 12, deposits $3300 into company 4. Admitted at time 603, arrived at 603
+(606) Employee 987, with help of Teller 7, checks balance of company 1. It is $300010100. Admitted at time 600, arrived at 600
+(606) Teller 1 takes on Employee 995.
+----- Time = 607 -----
+(607) Employee 993, with help of Teller 11, withdraws $3200 from company 2. Admitted at time 604, arrived at 604
+(607) Teller 9 takes on Employee 996.
+(607) Teller 13 takes on Employee 997.
+(607) Teller 16 takes on Employee 998.
+----- Time = 608 -----
+(608) Employee 994, with help of Teller 17, withdraws $2800 from company 10. Admitted at time 605, arrived at 605
+(608) Teller 12 takes on Employee 999.
+(608) Teller 7 takes on Employee 1000.
+----- Time = 609 -----
+(609) Employee 995, with help of Teller 1, deposits $4700 into company 10. Admitted at time 606, arrived at 606
+----- Time = 610 -----
+(610) Employee 996, with help of Teller 9, checks balance of company 9. It is $300032200. Admitted at time 607, arrived at 607
+(610) Employee 997, with help of Teller 13, checks balance of company 6. It is $99996900. Admitted at time 607, arrived at 607
+(610) Employee 998, with help of Teller 16, withdraws $1900 from company 6. Admitted at time 607, arrived at 607
+----- Time = 611 -----
+(611) Employee 999, with help of Teller 12, withdraws $2400 from company 8. Admitted at time 608, arrived at 608
+(611) Employee 1000, with help of Teller 7, withdraws $3400 from company 9. Admitted at time 608, arrived at 608
+All jobs are done
+Teller 18 ends his day. Kill Thread-17
+Teller 17 ends his day. Kill Thread-16
+Teller 1 ends his day. Kill Thread-0
+Teller 8 ends his day. Kill Thread-7
+Teller 11 ends his day. Kill Thread-10
+Teller 20 ends his day. Kill Thread-19
+Teller 10 ends his day. Kill Thread-9
+Teller 14 ends his day. Kill Thread-13
+Teller 5 ends his day. Kill Thread-4
+Teller 9 ends his day. Kill Thread-8
+Teller 4 ends his day. Kill Thread-3
+Teller 19 ends his day. Kill Thread-18
+Teller 13 ends his day. Kill Thread-12
+Teller 12 ends his day. Kill Thread-11
+Teller 16 ends his day. Kill Thread-15
+Teller 7 ends his day. Kill Thread-6
+Teller 6 ends his day. Kill Thread-5
+Teller 2 ends his day. Kill Thread-1
+Teller 15 ends his day. Kill Thread-14
+Teller 3 ends his day. Kill Thread-2
+Bank is now closed

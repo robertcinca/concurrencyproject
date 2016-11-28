@@ -1,0 +1,58 @@
+Entering manual configuration mode...reverting to console use
+Please use console to manually enter a file number.
+Which manual configuration should be run? (If in doubt, use 1, 2 or 3!)
+File exists!
+Do you wish to print results in Console or Frame?
+(Enter 'console' or 'frame')
+PRINTING TO CONSOLE
+Bank is now open!
+Teller 1 starts his day. Start Thread-0
+Teller 2 starts his day. Start Thread-1
+Teller 3 starts his day. Start Thread-2
+Teller 4 starts his day. Start Thread-3
+Teller 5 starts his day. Start Thread-4
+----- Time = 0 -----
+(0) Teller 1 takes on Employee 1.
+----- Time = 1 -----
+(1) Teller 4 takes on Employee 2.
+----- Time = 2 -----
+----- Time = 3 -----
+(3) Employee 1, with help of Teller 1, deposits $1000 into company 2. Admitted at time 0, arrived at 0
+(3) Teller 1 takes on Employee 3.
+----- Time = 4 -----
+(4) Employee 2, with help of Teller 4, checks balance of company 1. It is $10000. Admitted at time 1, arrived at 1
+(4) Employee 8 is going to the queue
+(4) Teller 4 takes on Employee 4.
+(4) Teller 2 takes on Employee 7.
+(4) Teller 5 takes on Employee 5.
+(4) Teller 3 takes on Employee 6.
+----- Time = 5 -----
+(5) Employee 9 is going to the queue
+----- Time = 6 -----
+(6) Employee 10 is going to the queue
+----- Time = 7 -----
+(7) Employee 6, with help of Teller 3, checks balance of company 1. It is $10000. Admitted at time 4, arrived at 4
+(7) Employee 5, with help of Teller 5, deposits $4000 into company 2. Admitted at time 4, arrived at 4
+(7) Employee 4, with help of Teller 4, deposits $3000 into company 1. Admitted at time 4, arrived at 4
+(7) Employee 3, with help of Teller 1, withdraws $500 from company 1. Admitted at time 3, arrived at 3
+(7) Employee 8 steps out of queue.
+(7) Employee 9 steps out of queue.
+(7) Employee 10 steps out of queue.
+(7) Teller 1 takes on Employee 8.
+(7) Teller 3 takes on Employee 9.
+(7) Teller 5 takes on Employee 10.
+----- Time = 8 -----
+(8) Employee 7, with help of Teller 2, checks balance of company 2. It is $5100. Admitted at time 4, arrived at 4
+----- Time = 9 -----
+----- Time = 10 -----
+----- Time = 11 -----
+(11) Employee 8, with help of Teller 1, withdraws $1500 from company 1. Admitted at time 8, arrived at 4
+(11) Employee 9, with help of Teller 3, checks balance of company 1. It is $11000. Admitted at time 8, arrived at 5
+(11) Employee 10, with help of Teller 5, withdraws $1000 from company 2. Admitted at time 8, arrived at 6
+All jobs are done
+Teller 2 ends his day. Kill Thread-1
+Teller 5 ends his day. Kill Thread-4
+Teller 4 ends his day. Kill Thread-3
+Teller 1 ends his day. Kill Thread-0
+Teller 3 ends his day. Kill Thread-2
+Bank is now closed
