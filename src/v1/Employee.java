@@ -12,7 +12,7 @@ public class Employee {
 		this.employer = employer;
 	}
 	
-	/*
+	/**
 	 * Transfers an incoming task to the appropriate handling method
 	 */
 	public void doTask(int transactionType, int amount, int admitted, int timer, int arrived, int processingTime, BankStaff teller) {
@@ -25,7 +25,7 @@ public class Employee {
 		}
 	}
 	
-	/*
+	/**
 	 * Executes a job. The on-code comments in this method apply in the withdraw and check methods as well
 	 */
 	private void deposit(int amount, int processingTime, int admitted, BankStaff teller, int arrived) {

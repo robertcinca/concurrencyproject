@@ -23,7 +23,7 @@ public class Job implements Comparable<Job> {
 		this.queueingTimes[1] = T_out;
 	}
 	
-	/*
+	/**
 	 * When a teller starts to process this Job, his ID and the corresponding time are set
 	 */
 	public void setAdmitted(int admitted, BankStaff teller) {
@@ -31,7 +31,7 @@ public class Job implements Comparable<Job> {
 		this.teller = teller;
 	}
 	
-	/*
+	/**
 	 * For execution, the Jobs are passed from BankStaff to Employee
 	 */
 	public void execute(int timer) {
@@ -39,7 +39,7 @@ public class Job implements Comparable<Job> {
 		employee = null;
 	}
 
-	/*
+	/**
 	 * Favors jobs with earlier arrival time. FCFS principle.
 	 */
 	@Override

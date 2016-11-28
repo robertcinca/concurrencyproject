@@ -3,10 +3,12 @@ package v1;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.SwingUtilities;
 
 import java.awt.Font;
+import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -20,6 +22,8 @@ import javax.swing.JTextArea;
 public class BankFrame {
 
 	JFrame frame;
+	JPanel center;
+	JPanel north;
 	private static JTextArea jTextArea1 = new JTextArea();
 	private static JScrollPane scroll = new JScrollPane(jTextArea1, 
 			JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
@@ -55,13 +59,16 @@ public class BankFrame {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.getContentPane().add(scroll);
-		frame.setBounds(100, 100, 450, 300);
+		frame.setTitle("Bank Simulator - Control Panel");
+		center = new JPanel();
+		center.setLayout(new BorderLayout());
+		north = new JPanel();
+		north.setLayout(new BorderLayout());
+		center.add(scroll, BorderLayout.CENTER);
+		frame.setBounds(100, 100, 900, 600);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
 
-		//Create launch button
-		JButton btnStartTheBusiness = new JButton("Start the Business Day!");
+		JButton btnStartTheBusiness = new JButton("Start the Business Day!"); //Create launch button
 		btnStartTheBusiness.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -75,8 +82,7 @@ public class BankFrame {
 				        fileNumber, 
 				        fileNumber[0]);
 				
-				//Not file 1,2 or 3
-				if (chosenNumber == "Other"){
+				if (chosenNumber == "Other"){ //Not file 1,2 or 3
 					System.out.println("Entering manual configuration mode...reverting to console use");
 					System.out.println("Please use console to manually enter a file number.");
 					chosenNumber = "4"; 
@@ -97,7 +103,7 @@ public class BankFrame {
 		btnStartTheBusiness.setBackground(Color.PINK);
 		btnStartTheBusiness.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
 		btnStartTheBusiness.setBounds(31, 6, 182, 54);
-		frame.getContentPane().add(btnStartTheBusiness);
+		north.add(btnStartTheBusiness, BorderLayout.WEST);
 		
 		btnRestartProgram.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -118,15 +124,17 @@ public class BankFrame {
 		btnRestartProgram.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
 		btnRestartProgram.setForeground(Color.RED);
 		btnRestartProgram.setBounds(242, 6, 182, 54);
-		frame.getContentPane().add(btnRestartProgram);
+		north.add(btnRestartProgram, BorderLayout.EAST);
 		
+		frame.add(center, BorderLayout.CENTER);
+		frame.add(north, BorderLayout.NORTH);
 	}
 	
 	public void run(int chosenFileNumber)
     {
+		jTextArea1.setText(null);
 		FileScanner reader = new FileScanner(chosenFileNumber);
 		Bank bank = new Bank(reader);
-		
 		System.out.println("Bank is now open!");
 		bank.doBusiness();
 		System.out.println("Bank is now closed");
@@ -147,13 +155,15 @@ public class BankFrame {
 		
 	}
 	
-	//The following codes set where the text from console get redirected. In this case, jTextArea1    
+	  /**
+	   * The following codes set where the text from console get redirected. In this case, jTextArea1    
+	   */
 	  private static void updateTextArea(final String text) {
 	    SwingUtilities.invokeLater(new Runnable() {
 	      public void run() {
 				
 				//Create text area with bank data when button is pressed.
-				scroll.setBounds(6, 62, 438, 181);	
+				//scroll.setBounds(6, 62, 438, 181);	
 				//frame.add(scroll);
 				
 				jTextArea1.setEditable(false);
@@ -163,7 +173,9 @@ public class BankFrame {
 	    });
 	  }
 	 
-	//Methods that do the Redirect to jTextArea1. 
+	  /**
+	   * Methods that do the Redirect to jTextArea1. 
+	   */
 	  private static void redirectSystemStreams() {
 	    OutputStream out = new OutputStream() {
 	      @Override
@@ -185,4 +197,5 @@ public class BankFrame {
 	    System.setOut(new PrintStream(out, true));
 	    System.setErr(new PrintStream(out, true));
 	  }
+	  
 }
