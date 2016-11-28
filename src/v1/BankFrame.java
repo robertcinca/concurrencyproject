@@ -24,15 +24,15 @@ public class BankFrame {
 	JFrame frame;
 	JPanel center;
 	JPanel north;
-	private static JTextArea jTextArea1 = new JTextArea();
+	private static JTextArea jTextArea1 = new JTextArea(); //Creates text area to print messages
 	private static JScrollPane scroll = new JScrollPane(jTextArea1, 
 			JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, 
-			JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+			JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED); //Creates scroll feature for text area window
 	private final JButton btnRestartProgram = new JButton("Exit Program");
 	
 	
-	/*
-	 * Launch the application. Only needed if you want to run the Interface on its own.
+	/**
+	 * Launch the application. Only needed if you want to run/test the Interface on its own.
 	 */
 //	public static void main(String[] args) {	
 //		EventQueue.invokeLater(new Runnable() {
@@ -58,9 +58,9 @@ public class BankFrame {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
-		frame.setTitle("Bank Simulator - Control Panel");
-		center = new JPanel();
+		frame = new JFrame(); //create the frame
+		frame.setTitle("Bank Simulator - Control Panel"); //frame title
+		center = new JPanel(); //create panels for dynamic adjustment of window
 		center.setLayout(new BorderLayout());
 		north = new JPanel();
 		north.setLayout(new BorderLayout());
@@ -70,10 +70,11 @@ public class BankFrame {
 
 		JButton btnStartTheBusiness = new JButton("Start the Business Day!"); //Create launch button
 		btnStartTheBusiness.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) { //when user clicks on the Start the Business Day button, the code below executes
 				
-				String[] fileNumber = { "1","2","3","Other" };
+				String[] fileNumber = { "1","2","3","Other" }; //Options for what files can be selected
 
+				//Function 'Alert-style' box that gives user choice to select which program to run.
 				String chosenNumber = (String) JOptionPane.showInputDialog(frame, 
 				        "Which configuration should be run?",
 				        "Choose a Number",
@@ -82,12 +83,12 @@ public class BankFrame {
 				        fileNumber, 
 				        fileNumber[0]);
 				
-				if (chosenNumber == "Other"){ //Not file 1,2 or 3
+				if (chosenNumber == "Other"){ //Not file 1,2 or 3, will revert to manual mode
 					System.out.println("Entering manual configuration mode...reverting to console use");
 					System.out.println("Please use console to manually enter a file number.");
 					chosenNumber = "4"; 
 				}
-				if (chosenNumber == null)
+				if (chosenNumber == null) //User cancelled file selection, will revert to manual mode
 				{
 					System.out.println("WARNING: File Choosing Operation Cancelled!");
 					System.out.println("Entering manual configuration mode...reverting to console use");
@@ -95,20 +96,23 @@ public class BankFrame {
 					chosenNumber = "4"; 
 				}
 				
-				int chosenFileNumber = Integer.parseInt(chosenNumber);
+				int chosenFileNumber = Integer.parseInt(chosenNumber); //convert from string to int
 				run(chosenFileNumber); //To run program
 			}
 		});
+		
+		//Button properties and design
 		btnStartTheBusiness.setForeground(Color.BLUE);
 		btnStartTheBusiness.setBackground(Color.PINK);
 		btnStartTheBusiness.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
 		btnStartTheBusiness.setBounds(31, 6, 182, 54);
 		north.add(btnStartTheBusiness, BorderLayout.WEST);
 		
-		btnRestartProgram.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				String[] restartBox = { "Return to program","Exit program"};
+		btnRestartProgram.addActionListener(new ActionListener() { //create Restart button
+			public void actionPerformed(ActionEvent e) { //if restart button clicked
+				String[] restartBox = { "Return to program","Exit program"}; //options for this button
 
+				//Function 'Alert-style' box that gives user choice to select either to return to or exit program.
 				String restartAnswer = (String) JOptionPane.showInputDialog(frame, 
 				        "How do you wish to proceed?",
 				        "WARNING!",
@@ -121,15 +125,22 @@ public class BankFrame {
 				}
 			}
 		});
+		
+		//Restart button properties
 		btnRestartProgram.setFont(new Font("Lucida Grande", Font.PLAIN, 14));
 		btnRestartProgram.setForeground(Color.RED);
 		btnRestartProgram.setBounds(242, 6, 182, 54);
 		north.add(btnRestartProgram, BorderLayout.EAST);
 		
+		//Frame properties
 		frame.add(center, BorderLayout.CENTER);
 		frame.add(north, BorderLayout.NORTH);
 	}
 	
+	/**
+	 * Takes file input from user, passes it to FileScanner class for file parsing and starting the program
+	 * @param chosenFileNumber
+	 */
 	public void run(int chosenFileNumber)
     {
 		jTextArea1.setText(null);
@@ -141,6 +152,10 @@ public class BankFrame {
                     
     }
 	
+	/**
+	 * Determines whether to print messages in frame or console.
+	 * @param printStream
+	 */
 	public static void printStream(boolean printStream)
 	{
 		if (printStream == true)
@@ -161,20 +176,15 @@ public class BankFrame {
 	  private static void updateTextArea(final String text) {
 	    SwingUtilities.invokeLater(new Runnable() {
 	      public void run() {
-				
-				//Create text area with bank data when button is pressed.
-				//scroll.setBounds(6, 62, 438, 181);	
-				//frame.add(scroll);
-				
 				jTextArea1.setEditable(false);
-				jTextArea1.append(text);
-	        
+				jTextArea1.append(text);        
 	      }
 	    });
 	  }
 	 
 	  /**
-	   * Methods that do the Redirect to jTextArea1. 
+	   * Methods that do the Redirect to jTextArea1.
+	   * Forces program to print to frame instead of console. 
 	   */
 	  private static void redirectSystemStreams() {
 	    OutputStream out = new OutputStream() {

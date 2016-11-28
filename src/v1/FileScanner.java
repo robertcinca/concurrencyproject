@@ -17,21 +17,22 @@ public class FileScanner {
 	public FileScanner(int chosenFileNumber) {
 		boolean fileExists;
 		boolean printStream = true;
+		
 		//If Option 'Other' is selected in GUI, this manual selection will run in the console.
 		if (chosenFileNumber == 4) {
-			Scanner keyboard = new Scanner(System.in);
+			Scanner keyboard = new Scanner(System.in); //open keyboard for scanning
 			do {
 				System.out.println("Which manual configuration should be run? (If in doubt, use 1, 2 or 3!)");
-				while(!keyboard.hasNextInt()) {
+				while(!keyboard.hasNextInt()) { //if input is not a number, do the following
 					System.out.println("This is not a number.");
 					keyboard.next();
 				}
 				chosenFileNumber = keyboard.nextInt();
 				
-				data = "resources/config" + chosenFileNumber + ".txt";
+				data = "resources/config" + chosenFileNumber + ".txt"; //File name
 				File varTmpDir = new File(data);
-				fileExists = varTmpDir.exists();
-				if (!fileExists)
+				fileExists = varTmpDir.exists(); //Checks if filename with given input exists
+				if (!fileExists) //if input does not give a valid file name.
 					System.out.println("This is not a valid file name.");
 			} while(fileExists == false);
 			
@@ -39,12 +40,15 @@ public class FileScanner {
 			System.out.println("Do you wish to print results in Console or Frame?");
 			System.out.println("(Enter 'console' or 'frame')");
 			
+			/* Once the file has been found, the user is asked whether 
+		 	he wants to run the rest of the program in the console or in the frame */
 			String manualConfigRun;
 			boolean manualConfigRunBool;
 			
 			do {
 				manualConfigRun = keyboard.next();
 				
+				//Once user enters console or frame, do switch case to determine which one was chosen.
 				if (manualConfigRun.equals("console") || manualConfigRun.equals("frame"))
 				{
 					manualConfigRunBool = true;
@@ -54,10 +58,11 @@ public class FileScanner {
 						   printStream = false;
 					      break;
 					   
-					   default : 
+					   default : //default is run on frame
 					      break;
 					}
 				}
+				//If user didn't pick valid selection, keep running until they do.
 				else
 				{
 					manualConfigRunBool = false;
@@ -69,8 +74,9 @@ public class FileScanner {
 			keyboard.close();
 		}
 		
-		data = "resources/config" + chosenFileNumber + ".txt";
+		data = "resources/config" + chosenFileNumber + ".txt"; // File name
 		
+		//Starts up the rest of the program
 		BankFrame.printStream(printStream);
 		setup();
 		createEconomy();
