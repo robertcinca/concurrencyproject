@@ -33,7 +33,8 @@ public class FileScanner {
 				File varTmpDir = new File(data);
 				fileExists = varTmpDir.exists(); //Checks if filename with given input exists
 				if (!fileExists) //if input does not give a valid file name.
-					System.out.println("This is not a valid file name.");
+					System.out.println("This is not a valid file name.\n File needs to be in format fileNumber.txt, "
+							+ "and located in resources/config.\n Just provide the fileNumber");
 			} while(fileExists == false);
 			
 			System.out.println("File exists!");
